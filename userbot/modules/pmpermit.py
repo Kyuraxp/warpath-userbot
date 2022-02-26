@@ -41,17 +41,17 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 CUSTOM_TEXT = (
     str(PMPERMIT_TEXT)
     if PMPERMIT_TEXT
-    else f"__Halo kawan, saya bot yang menjaga room chat Skyzu-Userbot {DEFAULTUSER} di mohon jangan melakukan spam , kalau anda melakukan itu OTOMATIS saya akan memblockir anda!__ \n"
+    else f"__Halo kawan, saya bot yang menjaga room chat Kyura-Userbot {DEFAULTUSER} di mohon jangan melakukan spam , kalau anda melakukan itu OTOMATIS saya akan memblockir anda!__ \n"
 )
 DEF_UNAPPROVED_MSG = (
     "╔═════════════════════╗\n"
-    "    ⚡ 𝗔𝗧𝗧𝗘𝗡𝗧𝗜𝗢𝗡 𝗣𝗟𝗘𝗔𝗦𝗘 ⚡ \n"
+    "    🚫 𝗔𝗧𝗧𝗘𝗡𝗧𝗜𝗢𝗡 𝗣𝗟𝗘𝗔𝗦𝗘 🚫 \n"
     "╚═════════════════════╝\n"
-    "**TOLONG JANGAN MELAKUKAN SPAM CHAT KEPADA MAJIKAN SAYA** \n"
-    f"**YA KONTOL KARENA SAYA AKAN OTOMATIS MEMBLOKIR KAMU, TUNGGU SAMPAI {DEFAULTUSER} MENERIMA PESAN KAMU** \n"
+    "**TOLONG JANGAN MELAKUKAN SPAM CHAT KEPADA OWNER SAYA** \n"
+    f"**KARENA SAYA AKAN OTOMATIS MEMBLOKIR KAMU, TUNGGU SAMPAI {DEFAULTUSER} MENERIMA PESAN MU** \n"
     "╔═════════════════════╗\n"
     "│○›Support : @kyurasupport2      \n"
-    f"│○›ᗷy : 𝐊𝐘𝐔𝐑𝐀 𝐔𝐒𝐄𝐑𝐁𝐎𝐓​           \n"
+    f"│○›By : 𝐊𝐘𝐔𝐑𝐀 𝐔𝐒𝐄𝐑𝐁𝐎𝐓​           \n"
     "╚═════════════════════╝"
 )
 # =================================================================
@@ -111,8 +111,8 @@ async def permitpm(event):
 
             if COUNT_PM[event.chat_id] > PM_LIMIT:
                 await event.respond(
-                    "`Dibilangin jangan spam goblok gw Blokir juga lu anjeng, makanya jangan spam`\n"
-                    f"`Ke majikan saya blok`"
+                    "`Maaf anda telah terkena blokir otomatis karena anda melakukan spam`\n"
+                    f"`Ke owner saya`"
                 )
 
                 try:
@@ -258,7 +258,7 @@ async def approvepm(apprvpm):
         return await apprvpm.edit("`Oke Pesan Anda Sudah Diterima ツ`")
 
     await apprvpm.edit(
-        f"`Hai` [{name0}](tg://user?id={uid}) `Pesan Anda Sudah Diterima ya entot`"
+        f"`Hai` [{name0}](tg://user?id={uid}) `Pesan Anda Sudah Diterima Oleh Owner Saya`"
     )
     await apprvpm.delete(getmsg)
     await message.delete()
