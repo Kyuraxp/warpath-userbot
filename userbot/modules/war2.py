@@ -1,5 +1,5 @@
-# ReCode by @skyzu
-# FROM skyzu-userbot <https://github.com/Skyzu/skyzu-userbot>
+# ReCode by @kyuraxx
+# FROM kyura-userbot <https://github.com/Kyuraxp/kyura-userbot>
 # KONTOLLLLLL
 
 from time import sleep
@@ -227,7 +227,7 @@ CMD_HELP.update(
         \n  •  **Function : **Ngatain orang gila title\
         \n\n  •  **Syntax :** `.an`\
         \n  •  **Function : **Liat sendiri\
-        \n\n**Klo mau Req, kosa kata dari lu Hubungi @kyuraonly**\
+        \n\n**Klo mau Req, kosa kata dari lu Hubungi @kyuraxx**\
     "
     }
 )
