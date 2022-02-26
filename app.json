@@ -47,7 +47,7 @@
     },
     "PM_AUTO_BAN": {
       "description": "PM Auto-Ban Feature Switch. Also known as the 'bleep blop, this is a bot...' module.",
-      "value": "True",
+      "value": "False",
       "required": true
     },
     "REM_BG_API_KEY": {
