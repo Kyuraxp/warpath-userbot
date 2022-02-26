@@ -52,7 +52,7 @@
     "S_PACK_NAME": {
       "description": "Nama Sticker Pack Mu",
       "required": false
-    },
+    }
   },
   "addons": [
     {
