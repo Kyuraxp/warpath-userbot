@@ -227,13 +227,13 @@ async def pipcheck(pip):
         await pip.edit("Gunakan `.help pip` Untuk Melihat Contoh")
 
 
-@register(outgoing=True, pattern=r"^\.(?:kyuraalive)\s?(.)?")
+@register(outgoing=True, pattern=r"^\.(?:kyur)\s?(.)?")
 async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
         f"Ҝㄚㄩ尺卂 卂ㄥ丨ᐯ乇\n\n"
-        f"\n__**{ROSE_TEKS_KUSTOM}**__\n\n\n"
+        f"\n__**{KYURA_TEKS_KUSTOM}**__\n\n\n"
         f"╭✠╼━━━━━━━━━━━━━━━✠╮\n"
         f"➠ **Name** : `{DEFAULTUSER}` \n"
         f"➠ **Username** : @{user.username} \n"
@@ -302,14 +302,7 @@ async def amireallyalive(alive):
 async def redis(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
-    await alive.edit("__Sedang Memuat.__")
-    await alive.edit("__Sedang Memuat..__")
-    await alive.edit("__Sedang Memuat.__")
-    await alive.edit("__Sedang Memuat..__")
-    await alive.edit("__Sedang Memuat...__")
-    await alive.edit("__Sedang Memuat..__")
-    await alive.edit("__Sedang Memuat...__")
-    await alive.edit("🌙")
+    await alive.edit("⚡")
     await asyncio.sleep(2)
     output = (
         f"╭✠╼━━━━━━━━━━━━━━━━✠╮\n"
