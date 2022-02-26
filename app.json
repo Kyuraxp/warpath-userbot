@@ -60,7 +60,8 @@
     },
     "S_PACK_NAME": {
       "description": "Nama Sticker Pack Mu",
-      "required": @kyuraproject
+      "value": "@KyuraProject",
+      "required": false
     }
   },
   "addons": [
