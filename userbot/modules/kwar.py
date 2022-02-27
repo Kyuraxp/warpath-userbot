@@ -42,6 +42,8 @@ CMD_HELP.update(
         \n↳ : lihat sendiri\
         \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .roas2\
         \n↳ : lihat sendiri\
+        \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .roas3\
+        \n↳ : lihat sendiri\
         \n↳ **CEK SENDIRI GAUSAH MANJA!**.\
    "
     }
