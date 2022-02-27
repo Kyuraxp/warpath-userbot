@@ -16,7 +16,7 @@
 from . import format as _format
 from .format import parse_pre
 from .chrome import chrome, options
-#from .decorator import callback, rose_cmd, rose_handler
+#from .decorator import rose_cmd, rose_handler
 from .google_images_download import googleimagesdownload
 from .progress import progress, CancelProcess
 from .tools import (
