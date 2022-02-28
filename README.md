@@ -1,5 +1,8 @@
-#     𝐊𝐘𝐔𝐑𝐀 -  𝐔𝐒𝐄𝐑𝐁𝐎𝐓​​ 
-
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+    <p align="center"> 
+     𝐊𝐘𝐔𝐑𝐀 -  𝐔𝐒𝐄𝐑𝐁𝐎𝐓​​ 
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+    <p align="center"> 
 
 
 </p>
@@ -13,22 +16,26 @@
 
 <p align="center">
   <img src="https://telegra.ph/file/fc022ef493d19c922c218.jpg">
-</p>
-
 <h2 align="center">
    Metode Deploy
 </h2>
-
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+    <p align="center"> 
 <p align="center">
 <a href="https://dashboard.heroku.com/new?template=https://github.com/Kyuraxp/kyura-userbot"><img src="https://img.shields.io/badge/Deploy%20To%20Heroku-blueviolet?style=for-the-badge&logo=heroku" width="250""/</a>  
 <a href="https://telegram.dog/XTZ_HerokuBot?start=S3l1cmF4cC9reXVyYS11c2VyYm90IEt5dXJhLVVzZXJib3Q"><img src="https://img.shields.io/badge/Deploy%20Via%20Telegram-blue?style=for-the-badge&logo=telegram" width="250""/</a>  </p>
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+    <p align="center"> 
 
 
-
-## Group Support:
-
-   <a href="https://t.me/kyurasupport"><img src="https://img.shields.io/badge/Group%20Support%3F-yes-green?&style=flat-square?&logo=telegram" width=220px></a></p>
-
+## Support!
+</p>
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+    <p align="center"> 
+    <a href="https://t.me/kyurasupport2" target="blank"><img src="https://img.icons8.com/nolan/55/telegram-app.png" /></a>
+    <a href="https://t.me/kyuraproject" target="blank"><img src="https://img.icons8.com/nolan/55/telegram-app.png" /></a>
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+    <p align="center"> 
 
 ## Stay Support 🚀
 ❁   [LonamiWebs](https://github.com/LonamiWebs/) and [Telethon](https://github.com/LonamiWebs/Telethon)
