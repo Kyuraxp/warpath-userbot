@@ -30,6 +30,9 @@ brb = [
    "bang owner mau kemana:(",
    "jangan lama lama ya owner",
    "ayang mau kemana😭",
+   "off pasti mau ngewe ya bang",
+   "kalo bucin jangan lupa ke oyo bang",
+   "bang owner off karena dimakan janda",
 ]
 
 
