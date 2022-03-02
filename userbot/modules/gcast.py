@@ -8,6 +8,8 @@ GCAST_BLACKLIST = [
     -1001380293847,  # Nasty
     -1001692751821,  # ramsupportt
     -1001699144606,  # kastaot
+    -1001386557465,  # RumahKitaroo
+    -1001473548283,  # SharingUserbot
 ]
 
 
