@@ -24,7 +24,7 @@ def vcmention(user):
 
 async def get_call(rambot):
     kyura = await rambot.client(getchat(rambot.chat_id))
-    hehe = await rambot.client(getvc(kyura.full_chat.call))
+    hehe = await rambot.client(getvc(kyura.full_chat.call, limit=1))
     return hehe.call
 
 
