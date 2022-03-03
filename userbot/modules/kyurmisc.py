@@ -583,7 +583,7 @@ async def _(event):
     #  )
     await event.delete()
     await bot.send_message(
-        event.chat_id, "`Anda Telah Berhasil Ngeclon!.`", reply_to=reply_message
+        event.chat_id, "`Anda Telah Berhasil Ngeclone!.`", reply_to=reply_message
     )
 
 
