@@ -209,7 +209,7 @@ async def redis(pong):
     await pong.edit(
         f" **Ping !!** "
         f"`%sms` \n"
-        f" **Uptime -** "
+        f"**Uptime -** "
         f"`{uptime}` \n" % (duration)
     )
 
