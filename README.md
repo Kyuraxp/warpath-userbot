@@ -22,8 +22,8 @@
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
     <p align="center"> 
 <p align="center">
-<a href="https://dashboard.heroku.com/new?template=https://github.com/Kyuraxp/kyura-userbot"><img src="https://img.shields.io/badge/Deploy%20To%20Heroku-blueviolet?style=for-the-badge&logo=heroku" width="250""/</a>  
-<a href="https://telegram.dog/XTZ_HerokuBot?start=S3l1cmF4cC9reXVyYS11c2VyYm90IEt5dXJhLVVzZXJib3Q"><img src="https://img.shields.io/badge/Deploy%20Via%20Telegram-blue?style=for-the-badge&logo=telegram" width="250""/</a>  </p>
+<a href="https://dashboard.heroku.com/new?template=https://github.com/Kyuraxp/kyura-userbot"><img src="https://img.shields.io/badge/Deploy%20To%20Heroku-black?style=for-the-badge&logo=heroku" width="230""/</a>  
+<a href="https://telegram.dog/XTZ_HerokuBot?start=S3l1cmF4cC9reXVyYS11c2VyYm90IEt5dXJhLVVzZXJib3Q"><img src="https://img.shields.io/badge/Deploy%20Via%20Telegram-red?style=for-the-badge&logo=telegram" width="250""/</a>  </p>
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
     <p align="center"> 
 
