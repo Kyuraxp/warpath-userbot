@@ -905,7 +905,7 @@ with bot:
                 result = builder.photo(
                     file=roselogo,
                     link_preview=False,
-                    text=f"Kʏᴜʀᴀ​-Usᴇʀʙᴏᴛ\n\n❥ **ʙᴏᴛ ᴏꜰ :** {DEFAULTUSER}\n❥ **ʙᴏᴛ ᴠᴇʀ :** 5.0\n❥ **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}\n❥ ".format(
+                    text=f"Kʏᴜʀᴀ​-Usᴇʀʙᴏᴛ\n\n× **ʙᴏᴛ ᴏꜰ :** {DEFAULTUSER}\n× **ʙᴏᴛ ᴠᴇʀ :** 5.0\n× **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}\n ".format(
                         len(dugmeler),
                     ),
                     buttons=buttons,
