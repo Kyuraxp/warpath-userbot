@@ -96,7 +96,7 @@ def register(**args):
                     date = strftime("%Y-%m-%d %H:%M:%S", gmtime())
 
                     text = "**Kyura-Project ERROR**\n"
-                    link = "Silahkan chat: @kyuraonly"
+                    link = "Silahkan chat: @kyurasupport2"
                     text += "Untuk melaporkan kesalahan"
                     text += f"tinggal teruskan pesan ini {link}.\n"
                     text += "Kyura Siap Membantu Kamu\n"
