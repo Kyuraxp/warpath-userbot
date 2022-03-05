@@ -70,6 +70,25 @@ async def _(event):
     except Exception:
         await event.edit("Gaada yang mau sama kau karena kau jelek.")
 
+@register(outgoing=True, pattern=r"^\.bokep$")
+async def _(event):
+    try:
+        hentainya = [
+            hentai
+            async for hentai in event.client.iter_messages(
+                "@animexgif", filter=InputMessagesFilterVideo
+            )
+        ]
+        aing = await event.client.get_me()
+        await event.client.send_file(
+            event.chat_id,
+            file=random.choice(hentainya),
+            caption=f"Nih kak video hentai nya [{DEFAULTUSER}](tg://user?id={aing.id})",
+        )
+        await event.delete()
+    except Exception:
+        await event.edit("Tidak bisa menemukan video hentai.")
+
 
 CMD_HELP.update(
     {
@@ -80,6 +99,8 @@ CMD_HELP.update(
         \n  •  **Function : **Untuk Mengirim suara desah buat lu yang sange.\
         \n\n  •  **Syntax :** `.ayang`\
         \n  •  **Function : **Untuk Mencari ayang buat cowok yang jomblo.\
+        \n\n  •  **Syntax :** `.bokep`\
+        \n  •  **Function : **Untuk Mencari Bokep Secara Random😁.\
     "
     }
 )
