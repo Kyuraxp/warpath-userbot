@@ -1,7 +1,6 @@
 # Credits: cat userbot
 # Ported by @vckyaz
-# Thanks, GeezProjects <https://github.com/vckyou/GeezProjects>
-# Test module from Ram-Ubot
+# FROM GeezProjects <https://github.com/vckyou/GeezProjects>
 
 import asyncio
 
@@ -11,8 +10,9 @@ from userbot import BOTLOG_CHATID
 from userbot import CMD_HELP, LOGS, bot
 from userbot.modules.sql_helper import no_log_pms_sql
 from userbot.modules.sql_helper.globals import addgvar, gvarstatus
-from userbot.modules.vcg import vcmention
-from userbot.utils import _format, edit_delete, edit_or_reply
+from userbot.modules.ramcals import vcmention
+from userbot.utils import _format
+from telethon import events
 from userbot.utils.tools import media_type
 
 from userbot.events import register
@@ -28,55 +28,55 @@ LOG_CHATS_ = LOG_CHATS()
 
 
 @bot.on(events.ChatAction)
-async def logaddjoin(ramubot):
-    user = await ramubot.get_user()
-    chat = await ramubot.get_chat()
+async def logaddjoin(event):
+    user = await event.get_user()
+    chat = await event.get_chat()
     if not (user and user.is_self):
         return
     if hasattr(chat, "username") and chat.username:
-        chat = f"[{chat.title}](https://t.me/{chat.username}/{ramubot.action_message.id})"
+        chat = f"[{chat.title}](https://t.me/{chat.username}/{event.action_message.id})"
     else:
-        chat = f"[{chat.title}](https://t.me/c/{chat.id}/{ramubot.action_message.id})"
-    if ramubot.user_added:
-        tmp = ramubot.added_by
-        text = f"u📩 **#TAMBAH_LOG\n •** {vcmention(tmp)} **Menambahkan** {vcmention(user)}\n **• Ke Group** {chat}"
-    elif ramubot.user_joined:
-        text = f"📨 **#LOG_GABUNG\n •** [{user.first_name}](tg://user?id={user.id}) **Bergabung\n • Ke Group** {chat}"
+        chat = f"[{chat.title}](https://t.me/c/{chat.id}/{event.action_message.id})"
+    if event.user_added:
+        tmp = event.added_by
+        text = f"📩 **#ADD_LOG\n •** {vcmention(tmp)} **Menambahkan** {vcmention(user)}\n **• Ke Group** {chat}"
+    elif event.user_joined:
+        text = f"📨 **#JOIN_LOG\n •** [{user.first_name}](tg://user?id={user.id}) **Bergabung\n • Ke Group** {chat}"
     else:
         return
-    await ramubot.client.send_message(BOTLOG_CHATID, text)
+    await event.client.send_message(BOTLOG_CHATID, text)
 
 
 @bot.on(events.NewMessage(incoming=True, func=lambda e: e.is_private))
 @bot.on(events.MessageEdited(incoming=True, func=lambda e: e.is_private))
-async def monito_p_m_s(kyura):
+async def monito_p_m_s(event):
     if BOTLOG_CHATID == -100:
         return
     if gvarstatus("PMLOG") and gvarstatus("PMLOG") == "false":
         return
-    sender = await kyura.get_sender()
+    sender = await event.get_sender()
     await asyncio.sleep(0.5)
     if not sender.bot:
-        chat = await kyura.get_chat()
+        chat = await event.get_chat()
         if not no_log_pms_sql.is_approved(chat.id) and chat.id != 777000:
             if LOG_CHATS_.RECENT_USER != chat.id:
                 LOG_CHATS_.RECENT_USER = chat.id
                 if LOG_CHATS_.NEWPM:
                     await LOG_CHATS_.NEWPM.edit(
                         LOG_CHATS_.NEWPM.text.replace(
-                            "**💌 #PESAN_BARU**",
+                            "**💌 #NEW_MESSAGE**",
                             f" • `{LOG_CHATS_.COUNT}` **Pesan**",
                         )
                     )
                     LOG_CHATS_.COUNT = 0
-                LOG_CHATS_.NEWPM = await kyura.client.send_message(
+                LOG_CHATS_.NEWPM = await event.client.send_message(
                     BOTLOG_CHATID,
                     f"**💌 #MENERUSKAN #PESAN_BARU**\n** • Dari : **{_format.mentionuser(sender.first_name , sender.id)}\n** • User ID:** `{chat.id}`",
                 )
             try:
-                if kyura.message:
-                    await kyura.client.forward_messages(
-                        BOTLOG_CHATID, kyura.message, silent=True
+                if event.message:
+                    await event.client.forward_messages(
+                        BOTLOG_CHATID, event.message, silent=True
                     )
                 LOG_CHATS_.COUNT += 1
             except Exception as e:
@@ -85,36 +85,36 @@ async def monito_p_m_s(kyura):
 
 @bot.on(events.NewMessage(incoming=True, func=lambda e: e.mentioned))
 @bot.on(events.MessageEdited(incoming=True, func=lambda e: e.mentioned))
-async def log_tagged_messages(yahaha):
+async def log_tagged_messages(event):
     if BOTLOG_CHATID == -100:
         return
-    pornhub = await yahaha.get_chat()
+    hmm = await event.get_chat()
 
     if gvarstatus("GRUPLOG") and gvarstatus("GRUPLOG") == "false":
         return
     if (
-        (no_log_pms_sql.is_approved(pornhub.id))
+        (no_log_pms_sql.is_approved(hmm.id))
         or (BOTLOG_CHATID == -100)
-        or (await yahaha.get_sender() and (await yahaha.get_sender()).bot)
+        or (await event.get_sender() and (await event.get_sender()).bot)
     ):
         return
     full = None
     try:
-        full = await yahaha.client.get_entity(yahaha.message.from_id)
+        full = await event.client.get_entity(event.message.from_id)
     except Exception as e:
         LOGS.info(str(e))
-    messaget = media_type(yahaha)
+    messaget = media_type(event)
     resalt = f"<b>📨 #TAGS #MESSAGE</b>\n<b> • Dari : </b>{_format.htmlmentionuser(full.first_name , full.id)}"
     if full is not None:
-        resalt += f"\n<b> • Grup : </b><code>{pornhub.title}</code>"
+        resalt += f"\n<b> • Grup : </b><code>{hmm.title}</code>"
     if messaget is not None:
         resalt += f"\n<b> • Jenis Pesan : </b><code>{messaget}</code>"
     else:
-        resalt += f"\n<b> • 👀 </b><a href = 'https://t.me/c/{pornhub.id}/{yahaha.message.id}'>Lihat Pesan</a>"
-    resalt += f"\n<b> • Message : </b>{yahaha.message.message}"
+        resalt += f"\n<b> • 👀 </b><a href = 'https://t.me/c/{hmm.id}/{event.message.id}'>Lihat Pesan</a>"
+    resalt += f"\n<b> • Message : </b>{event.message.message}"
     await asyncio.sleep(0.5)
-    if not yahaha.is_private:
-        await yahaha.client.send_message(
+    if not event.is_private:
+        await event.client.send_message(
             BOTLOG_CHATID,
             resalt,
             parse_mode="html",
@@ -122,7 +122,7 @@ async def log_tagged_messages(yahaha):
         )
 
 
-@register(pattern=r"^\.save(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^\.save(?: |$)(.*)")
 async def log(log_text):
     if BOTLOG_CHATID:
         if log_text.reply_to_msg_id:
@@ -133,47 +133,36 @@ async def log(log_text):
             textx = user + log_text.pattern_match.group(1)
             await log_text.client.send_message(BOTLOG_CHATID, textx)
         else:
-            await edit_delete(log_text, "**Apa yang harus saya simpan?**")
+            await log_text.edit("**Apa yang harus saya simpan?**")
             return
-        await edit_delete(log_text, "**Berhasil disimpan di Grup Log**")
+        await log_text.edit("**Berhasil disimpan di Grup Log**")
     else:
-        await edit_delete(
-            log_text,
-            "**Untuk Menggunakan Module ini, Anda Harus Mengatur** `BOTLOG_CHATID` **di Config Vars**",
-            30,
-        )
+        await log_text.edit(
+            "**Untuk Menggunakan Module ini, Anda Harus Mengatur** `BOTLOG_CHATID` **di Config Vars**")
 
 
-@register(pattern=r"^\.log$")
+@register(outgoing=True, pattern=r"^\.log$")
 async def set_no_log_p_m(event):
     if BOTLOG_CHATID != -100:
         chat = await event.get_chat()
         if no_log_pms_sql.is_approved(chat.id):
             no_log_pms_sql.disapprove(chat.id)
-            await edit_delete(
-                event, "**LOG Chat dari Grup ini Berhasil Diaktifkan**", 15
-            )
+            await event.edit("**LOG Chat dari Grup ini Berhasil Diaktifkan**")
 
 
-@register(pattern=r"^\.nolog$")
+@register(outgoing=True, pattern=r"^\.nolog$")
 async def set_no_log_p_m(event):
     if BOTLOG_CHATID != -100:
         chat = await event.get_chat()
         if not no_log_pms_sql.is_approved(chat.id):
             no_log_pms_sql.approve(chat.id)
-            await edit_delete(
-                event, "**LOG Chat dari Grup ini Berhasil Dimatikan**", 15
-            )
+            await event.edit("**LOG Chat dari Grup ini Berhasil Dimatikan**")
 
 
-@register(pattern=r"^\.pmlog (on|off)$")
+@register(outgoing=True, pattern=r"^\.pmlog (on|off)$")
 async def set_pmlog(event):
     if BOTLOG_CHATID == -100:
-        return await edit_delete(
-            event,
-            "**Untuk Menggunakan Module ini, Anda Harus Mengatur** `BOTLOG_CHATID` **di Config Vars**",
-            30,
-        )
+        return await event.edit("**Untuk Menggunakan Module ini, Anda Harus Mengatur** `BOTLOG_CHATID` **di Config Vars**")
     input_str = event.pattern_match.group(1)
     if input_str == "off":
         h_type = False
@@ -185,25 +174,21 @@ async def set_pmlog(event):
         PMLOG = True
     if PMLOG:
         if h_type:
-            await edit_or_reply(event, "**PM LOG Sudah Diaktifkan**")
+            await event.edit("**PM LOG Lu Udah aktif ngentodddd!!**")
         else:
             addgvar("PMLOG", h_type)
-            await edit_or_reply(event, "**PM LOG Berhasil Dimatikan**")
+            await event.edit("**PM LOG Lu udh mati anjinggggg!!!**")
     elif h_type:
         addgvar("PMLOG", h_type)
-        await edit_or_reply(event, "**PM LOG Berhasil Diaktifkan**")
+        await event.edit("**PM LOG Udah aktif, Awas ada chatsex masuk tod**")
     else:
-        await edit_or_reply(event, "**PM LOG Sudah Dimatikan**")
+        await event.edit("**PM LOG Dimatikan, Takut ada chatsex masuk ya??**")
 
 
-@register(pattern=r"^\.gruplog (on|off)$")
+@register(outgoing=True, pattern=r"^\.gruplog (on|off)$")
 async def set_gruplog(event):
     if BOTLOG_CHATID == -100:
-        return await edit_delete(
-            event,
-            "**Untuk Menggunakan Module ini, Anda Harus Mengatur** `BOTLOG_CHATID` **di Config Vars**",
-            30,
-        )
+        return await event.edit("**Untuk Menggunakan Module ini, Anda Harus Mengatur** `BOTLOG_CHATID` **di Config Vars**")
     input_str = event.pattern_match.group(1)
     if input_str == "off":
         h_type = False
@@ -215,15 +200,15 @@ async def set_gruplog(event):
         GRUPLOG = True
     if GRUPLOG:
         if h_type:
-            await edit_or_reply(event, "**Group Log Sudah Diaktifkan**")
+            await event.edit("**Group Log Lu udah idup kontoll!!!**")
         else:
             addgvar("GRUPLOG", h_type)
-            await edit_or_reply(event, "**Group Log Berhasil Dimatikan**")
+            await event.edit("**Group Log Udah mati ngentod!!!**")
     elif h_type:
         addgvar("GRUPLOG", h_type)
-        await edit_or_reply(event, "**Group Log Berhasil Diaktifkan**")
+        await event.edit("**Group Log Sudah aktif, Awas Ada talent minta Vn desah masuk!!!**")
     else:
-        await edit_or_reply(event, "**Group Log Sudah Dimatikan**")
+        await event.edit("**Group Log Dimatikan, Takut ada talent sangean ya?**")
 
 
 CMD_HELP.update(
