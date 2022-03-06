@@ -12,7 +12,7 @@ from telethon.tl import functions, types
 
 from userbot.utils import kyura_cmd
 
-from userbot import CMR_HANDLER as cmd
+from userbot import CMD_HANDLER as cmd
 from userbot import (  # noqa pylint: disable=unused-import isort:skip
     AFKREASON,
     ALIVE_NAME,
