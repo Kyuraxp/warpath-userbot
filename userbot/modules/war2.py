@@ -4,11 +4,11 @@
 
 from time import sleep
 
-from userbot import CMD_HELP
-from userbot.events import register
+from userbot import CMD_HELP, CMD_HANDLER as cmd
+from userbot.utils import kyura_cmd
 
 
-@register(outgoing=True, pattern=r"^\.sok(?: |$)(.*)")
+@kyura_cmd(pattern="sok(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1.5)
@@ -23,7 +23,7 @@ async def typewriter(typew):
     await typew.edit("**GA KEREN LO BEGITU NGENTOT**")
 
 
-@register(outgoing=True, pattern="^.alay(?: |$)(.*)")
+@kyura_cmd(pattern="alay(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**Halo kak**")
@@ -45,7 +45,7 @@ async def typewriter(typew):
     await typew.edit("**Lawriiiiiiieeeee:v**")
 
 
-@register(outgoing=True, pattern="^.wah(?: |$)(.*)")
+@kyura_cmd(pattern="wah(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("`Wahh, War nya keren bang`")
@@ -65,7 +65,7 @@ async def typewriter(typew):
     await typew.edit("`Dah sana cabut, Makasih hiburannya, Udah bikin Gua tawa ngakak`")
 
 
-@register(outgoing=True, pattern=r"^\.kont(?: |$)(.*)")
+@kyura_cmd(pattern="kont(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
@@ -94,7 +94,7 @@ async def typewriter(typew):
     await typew.edit("**KASIAN CACAD GAPUNYA KONTOLL**")
 
 
-@register(outgoing=True, pattern=r"^\.emak(?: |$)(.*)")
+@kyura_cmd(pattern="emak(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(
@@ -102,7 +102,7 @@ async def typewriter(typew):
     )
 
 
-@register(outgoing=True, pattern=r"^\.ehh(?: |$)(.*)")
+@kyura_cmd(pattern="ehh(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(
@@ -110,7 +110,7 @@ async def typewriter(typew):
     )
 
 
-@register(outgoing=True, pattern=r"^\.mas(?: |$)(.*)")
+@kyura_cmd(pattern="mas(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(
@@ -118,7 +118,7 @@ async def typewriter(typew):
     )
 
 
-@register(outgoing=True, pattern=r"^\.an(?: |$)(.*)")
+@kyura_cmd(pattern="an(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(
@@ -126,7 +126,7 @@ async def typewriter(typew):
     )
 
 
-@register(outgoing=True, pattern=r"^\.bk(?: |$)(.*)")
+@kyura_cmd(pattern="bk(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(
@@ -134,7 +134,7 @@ async def typewriter(typew):
     )
 
 
-@register(outgoing=True, pattern=r"^\.gj(?: |$)(.*)")
+@kyura_cmd(pattern="gj(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(
@@ -142,7 +142,7 @@ async def typewriter(typew):
     )
 
 
-@register(outgoing=True, pattern=r"^\.gh(?: |$)(.*)")
+@kyura_cmd(pattern="gh(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(
@@ -150,7 +150,7 @@ async def typewriter(typew):
     )
 
 
-@register(outgoing=True, pattern=r"^\.lol(?: |$)(.*)")
+@kyura_cmd(pattern="lol(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(
@@ -158,7 +158,7 @@ async def typewriter(typew):
     )
 
 
-@register(outgoing=True, pattern="^.title(?: |$)(.*)")
+@kyura_cmd(pattern="title(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**OI ANAK TITLE**")
@@ -200,32 +200,32 @@ async def typewriter(typew):
 
 CMD_HELP.update(
     {
-        "war2": "**Plugin : **`war2`\
-        \n\n  •  **Syntax :** `.sok`\
+        "war2": f"**Plugin : **`war2`\
+        \n\n  •  **Syntax :** `{cmd}sok`\
         \n  •  **Function : **Ngatain orang sok keras\
-        \n\n  •  **Syntax :** `.alay`\
+        \n\n  •  **Syntax :** `{cmd}alay`\
         \n  •  **Function : **Ngatain orang baru pasang bot\
-        \n\n  •  **Syntax :** `.bk`\
+        \n\n  •  **Syntax :** `{cmd}bk`\
         \n  •  **Function : **Ngatain bocah hina\
-        \n\n  •  **Syntax :** `.gh`\
+        \n\n  •  **Syntax :** `{cmd}gh`\
         \n  •  **Function : **Liat sendiri\
-        \n\n  •  **Syntax :** `.ehh`\
+        \n\n  •  **Syntax :** `{cmd}ehh`\
         \n  •  **Function : **Liat sendiri\
-        \n\n  •  **Syntax :** `.emak`\
+        \n\n  •  **Syntax :** `{cmd}emak`\
         \n  •  **Function : **Liat sendiri\
-        \n\n  •  **Syntax :** `.wah`\
+        \n\n  •  **Syntax :** `{cmd}wah`\
         \n  •  **Function : **Liat sendiri\
-        \n\n  •  **Syntax :** `.mas`\
+        \n\n  •  **Syntax :** `{cmd}mas`\
         \n  •  **Function : **Liat sendiri\
-        \n\n  •  **Syntax :** `.kont`\
+        \n\n  •  **Syntax :** `{cmd}kont`\
         \n  •  **Function : **Ngatain anak kontoll\
-        \n\n  •  **Syntax :** `.gj`\
+        \n\n  •  **Syntax :** `{cmd}gj`\
         \n  •  **Function : **Ngatain anak gaje\
-        \n\n  •  **Syntax :** `.lol`\
+        \n\n  •  **Syntax :** `{cmd}lol`\
         \n  •  **Function : **Ngatain anak tolol\
-        \n\n  •  **Syntax :** `.title`\
+        \n\n  •  **Syntax :** `{cmd}title`\
         \n  •  **Function : **Ngatain orang gila title\
-        \n\n  •  **Syntax :** `.an`\
+        \n\n  •  **Syntax :** `{cmd}an`\
         \n  •  **Function : **Liat sendiri\
         \n\n**Klo mau Req, kosa kata dari lu Hubungi @kyuraxx**\
     "

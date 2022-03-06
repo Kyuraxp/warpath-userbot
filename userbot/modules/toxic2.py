@@ -1,10 +1,10 @@
 from time import sleep
 
-from userbot import CMD_HELP
-from userbot.events import register
+from userbot import CMD_HELP, CMD_HANDLER as cmd
+from userbot.utils import kyura_cmd
 
 
-@register(outgoing=True, pattern="^.ngentot(?: |$)(.*)")
+@kyura_cmd(pattern="ngentot(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
@@ -32,7 +32,7 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
-@register(outgoing=True, pattern="^.goblok(?: |$)(.*)")
+@kyura_cmd(pattern="goblok(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
@@ -60,7 +60,7 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
-@register(outgoing=True, pattern="^.ngatain(?: |$)(.*)")
+@kyura_cmd(pattern="ngatain(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
@@ -89,11 +89,11 @@ async def typewriter(typew):
 
 CMD_HELP.update(
     {
-        "toxic2": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.ngentot`\
+        "toxic2": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}ngentot`\
     \n↳ : Lu Coba Sendiri Aja."
-        "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.goblok`\
+        f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}goblok`\
     \n↳ : Lu Coba Sendiri Aja."
-        "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.ngatain`\
+        f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}ngatain`\
     \n↳ : Lu Coba Sendiri Aja."
     }
 )

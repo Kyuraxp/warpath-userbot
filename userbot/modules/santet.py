@@ -1,10 +1,10 @@
 from time import sleep
 
-from userbot import CMD_HELP
-from userbot.events import register
+from userbot import CMD_HELP, CMD_HANDLER as cmd
+from userbot.utils import kyura_cmd
 
 
-@register(outgoing=True, pattern=r"^\.santet(?: |$)(.*)")
+@kyura_cmd(pattern="santet(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("`Anda Telah Mengaktifkan Perintah Santet Online ツ`")
@@ -319,7 +319,7 @@ async def typewriter(typew):
 
 CMD_HELP.update(
     {
-        "santetonline": "`.santet`\
+        "santetonline": f"`{cmd}santet`\
         \nUsage: Santet Online Buat Bercanda."
     }
 )

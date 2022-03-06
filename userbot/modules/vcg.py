@@ -10,7 +10,7 @@ from telethon.tl.functions.phone import GetGroupCallRequest as getvc
 from telethon.tl.functions.phone import InviteToGroupCallRequest as invitetovc
 
 from userbot import CMD_HELP
-from userbot.events import register
+from userbot.utils import kyura_cmd
 
 NO_ADMIN = "`Maaf Kamu Bukan Admin!"
 
@@ -33,7 +33,7 @@ def user_list(l, n):
         yield l[i : i + n]
 
 
-@register(outgoing=True, pattern=r"^\.startvc$", groups_only=True)
+@kyura_cmd(pattern="startvc$")
 async def start_voice(kyura):
     chat = await kyura.get_chat()
     admin = chat.admin_rights
@@ -48,7 +48,7 @@ async def start_voice(kyura):
         await kyura.edit(f"`{str(ex)}`")
 
 
-@register(outgoing=True, pattern=r"^\.stopvc$", groups_only=True)
+@kyura_cmd(pattern="stopvc$")
 async def stop_voice(hmm):
     chat = await hmm.get_chat()
     admin = chat.admin_rights
@@ -63,7 +63,7 @@ async def stop_voice(hmm):
         await hmm.edit(f"`{str(ex)}`")
 
 
-@register(outgoing=True, pattern=r"^\.vcinvite", groups_only=True)
+@kyura_cmd(pattern="vcinvite")
 async def vc_invite(td):
     await td.edit("`Sedang Mengivinte Member...`")
     users = []
@@ -83,11 +83,11 @@ async def vc_invite(td):
 
 CMD_HELP.update(
     {
-        "vcg": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.startvc`\
+        "vcg": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}startvc`\
          \n↳ : Start Group Call in a group.\
-         \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.stopvc`\
+         \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}stopvc`\
          \n↳ : `Stop Group Call in a group.`\
-         \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.vcinvite`\
+         \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}vcinvite`\
          \n↳ : Invite all members of group in Group Call. (You must be joined)."
     }
 )

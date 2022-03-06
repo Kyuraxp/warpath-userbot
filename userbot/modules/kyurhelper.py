@@ -1,13 +1,13 @@
 """ Userbot module for other small commands. """
-from userbot import ALIVE_NAME, CMD_HELP
-from userbot.events import register
+from userbot import ALIVE_NAME, CMD_HELP, CMD_HANDLER as cmd
+from userbot.utils import kyura_cmd
 
 # ================= CONSTANT =================
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 # ============================================
 
 
-@register(outgoing=True, pattern="^.lhelp$")
+@kyura_cmd(pattern="lhelp$")
 async def usit(e):
     await e.edit(
         f"**Halo {DEFAULTUSER} Jika Anda Tidak Tau Perintah Untuk Memerintah Ku Ketik** `.help` Atau Bisa Minta Bantuan Ke:\n"
@@ -16,7 +16,7 @@ async def usit(e):
     )
 
 
-@register(outgoing=True, pattern="^.vars$")
+@kyura_cmd(pattern="vars$")
 async def var(m):
     await m.edit(
         f"**Disini Daftar Vars Dari {DEFAULTUSER}:**\n"
@@ -26,9 +26,9 @@ async def var(m):
 
 CMD_HELP.update(
     {
-        "helper": "`.lhelp`\
+        "helper": f"`{cmd}lhelp`\
 \nUsage: Bantuan Untuk Kyura-Userbot.\
-\n`.vars`\
+\n`{cmd}vars`\
 \nUsage: Melihat Daftar Vars."
     }
 )

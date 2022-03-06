@@ -6,7 +6,7 @@ import asyncio
 
 from telethon import events
 
-from userbot import BOTLOG_CHATID
+from userbot import BOTLOG_CHATID, CMD_HANDLER as cmd
 from userbot import CMD_HELP, LOGS, bot
 from userbot.modules.sql_helper import no_log_pms_sql
 from userbot.modules.sql_helper.globals import addgvar, gvarstatus
@@ -15,7 +15,7 @@ from userbot.utils import _format
 from telethon import events
 from userbot.utils.tools import media_type
 
-from userbot.events import register
+from userbot.utils import kyura_cmd
 
 class LOG_CHATS:
     def __init__(self):
@@ -122,7 +122,7 @@ async def log_tagged_messages(event):
         )
 
 
-@register(outgoing=True, pattern=r"^\.save(?: |$)(.*)")
+@kyura_cmd(pattern="save(?: |$)(.*)")
 async def log(log_text):
     if BOTLOG_CHATID:
         if log_text.reply_to_msg_id:
@@ -141,7 +141,7 @@ async def log(log_text):
             "**Untuk Menggunakan Module ini, Anda Harus Mengatur** `BOTLOG_CHATID` **di Config Vars**")
 
 
-@register(outgoing=True, pattern=r"^\.log$")
+@kyura_cmd(pattern="log$")
 async def set_no_log_p_m(event):
     if BOTLOG_CHATID != -100:
         chat = await event.get_chat()
@@ -150,7 +150,7 @@ async def set_no_log_p_m(event):
             await event.edit("**LOG Chat dari Grup ini Berhasil Diaktifkan**")
 
 
-@register(outgoing=True, pattern=r"^\.nolog$")
+@kyura_cmd(pattern="nolog$")
 async def set_no_log_p_m(event):
     if BOTLOG_CHATID != -100:
         chat = await event.get_chat()
@@ -159,7 +159,7 @@ async def set_no_log_p_m(event):
             await event.edit("**LOG Chat dari Grup ini Berhasil Dimatikan**")
 
 
-@register(outgoing=True, pattern=r"^\.pmlog (on|off)$")
+@kyura_cmd(pattern="pmlog (on|off)$")
 async def set_pmlog(event):
     if BOTLOG_CHATID == -100:
         return await event.edit("**Untuk Menggunakan Module ini, Anda Harus Mengatur** `BOTLOG_CHATID` **di Config Vars**")
@@ -185,7 +185,7 @@ async def set_pmlog(event):
         await event.edit("**PM LOG Dimatikan, Takut ada chatsex masuk ya??**")
 
 
-@register(outgoing=True, pattern=r"^\.gruplog (on|off)$")
+@kyura_cmd(pattern="gruplog (on|off)$")
 async def set_gruplog(event):
     if BOTLOG_CHATID == -100:
         return await event.edit("**Untuk Menggunakan Module ini, Anda Harus Mengatur** `BOTLOG_CHATID` **di Config Vars**")
@@ -214,15 +214,15 @@ async def set_gruplog(event):
 CMD_HELP.update(
     {
         "log": f"**Modules : **`log`\
-        \n\n •  **Command  :** `.save`\
+        \n\n •  **Command  :** `{cmd}save`\
         \n  •  **Function  : **__Untuk Menyimpan pesan yang ditandai ke grup pribadi.__\
-        \n\n •  **Command  :** `.log`\
+        \n\n •  **Command  :** `{cmd}log`\
         \n  •  **Function  : **__Untuk mengaktifkan Log Chat dari obrolan/grup itu.__\
-        \n\n •  **Command  :** `.nolog`\
+        \n\n •  **Command  :** `{cmd}nolog`\
         \n  •  **Function  : **__Untuk menonaktifkan Log Chat dari obrolan/grup itu.__\
-        \n\n •  **Command  :** `.pmlog on/off`\
+        \n\n •  **Command  :** `{cmd}pmlog on/off`\
         \n  •  **Function  : **__Untuk mengaktifkan atau menonaktifkan pencatatan pesan pribadi__\
-        \n\n •  **Command  :** `.gruplog on/off`\
+        \n\n •  **Command  :** `{cmd}gruplog on/off`\
         \n  •  **Function  : **__Untuk mengaktifkan atau menonaktifkan tag grup, yang akan masuk ke grup pmlogger.__"
     }
 )

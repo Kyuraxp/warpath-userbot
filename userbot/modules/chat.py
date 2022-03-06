@@ -25,12 +25,13 @@ from telethon.tl.types import (
 )
 from telethon.utils import get_input_location, pack_bot_file_id
 
-from userbot import ALIVE_NAME, BOTLOG, BOTLOG_CHATID, CMD_HELP, bot
+from userbot import ALIVE_NAME, BOTLOG, BOTLOG_CHATID, CMD_HELP, bot, CMD_HANDLER as cmd
 from userbot.events import register
+from userbot.utils import kyura_cmd
 from userbot.modules.admin import get_user_from_event
 
 
-@register(outgoing=True, pattern="^.id(?: |$)(.*)")
+@kyura_cmd(pattern="id(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -54,7 +55,7 @@ async def _(event):
         await event.edit("ID Grup: `{}`".format(str(event.chat_id)))
 
 
-@register(outgoing=True, pattern="^.link(?: |$)(.*)")
+@kyura_cmd(pattern="link(?: |$)(.*)")
 async def permalink(mention):
     """For .link command, generates a link to the user's PM with a custom text."""
     user, custom = await get_user_from_event(mention)
@@ -69,7 +70,7 @@ async def permalink(mention):
         await mention.edit(f"[{tag}](tg://user?id={user.id})")
 
 
-@register(outgoing=True, pattern="^.getbot(?: |$)(.*)")
+@kyura_cmd(pattern="getbot(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -122,7 +123,7 @@ async def log(log_text):
     await log_text.delete()
 
 
-@register(outgoing=True, pattern="^.kickme$")
+@kyura_cmd(pattern="kickme$")
 async def kickme(leave):
     """Basically it's .kickme command"""
     await leave.edit(
@@ -131,7 +132,7 @@ async def kickme(leave):
     await leave.client.kick_participant(leave.chat_id, "me")
 
 
-@register(outgoing=True, pattern="^.unmutechat$")
+@kyura_cmd(pattern="unmutechat$")
 async def unmute_chat(unm_e):
     """For .unmutechat command, unmute a muted chat."""
     try:
@@ -145,7 +146,7 @@ async def unmute_chat(unm_e):
     await unm_e.delete()
 
 
-@register(outgoing=True, pattern="^.mutechat$")
+@kyura_cmd(pattern="mutechat$")
 async def mute_chat(mute_e):
     """For .mutechat command, mute any chat."""
     try:
@@ -182,7 +183,7 @@ async def keep_read(message):
 regexNinja = False
 
 
-@register(outgoing=True, pattern="^s/")
+@kyura_cmd(pattern="s/")
 async def sedNinja(event):
     """Untuk Modul Regex-Ninja, Perintah Hapus Otomatis Yang Dimulai Dengans/"""
     if regexNinja:
@@ -190,7 +191,7 @@ async def sedNinja(event):
         await event.delete()
 
 
-@register(outgoing=True, pattern="^.regexninja (on|off)$")
+@kyura_cmd(pattern="regexninja (on|off)$")
 async def sedNinjaToggle(event):
     """Aktifkan Atau Nonaktifkan Modul Regex Ninja."""
     global regexNinja
@@ -206,7 +207,7 @@ async def sedNinjaToggle(event):
         await event.delete()
 
 
-@register(pattern=".chatinfo(?: |$)(.*)", outgoing=True)
+@kyura_cmd(pattern="chatinfo(?: |$)(.*)")
 async def info(event):
     await event.edit("`Menganalisis Obrolan Ini...`")
     chat = await get_chatinfo(event)
@@ -476,7 +477,7 @@ async def fetch_info(chat, event):
     return caption
 
 
-@register(outgoing=True, pattern="^.invite(?: |$)(.*)")
+@kyura_cmd(pattern="invite(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -512,13 +513,13 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "chat": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.getid`\
+        "chat": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}getid`\
 \n↳ : Dapatkan ID dari media Telegram mana pun, atau pengguna mana pun\
-\n\n: `.getbot`\
+\n\n: `{cmd}getbot`\
 \n↳ : Dapatkan Bot dalam obrolan apa pun.\
-\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.logit`\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}logit`\
 \n↳ : Meneruskan pesan yang telah Anda balas di grup log bot Anda.\
-\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.exit`\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}exit`\
 \n↳ : Keluar dari grup.\
 \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.unmutechat`\
 \n↳ : Membuka obrolan yang dibisukan.\

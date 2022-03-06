@@ -1,15 +1,15 @@
 from platform import uname
 from time import sleep
 
-from userbot import ALIVE_NAME, CMD_HELP, WEATHER_DEFCITY
-from userbot.events import register
+from userbot import ALIVE_NAME, CMD_HELP, WEATHER_DEFCITY, CMD_HANDLER as cmd
+from userbot.utils import kyura_cmd
 
 # ================= CONSTANT =================
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 # ============================================
 
 
-@register(outgoing=True, pattern="^.g(?: |$)(.*)")
+@kyura_cmd(pattern="g(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(f"**JAKA SEMBUNG BAWA GOLOK**")
@@ -20,7 +20,7 @@ async def typewriter(typew):
 # Pantun
 
 
-@register(outgoing=True, pattern="^.p(?: |$)(.*)")
+@kyura_cmd(pattern="p(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("`Salam Dulu Biar Sopan...`")
@@ -31,7 +31,7 @@ async def typewriter(typew):
 # Salam
 
 
-@register(outgoing=True, pattern="^.l(?: |$)(.*)")
+@kyura_cmd(pattern="l(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("`Kalo Orang Salam Itu Dijawab...`")
@@ -42,7 +42,7 @@ async def typewriter(typew):
 # Menjawab Salam
 
 
-@register(outgoing=True, pattern="^.kenalin(?: |$)(.*)")
+@kyura_cmd(pattern="kenalin(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("☑️ `putra wibu`")
@@ -73,7 +73,7 @@ async def typewriter(typew):
 # King Userbot Support
 
 
-@register(outgoing=True, pattern="^.istigfar(?: |$)(.*)")
+@kyura_cmd(pattern="istigfar(?: |$)(.*)")
 async def perkenalan(event):
     event.pattern_match.group(1)
     await event.edit(f"`Heh Kamu Gaboleh Begitu...`")
@@ -84,7 +84,7 @@ async def perkenalan(event):
 # Istigfar
 
 
-@register(outgoing=True, pattern=r"^\.virtual(?: |$)(.*)")
+@kyura_cmd(pattern="virtual(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**OOOO**")
@@ -106,7 +106,7 @@ async def typewriter(typew):
     await typew.edit("**KASIAN MANA MASIH MUDA**")
 
 
-@register(outgoing=True, pattern="^.perkenalkan(?: |$)(.*)")
+@kyura_cmd(pattern="perkenalkan(?: |$)(.*)")
 async def perkenalan(event):
     event.pattern_match.group(1)
     await event.edit(f"`Hai Guys , Perkenalkan Nama Gw {DEFAULTUSER}`")
@@ -121,7 +121,7 @@ async def perkenalan(event):
 # Perkenalan
 
 
-@register(outgoing=True, pattern="^.skyzu(?: |$)(.*)")
+@kyura_cmd(pattern="skyzu(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
@@ -151,20 +151,20 @@ async def typewriter(typew):
 
 CMD_HELP.update(
     {
-        "gabut": "**Modules** - `Gabut`\
-        \n\n Cmd : `.l`\
+        "gabut": f"**Modules** - `Gabut`\
+        \n\n Cmd : `{cmd}l`\
         \nUsage : Untuk Menjawab Salam\
-        \n\n Cmd : `.perkenalkan`\
+        \n\n Cmd : `{cmd}perkenalkan`\
         \nUsage : Memperkenalkan Diri\
-        \n\n Cmd : `.virtual`\
+        \n\n Cmd : `{cmd}virtual`\
         \nUsage : ngeledek orang yang virtual\
-        \n\n Cmd : `.g`\
+        \n\n Cmd : `{cmd}g`\
         \nUsage : Member Goblok\
-        \n\n Cmd : `.kenalin`\
+        \n\n Cmd : `{cmd}kenalin`\
         \nUsage : Awokwok\
-        \n\n Cmd : `.skyzu`\
+        \n\n Cmd : `{cmd}skyzu`\
         \nUsage : buat ngeledek skyzu\
-        \n\n Cmd : `.p`\
+        \n\n Cmd : `{cmd}p`\
         \nUsage : Untuk Memberi Salam\
     "
     }

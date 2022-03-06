@@ -5,15 +5,15 @@
 
 import random
 
-from userbot import CMD_HELP
-from userbot.events import register
+from userbot import CMD_HELP, CMD_HANDLER as cmd
+from userbot.utils import kyura_cmd
 from userbot import DEFAULTUSER
 from telethon.tl.types import InputMessagesFilterVideo
 from telethon.tl.types import InputMessagesFilterVoice
 from telethon.tl.types import InputMessagesFilterPhotos
 
 
-@register(outgoing=True, pattern=r"^\.asupan$")
+@kyura_cmd(pattern="asupan$")
 async def _(event):
     try:
         asupannya = [
@@ -32,7 +32,7 @@ async def _(event):
     except Exception:
         await event.edit("Tidak bisa menemukan video asupan.")
 
-@register(outgoing=True, pattern=r"^\.desah$")
+@kyura_cmd(pattern="desah$")
 async def _(event):
     try:
         desahnya = [
@@ -51,7 +51,7 @@ async def _(event):
     except Exception:
         await event.edit("Tidak bisa menemukan desahan.")
         
-@register(outgoing=True, pattern=r"^\.ayang$")
+@kyura_cmd(pattern="ayang$")
 async def _(event):
     try:
         ayangnya = [
@@ -70,7 +70,7 @@ async def _(event):
     except Exception:
         await event.edit("Gaada yang mau sama kau karena kau jelek.")
 
-@register(outgoing=True, pattern=r"^\.bokep$")
+@kyura_cmd(pattern="bokep$")
 async def _(event):
     try:
         hentainya = [
@@ -92,14 +92,14 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "asupan": "**Plugin : **`asupan`\
-        \n\n  •  **Syntax :** `.asupan`\
+        "asupan": f"**Plugin : **`asupan`\
+        \n\n  •  **Syntax :** `{cmd}asupan`\
         \n  •  **Function : **Untuk Mengirim video asupan secara random.\
-        \n\n  •  **Syntax :** `.desah`\
+        \n\n  •  **Syntax :** `{cmd}desah`\
         \n  •  **Function : **Untuk Mengirim suara desah buat lu yang sange.\
-        \n\n  •  **Syntax :** `.ayang`\
+        \n\n  •  **Syntax :** `{cmd}ayang`\
         \n  •  **Function : **Untuk Mencari ayang buat cowok yang jomblo.\
-        \n\n  •  **Syntax :** `.bokep`\
+        \n\n  •  **Syntax :** `{cmd}bokep`\
         \n  •  **Function : **Untuk Mencari Bokep Secara Random😁.\
     "
     }

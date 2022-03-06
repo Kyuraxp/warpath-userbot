@@ -1,14 +1,14 @@
 import logging
 
 from userbot import BOT_USERNAME
-from userbot.events import register
+from userbot.utils import kyura_cmd
 
 logging.basicConfig(
     format="[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s",
     level=logging.WARNING)
 
 
-@register(outgoing=True, pattern=r"^\.helpme")
+@kyura_cmd(pattern="helpme")
 async def yardim(event):
     try:
         tgbotusername = BOT_USERNAME

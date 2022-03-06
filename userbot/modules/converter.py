@@ -1,14 +1,14 @@
 from platform import uname
 
-from userbot import ALIVE_NAME, CMD_HELP
-from userbot.events import register
+from userbot import ALIVE_NAME, CMD_HELP, CMD_HANDLER as cmd
+from userbot.utils import kyura_cmd
 
 # ================= CONSTANT =================
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 # ============================================
 
 
-@register(outgoing=True, pattern="^.convert(?: |$)(.*)")
+@kyura_cmd(pattern="convert(?: |$)(.*)")
 async def convert(event):
     if event.fwd_from:
         return
@@ -116,4 +116,4 @@ async def convert(event):
             await event.edit("dikonversi dalam {ms_two} detik")
 
 
-CMD_HELP.update({"converter": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.convert`" "\n↳ : Converter Video mp3"})
+CMD_HELP.update({"converter": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}convert`" "\n↳ : Converter Video mp3"})
