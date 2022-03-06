@@ -13,7 +13,7 @@ from datetime import datetime
 import redis
 from speedtest import Speedtest
 
-from userbot import ALIVE_NAME, CMD_HELP, DEVS, StartTime, CMD_HANDLER as {cmd}
+from userbot import ALIVE_NAME, CMD_HELP, DEVS, StartTime, CMD_HANDLER as cmd
 from userbot.events import register
 from userbot.utils import kyura_cmd
 
