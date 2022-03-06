@@ -10,7 +10,7 @@ import asyncio
 import random
 import re
 
-from userbot import CMD_HELP, botkyura_cmd(pattern="
+from userbot import CMD_HELP, bot, CMD_HANDLER as cmd
 from userbot.utils import utils
 
 usernexp = re.compile(r"@(\w{3,32})\[(.+?)\]")
