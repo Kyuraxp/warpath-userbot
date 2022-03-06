@@ -11,7 +11,7 @@ import random
 import re
 
 from userbot import CMD_HELP, bot, CMD_HANDLER as cmd
-from userbot.utils import utils
+from userbot.utils import kyura_cmd
 
 usernexp = re.compile(r"@(\w{3,32})\[(.+?)\]")
 nameexp = re.compile(r"\[([\w\S]+)\]\(tg://user\?id=(\d+)\)\[(.+?)\]")
