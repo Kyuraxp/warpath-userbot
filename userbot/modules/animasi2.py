@@ -13,6 +13,7 @@ import requests
 from cowpy import cow
 
 from userbot import CMD_HELP, CMD_HANDLER as cmd
+from userbot.events import register
 from userbot.utils import kyura_cmd
 from userbot.modules.admin import get_user_from_event
 
