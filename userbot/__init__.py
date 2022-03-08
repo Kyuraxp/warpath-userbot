@@ -194,7 +194,7 @@ ANTI_SPAMBOT_SHOUT = sb(os.environ.get("ANTI_SPAMBOT_SHOUT", "False"))
 YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", None)
 
 # Untuk Perintah .kyuraalive
-ROSE_TEKS_KUSTOM = os.environ.get("KYURA_TEKS_KUSTOM", "")
+KYURA_TEKS_KUSTOM = os.environ.get("KYURA_TEKS_KUSTOM", "")
 
 # Untuk Mengubah Pesan Welcome
 START_WELCOME = os.environ.get("START_WELCOME", None)
@@ -216,7 +216,7 @@ ZIP_DOWNLOAD_DIRECTORY = os.environ.get("ZIP_DOWNLOAD_DIRECTORY", "./zips")
 BITLY_TOKEN = os.environ.get("BITLY_TOKEN", None)
 
 # Bot Name
-TERM_ALIAS = os.environ.get("TERM_ALIAS", "Geez-UserBot")
+TERM_ALIAS = os.environ.get("TERM_ALIAS", "kyura-userbot")
 
 # Bot Version
 BOT_VER = os.environ.get("BOT_VER", "5.0")
@@ -499,7 +499,7 @@ with bot:
             except Exception:
                 return await event.edit("⛔ **Kamu Tidak Diizinkan Untuk Menekan Nya**!")
 
-        roselogo = INLINE_PIC
+        kyuralogo = INLINE_PIC
         plugins = CMD_HELP
         vr = BOT_VER
 
@@ -569,7 +569,7 @@ with bot:
                 text = f"Kʏᴜʀᴀ​ Usᴇʀʙᴏᴛ\n\n× **ʙᴏᴛ ᴏꜰ :** {DEFAULTUSER}\n× **ʙᴏᴛ ᴠᴇʀ :** 5.0\n× **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}\n "
                 await event.edit(
                     text,
-                    file=roselogo,
+                    file=kyuralogo,
                     buttons=buttons,
                     link_preview=False,
                 )
@@ -586,7 +586,7 @@ with bot:
             current_page_number = int(lockpage)
             buttons = paginate_help(current_page_number, plugins, "helpme")
             await event.edit(
-                file=roselogo,
+                file=kyuralogo,
                 buttons=buttons,
                 link_preview=False,
             )
@@ -605,7 +605,7 @@ with bot:
                     f"© @kyurasupport2")
                 await event.edit(
                     text,
-                    file=roselogo,
+                    file=kyuralogo,
                     link_preview=True,
                     buttons=[
                         [custom.Button.inline("ᴄʟᴏꜱᴇ", data="closed")],
@@ -625,7 +625,7 @@ with bot:
                 text = f"{DEFAULTUSER}Pilih dari opsi di bawah ini :"
                 await event.edit(
                     text,
-                    file=roselogo,
+                    file=kyuralogo,
                     link_preview=True,
                     buttons=[
                         [custom.Button.inline("ᴀʟɪᴠᴇ", data="alive")],
@@ -650,7 +650,7 @@ with bot:
                 text = f"Menu Lainnya ! Untuk {DEFAULTUSER}"
                 await event.edit(
                     text,
-                    file=roselogo,
+                    file=kyuralogo,
                     link_preview=True,
                     buttons=[
                         [custom.Button.inline("ᴜᴘᴅᴀᴛᴇ", data="pembaruan")],
@@ -682,7 +682,7 @@ with bot:
                 )
                 await event.edit(
                     text,
-                    file=roselogo,
+                    file=kyuralogo,
                     link_preview=True,
                     buttons=[
                         [
@@ -711,7 +711,7 @@ with bot:
                     f"© @kyurasupport2")
                 await event.edit(
                     text,
-                    file=roselogo,
+                    file=kyuralogo,
                     link_preview=True,
                     buttons=[
                         [
@@ -740,7 +740,7 @@ with bot:
                     f"© @kyurasupport2")
                 await event.edit(
                     text,
-                    file=roselogo,
+                    file=kyuralogo,
                     link_preview=True,
                     buttons=[
                         [
@@ -767,7 +767,7 @@ with bot:
                     f"© @kyurasupport2")
                 await event.edit(
                     text,
-                    file=roselogo,
+                    file=kyuralogo,
                     link_preview=True,
                     buttons=[
                         [
@@ -796,7 +796,7 @@ with bot:
                     f"© @kyurasupport2")
                 await event.edit(
                     text,
-                    file=roselogo,
+                    file=kyuralogo,
                     link_preview=True,
                     buttons=[
                         [
@@ -822,7 +822,7 @@ with bot:
                 text = f"**PONG!!**\n `{ms}ms`"
                 await event.edit(
                     text,
-                    file=roselogo,
+                    file=kyuralogo,
                     link_preview=True,
                     buttons=[
                         [custom.Button.inline("ʙᴀᴄᴋ", data="kanan")],
@@ -859,7 +859,7 @@ with bot:
                 )
                 await event.edit(
                     text,
-                    file=roselogo,
+                    file=kyuralogo,
                     link_preview=True,
                     buttons=[
                         [custom.Button.inline("ʙᴀᴄᴋ", data="kanan")],
@@ -879,7 +879,7 @@ with bot:
                 text = f"**Restaring kyura-userbot**..."
                 await event.edit(
                     text,
-                    file=roselogo,
+                    file=kyuralogo,
                     link_preview=True,
                     buttons=[
                         [custom.Button.inline("ʙᴀᴄᴋ", data="kanan")],
@@ -896,7 +896,7 @@ with bot:
                 text = f"Closed Menu!"
                 await event.edit(
                     text,
-                    file=roselogo,
+                    file=kyuralogo,
                     link_preview=True,
                     buttons=[
                         [Button.url("ᴄʜᴀɴɴᴇʟ", "t.me/kyuraproject")],
@@ -911,7 +911,7 @@ with bot:
             if event.query.user_id == uid and query.startswith(""):
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = builder.photo(
-                    file=roselogo,
+                    file=kyuralogo,
                     link_preview=False,
                     text=f"Kʏᴜʀᴀ​-Usᴇʀʙᴏᴛ\n\n× **ʙᴏᴛ ᴏꜰ :** {DEFAULTUSER}\n× **ʙᴏᴛ ᴠᴇʀ :** 5.0\n× **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}\n ".format(
                         len(dugmeler),
@@ -969,7 +969,7 @@ with bot:
             if event.query.user_id == uid:  # userbot
                 # https://t.me/TelethonChat/115200
                 await event.edit(
-                    file=roselogo,
+                    file=kyuralogo,
                     link_preview=True,
                     buttons=[
                         [

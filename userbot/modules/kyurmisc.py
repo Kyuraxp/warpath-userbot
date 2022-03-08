@@ -27,8 +27,8 @@ from telethon.tl.types import (
     UserStatusRecently,
 )
 
-from userbot import ALIVE_NAME, CMD_HELP, DEFAULT_BIO, TEMP_DOWNLOAD_DIRECTORY, bot
-from userbot.events import register
+from userbot import ALIVE_NAME, CMD_HELP, DEFAULT_BIO, TEMP_DOWNLOAD_DIRECTORY, bot, CMD_HANDLER as cmd
+from userbot.utils import kyura_cmd
 
 normiefont = [
     "a",
@@ -98,7 +98,7 @@ if 1 == 1:
     client = bot
 
 
-@register(outgoing=True, pattern="^.app(?: |$)(.*)")
+@kyura_cmd(pattern="app(?: |$)(.*)")
 async def apk(e):
     try:
         app_name = e.pattern_match.group(1)
@@ -168,7 +168,7 @@ async def apk(e):
         await e.edit("Exception Occured:- " + str(err))
 
 
-@register(outgoing=True, pattern="^.undlt(?: |$)(.*)")
+@kyura_cmd(pattern="undlt(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -187,7 +187,7 @@ async def _(event):
         await event.delete()
 
 
-@register(outgoing=True, pattern="^.calc(?: |$)(.*)")
+@kyura_cmd(pattern="calc(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -223,7 +223,7 @@ async def _(event):
         await event.edit("use .calc help")
 
 
-@register(outgoing=True, pattern="^.xcd(?: |$)(.*)")
+@kyura_cmd(pattern="xcd(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -268,7 +268,7 @@ Year: {}""".format(
         await event.edit("xkcd n.{} not found!".format(xkcd_id))
 
 
-@register(outgoing=True, pattern="^.remove(?: |$)(.*)")
+@kyura_cmd(pattern="remove(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -417,7 +417,7 @@ async def ban_user(chat_id, i, rights):
         return False, str(exc)
 
 
-@register(outgoing=True, pattern="^.rnupload(?: |$)(.*)")
+@kyura_cmd(pattern="rnupload(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -469,7 +469,7 @@ async def _(event):
         )
 
 
-@register(outgoing=True, pattern="^.grab(?: |$)(.*)")
+@kyura_cmd(pattern="grab(?: |$)(.*)")
 async def potocmd(event):
     """Gets the profile photos of replied users, channels or chats"""
     id = "".join(event.raw_text.split(maxsplit=2)[1:])
@@ -502,7 +502,7 @@ async def potocmd(event):
             return
 
 
-@register(outgoing=True, pattern="^.res(?: |$)(.*)")
+@kyura_cmd(pattern="res(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -536,7 +536,7 @@ async def _(event):
             await event.client.delete_message(chat, event.chat_id, response.message)
 
 
-@register(outgoing=True, pattern="^.clone(?: |$)(.*)")
+@kyura_cmd(pattern="clone(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -708,7 +708,7 @@ def get_provider(url):
     return url
 
 
-@register(outgoing=True, pattern="^.watch(?: |$)(.*)")
+@kyura_cmd(pattern="watch(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -763,7 +763,7 @@ async def _(event):
 # Modified by :- @kirito6969,@deleteduser420
 
 
-@register(outgoing=True, pattern="^.weeb(?: |$)(.*)")
+@kyura_cmd(pattern="weeb(?: |$)(.*)")
 async def weebify(event):
 
     args = event.pattern_match.group(1)
@@ -811,7 +811,7 @@ boldfont = [
 ]
 
 
-@register(outgoing=True, pattern="^.bold(?: |$)(.*)")
+@kyura_cmd(pattern="bold(?: |$)(.*)")
 async def thicc(bolded):
 
     args = bolded.pattern_match.group(1)
@@ -859,7 +859,7 @@ medievalbold = [
 ]
 
 
-@register(outgoing=True, pattern="^.medbold(?: |$)(.*)")
+@kyura_cmd(pattern="medbold(?: |$)(.*)")
 async def mediv(medievalx):
 
     args = medievalx.pattern_match.group(1)
@@ -907,7 +907,7 @@ doublestruckt = [
 ]
 
 
-@register(outgoing=True, pattern="^.doublestruck(?: |$)(.*)")
+@kyura_cmd(pattern="doublestruck(?: |$)(.*)")
 async def doublex(doublestrucktx):
 
     args = doublestrucktx.pattern_match.group(1)
@@ -957,7 +957,7 @@ cursiveboldx = [
 ]
 
 
-@register(outgoing=True, pattern="^.curbold(?: |$)(.*)")
+@kyura_cmd(pattern="curbold(?: |$)(.*)")
 async def cursive2(cursivebolded):
 
     args = cursivebolded.pattern_match.group(1)
@@ -1007,7 +1007,7 @@ medival2 = [
 ]
 
 
-@register(outgoing=True, pattern="^.medi(?: |$)(.*)")
+@kyura_cmd(pattern="medi(?: |$)(.*)")
 async def medival22(medivallite):
 
     args = medivallite.pattern_match.group(1)
@@ -1055,7 +1055,7 @@ cursive = [
 ]
 
 
-@register(outgoing=True, pattern="^.cur(?: |$)(.*)")
+@kyura_cmd(pattern="cur(?: |$)(.*)")
 async def xcursive(cursivelite):
 
     args = cursivelite.pattern_match.group(1)
@@ -1073,7 +1073,7 @@ async def xcursive(cursivelite):
     await cursivelite.edit(string)
 
 
-@register(outgoing=True, pattern="^.rclone(?: |$)(.*)")
+@kyura_cmd(pattern="rclone(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -1092,34 +1092,34 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "misc": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.app`\
+        "misc": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}app`\
 \n↳ : ketik `.app namaapp` Dan Dapatkan Detail Informasi App.\
-\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.undlt`\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}undlt`\
 \n↳ : urungkan pesan yang dihapus tetapi Anda harus menjadi admin.\
-\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.calc`\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.{cmd}calc`\
 \n↳ : `.calc <term1><operator><term2>\nUntuk eg .calc 02*02 Atau 99*99 (Angka Nol Penting) (Minimal Dua Suku Dan Dua Digit).\
-\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.remove`\
-\n↳ : gunakan di grup .remove d atau y atau m atau w atau o atau q atau r.\n(d=AkunTerhapus y=userstatsempty m=userstatsmonth w=userstatsweek o=userstatsoffline q=userstatsonline r=userstatsrecently).\
-\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.xcd`\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}remove`\
+\n↳ : gunakan di grup {cmd}remove d atau y atau m atau w atau o atau q atau r.\n(d=AkunTerhapus y=userstatsempty m=userstatsmonth w=userstatsweek o=userstatsoffline q=userstatsonline r=userstatsrecently).\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}xcd`\
 \n↳ : Ketik xcd <query>.ps:Aku Sangat Bosan:v\
-\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.grab` <count>\
-\n↳ : Balas Ke Pesan Pengguna Ketik `.grab` Atau `.grab <count>` Untuk Mengambil Foto Profil.\
-\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.rnupload` filename.extenstion\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}grab` <count>\
+\n↳ : Balas Ke Pesan Pengguna Ketik `{cmd}grab` Atau `{cmd}grab <count>` Untuk Mengambil Foto Profil.\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.{cmd}rnupload` filename.extenstion\
 \n↳ : Balas Ke Sticker Dan Ketik .rnupload xyz.jpg\
-\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.res`\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}res`\
 \n↳ : Ketik Username Akun,Channel,Group Atau Bot Bersama .res Dan Check Batasan\
-\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.watch` <movie/tv>\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}watch` <movie/tv>\
 \n↳ : Mengetahui Detail Tentang Film.\
-\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.weeb` <text>\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}weeb` <text>\
 \n↳ : Teks Weebify.\
-\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: Ketik (`.bold <Teks>`,`.cur <Teks>`,`.curbold <Teks>`,`.medi <Teks>`,`.medbold <Teks>`,`.doublestruck <Teks>`)\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: Ketik (`{cmd}bold <Teks>`,`.{cmd}ks>`,`.{cmd}doublestruck <Teks>`)\
 \n↳ : Buat Teks <Bold,Cursive,Cursivebold,Medival,Medivalbold,Gayishbold>\
-\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.randompp`\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}randompp`\
 \n↳ : Otomatis Mengganti Foto Profile Mu Untuk Stop ini Ketik .restart.\
-\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.glitch` Balas Ke Media\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}glitch` Balas Ke Media\
 \n↳ : Memberikan Glitch (Gif , Stickers , Gambar, Video) Ke Gif Dan Level Glitch 1 - 8.\
 Jika Tidak Memberikan Level Otomatis Default Ke Level 2\
-\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.glitchs` Balas Ke Media\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}glitchs` Balas Ke Media\
 \n↳ : Memberikan Glitch (Gif , Stickers , Gambar, Video) Ke Sticker Dan Level Glitch 1 to 8.\
 Jika Tidak Memberikan Level Otomatis Default Ke Level 2."
     }
@@ -1128,9 +1128,9 @@ Jika Tidak Memberikan Level Otomatis Default Ke Level 2."
 
 CMD_HELP.update(
     {
-        "clone": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.clone` <username>.\
+        "clone": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}clone` <username>.\
         \n↳ : Mulai Mengaktifkan Clonning Ke Seseorang\
-        \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `'.rclone' Untuk Mengembalikan\
+        \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `'{cmd}rclone' Untuk Mengembalikan\
         \n↳ : Mengembalikan Kloning, Dan Kembali Keakun Utama.\
     "
     }

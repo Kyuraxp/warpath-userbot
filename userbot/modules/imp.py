@@ -11,11 +11,11 @@ from textwrap import wrap
 from PIL import Image, ImageDraw, ImageFont
 from requests import get
 
-from userbot import CMD_HELP
-from userbot.events import register
+from userbot import CMD_HELP, CMD_HANDLER as cmd
+from userbot.utils import kyura_cmd
 
 
-@register(outgoing=True, pattern="^.imp (.*)")
+@kyura_cmd(pattern="imp (.*)")
 async def f_load(message):
     clrs = {
         "red": 1,
@@ -92,7 +92,7 @@ async def bruh(message, user):
 
 CMD_HELP.update(
     {
-        "amongus": "`.imp`\
+        "amongus": f"`{cmd}imp`\
     \nUsage: Kirimkan gambar seorang impostor Among US dengan kalimat dari Anda."
     }
 )

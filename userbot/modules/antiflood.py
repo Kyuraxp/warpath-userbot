@@ -5,6 +5,7 @@ from telethon.tl.types import ChatBannedRights
 
 import userbot.modules.sql_helper.antiflood_sql as sql
 from userbot.events import register
+from userbot.utils import kyura_cmd
 from userbot.utils.tools import is_admin
 
 CHAT_FLOOD = sql.__load_flood_settings()
@@ -58,7 +59,7 @@ because he reached the defined flood limit.""".format(
         )
 
 
-@register(outgoing=True, pattern="^.setflood(?: |$)(.*)")
+@kyura_cmd(pattern="setflood(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return

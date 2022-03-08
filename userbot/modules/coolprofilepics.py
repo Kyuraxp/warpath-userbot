@@ -9,8 +9,8 @@ import urllib
 import requests
 from telethon.tl import functions
 
-from userbot import CMD_HELP
-from userbot.events import register
+from userbot import CMD_HELP, CMD_HANDLER as cmd
+from userbot.utils import kyura_cmd
 
 COLLECTION_STRING = [
     "epic-fantasy-wallpaper",
@@ -66,7 +66,7 @@ async def animepp():
     urllib.request.urlretrieve(fy, "donottouch.jpg")
 
 
-@register(outgoing=True, pattern="^.pprandom(?: |$)(.*)")
+@kyura_cmd(pattern="pprandom(?: |$)(.*)")
 async def main(event):
     await event.edit("`Sedang Mengubah Photo Profile Anda...`")
 
@@ -82,7 +82,7 @@ async def main(event):
 
 CMD_HELP.update(
     {
-        "randompp": "\n\n⚡𝘾𝙈𝘿⚡: `.pprandom`"
+        "randompp": f"\n\n⚡𝘾𝙈𝘿⚡: `{cmd}pprandom`"
         "\n↳ : Mengubah Photo Profile Anda Secara Random."
     }
 )

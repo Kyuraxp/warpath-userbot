@@ -102,7 +102,7 @@ async def _(event):
     await event.edit(mentions)
 
 
-@register(outgoing=True, pattern=r"^.logit(?: |$)([\s\S]*)")
+@kyura_cmd(pattern="logit(?: |$)([\s\S]*)")
 async def log(log_text):
     """For .log command, forwards a message or the command argument to the bot logs group"""
     if BOTLOG:

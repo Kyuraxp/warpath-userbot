@@ -4,13 +4,13 @@ import textwrap
 
 from PIL import Image, ImageDraw, ImageFont
 
-from userbot import CMD_HELP, TEMP_DOWNLOAD_DIRECTORY, bot
-from userbot.events import register
+from userbot import CMD_HELP, TEMP_DOWNLOAD_DIRECTORY, bot, CMD_HANDLER as cmd
+from userbot.utils import kyura_cmd
 
 THUMB_IMAGE_PATH = "./thumb_image.jpg"
 
 
-@register(outgoing=True, pattern=r"^\.mmf(?: |$)(.*)")
+@kyura_cmd(pattern="mmf(?: |$)(.*)")
 async def mim(event):
     if event.fwd_from:
         return
@@ -158,7 +158,7 @@ async def draw_meme_text(image_path, text):
     return webp_file
 
 
-@register(outgoing=True, pattern=r"^\.mmf2(?: |$)(.*)")
+@kyura_cmd(pattern="mmf2(?: |$)(.*)")
 async def mim(event):
     if event.fwd_from:
         return
@@ -308,9 +308,9 @@ async def draw_meme_text(image_path, text):
 
 CMD_HELP.update(
     {
-        "memify": "`.mmf Teks Atas ; Teks Bawah`\
+        "memify": f"`.{cmd}mf Teks Atas ; Teks Bawah`\
         \nUsage: Balas Ke Sticker/Gambar/Gif.\n"
-        "`.mmf2 Teks Atas ; Teks Bawah`\
+        f"`{cmd}mmf2 Teks Atas ; Teks Bawah`\
         \nUsage: Balas Ke Sticker/Gambar/Gif."
     }
 )
