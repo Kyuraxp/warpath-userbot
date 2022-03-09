@@ -47,7 +47,7 @@ async def typewriter(typew):
         "`\n┻┳|￣  )`"
         "`\n┳ﾐ(￣ ／`"
         "`\n┻┳T￣|`"
-        "\n**Masih Ku Pantau**"
+        "\n**Lagi Pantau Org Sombong Berbicara**"
     )
 
 
