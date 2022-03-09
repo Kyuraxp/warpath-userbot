@@ -303,7 +303,7 @@ async def amireallyalive(alive):
 async def redis(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
-    await alive.edit("✫")
+    await alive.edit("⚡️")
     await asyncio.sleep(2)
     output = (
         f"╭✠╼━━━━━━━━━━━━━━━━✠╮\n"
@@ -316,7 +316,7 @@ async def redis(alive):
         f"┃✩ **Modules :** {len(modules)} Modules \n"
         f"┃✩ **Repo :** [✫AM͢͢͢ITOD-U฿OT](https://github.com/amibotdisini/AMITOD-UBOT) \n"
         f"┃✩ **Si Cupu :** [✫AM͢͢͢ITOD](https://t.me/AmiUseriBot) \n"
-        f"┃✩ **support :** [groups](https://t.me/AmiBotSiMurni) \n"
+        f"┃✩ **Support :** [Groups](https://t.me/AmiBotSiMurni) \n"
         f"╰✠╼━━━━━━━━━━━━━━━━✠╯"
     )
     if ALIVE_LOGO:
