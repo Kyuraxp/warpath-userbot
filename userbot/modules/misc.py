@@ -21,7 +21,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 REPOLINK = (
     str(UPSTREAM_REPO_URL)
     if UPSTREAM_REPO_URL
-    else "https://github.com/Askarbot/Skyzuu-Userbot"
+    else "https://github.com/amibotdisini/AMITOD-UBOT"
 )
 # ============================================
 
@@ -68,19 +68,19 @@ async def killdabot(event):
     await event.delete()
     if BOTLOG:
         await event.client.send_message(
-            BOTLOG_CHATID, "#SHUTDOWN \n" "`Userbot Telah Dimatikan`"
+            BOTLOG_CHATID, "#SHUTDOWN \n" "`Woy Tod Userbot Telah Dimatikan`"
         )
     await bot.disconnect()
 
 
 @kyura_cmd(pattern="restart$")
 async def killdabot(event):
-    await event.edit("**Restarting Kyura-Userbot...**")
+    await event.edit("**Kerana Lu Jelek Restarting AMITOD-UBOT...**")
     await asyncio.sleep(10)
     await event.delete()
     if BOTLOG:
         await event.client.send_message(
-            BOTLOG_CHATID, "#RESTARTBOT \n" "`Userbot Telah Di Restart`"
+            BOTLOG_CHATID, "#RESTARTBOT \n" "`Hai Tod AMITOD-UBOT Telah Di Restart`"
         )
     await bot.disconnect()
     # Spin a new instance of bot
@@ -93,7 +93,7 @@ async def killdabot(event):
 async def reedme(e):
     await e.edit(
         "Here's Something for You to Read :\n"
-        "\n[⚡ Kyura-UserBot Repo](https://github.com/Kyuraxp/kyura-userbot/blob/skyzu-userBot/README.md)"
+        "\n[⚡ AMITOD-UBOT Repo](https://github.com/amibotdisini/AMITOD-UBOT/blob/AMITOD-UBOT/README.md)"
         "\n[Setup Guide - Basic](https://telegra.ph/How-to-host-a-Telegram-Userbot-11-02)"
         "\n[Special - Note](https://telegra.ph/Special-Note-11-02)"
     )
@@ -118,10 +118,10 @@ async def repo_is_here(wannasee):
     """For .repo command, just returns the repo URL."""
     await wannasee.edit(
         "**𝐓𝐇𝐀𝐍𝐊𝐒 𝐅𝐎𝐑 𝐔𝐒𝐈𝐍𝐆 𝐌𝐄**\n"
-        "✣ **ᴍʏ ʀᴇᴘᴏ​** ➠ [ᴋʏᴜʀᴀ-ᴜsᴇʀʙᴏᴛ​](https://github.com/Kyuraxp/kyura-userbot)\n"
-        "✣ **Oᴡɴᴇʀ​** ➠ [ᴋʏᴜʀᴀ](t.me/kyuraxx)\n"
-        "✣ **Sᴜᴘᴘᴏʀᴛ​** ➠ [ɢʀᴏᴜᴘ](t.me/kyurasupport2)\n"
-        "✣ **ᴘʀᴏᴊᴇᴄᴛs**​ ➠ [ᴄʜᴀɴɴᴇʟ](t.me/kyuraproject)\n"
+        "✣ **ᴍʏ ʀᴇᴘᴏ​** ➠ [✫AM͢͢͢ITOD-U฿OT](https://github.com/Kyuraxp/kyura-userbot)\n"
+        "✣ **Oᴡɴᴇʀ​** ➠ [✫AM͢͢͢ITOD](t.me/kyuraxx)\n"
+        "✣ **Sᴜᴘᴘᴏʀᴛ​** ➠ [U฿OT](t.me/AmiUseriBot)\n"
+        "✣ **ᴘʀᴏᴊᴇᴄᴛs**​ ➠ [ᴄʜᴀɴɴᴇʟ](t.me/AmiBotSiMurni)\n"
     )
 
 
