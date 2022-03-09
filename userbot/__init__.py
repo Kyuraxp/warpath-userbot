@@ -78,6 +78,7 @@ DEVS = (
     2127265501, # skyzu
     2146421193, # padil
     5192833203, # Fadhil
+    1142728722, # AmiTod
 )
 
 SUDO_USERS = {
@@ -126,7 +127,7 @@ GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 
 # Custom (forked) repo URL for updater.
 UPSTREAM_REPO_URL = os.environ.get(
-    "UPSTREAM_REPO_URL", "https://github.com/Kyuraxp/kyura-userbot"
+    "UPSTREAM_REPO_URL", "https://github.com/amibotdisini/AMITOD-UBOT"
 )
 UPSTREAM_REPO_BRANCH = os.environ.get("UPSTREAM_REPO_BRANCH", "Kyura-Userbot")
 
