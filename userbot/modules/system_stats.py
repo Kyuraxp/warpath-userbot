@@ -169,14 +169,14 @@ async def bot_ver(event):
         revout = str(stdout.decode().strip()) + str(stderr.decode().strip())
 
         await event.edit(
-            "**⚜-**⚡Kyura-Userbot⚡ Versi:** \n "
-            f"heads/Kyura-Userbot-0-x634i7u1"
+            "**⚜-**✫AMITOD-UBOT✫ Versi:** \n "
+            f"heads/AMITOD-UBOT-0-x634i7u1"
             "\n**⚜-**Revisi:**\n "
             f"{revout}"
         )
     else:
         await event.edit(
-            "Sayang sekali anda tidak memiliki git, Anda Menjalankan Bot - 'v1.beta.4'!"
+            "Woy Tod Dih Kasian Sayang sekali anda tidak memiliki git, Anda Menjalankan Bot - 'v1.beta.4'!"
         )
 
 
@@ -233,7 +233,7 @@ async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
-        f"Ҝㄚㄩ尺卂 卂ㄥ丨ᐯ乇\n\n"
+        f"✫AM͢͢͢ITOD 卂ㄥ丨ᐯ乇\n\n"
         f"\n__**{KYURA_TEKS_KUSTOM}**__\n\n\n"
         f"╭✠╼━━━━━━━━━━━━━━━✠╮\n"
         f"➠ **Name** : `{DEFAULTUSER}` \n"
@@ -243,7 +243,7 @@ async def amireallyalive(alive):
         f"➠ **Bot Ver**  : `{BOT_VER}` \n"
         f"➠ **Modules**  : `{len(modules)}` \n"
         f"╰✠╼━━━━━━━━━━━━━━━✠╯\n"
-        f"[ɢʀᴏᴜᴘꜱ](https://t.me/kyurasupport2) | [ʙᴏᴛᴏꜰ](https://t.me/{user.username}) | [ɢɪᴛʜᴜʙ](https://github.com/Kyuraxp/kyura-userbot)"
+        f"[ɢʀᴏᴜᴘꜱ](https://t.me/AmiBotSiMurni) | [ʙᴏᴛᴏꜰ](https://t.me/{user.username}) | [ɢɪᴛʜᴜʙ](https://github.com/amibotdisini/AMITOD-UBOT)"
     )
     if ALIVE_LOGO:
         try:
@@ -271,7 +271,7 @@ async def amireallyalive(alive):
     await get_readable_time((time.time() - StartTime))
     output = (
         f"●▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬● \n"
-        f"✾ 🤴 • `ᴏᴡɴᴇʀ :`[KYURA](t.me/kyuraxx)             ㅤ \n"
+        f"✾ 🤴 • `ᴏᴡɴᴇʀ :`[✫AM͢͢͢ITOD](t.me/AmiUseriBot)             ㅤ \n"
         f"✾ 🖥️ • `ꜱʏꜱᴛᴇᴍ. :`Ubuntu 20.10            \n"
         f"✾ ⚙️ • `ᴛᴇʟᴇᴛʜᴏɴ :`v.{version.__version__}                ㅤㅤ  \n"
         f"✾ 🐍 • `ᴘʏᴛʜᴏɴ. :`v.{python_version()} ㅤㅤ\n"
@@ -303,7 +303,7 @@ async def amireallyalive(alive):
 async def redis(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
-    await alive.edit("⚡")
+    await alive.edit("✫")
     await asyncio.sleep(2)
     output = (
         f"╭✠╼━━━━━━━━━━━━━━━━✠╮\n"
@@ -314,9 +314,9 @@ async def redis(alive):
         f"┃✩ **Branch :** {UPSTREAM_REPO_BRANCH} \n"
         f"┃✩ **Bot Ver :** {BOT_VER} \n"
         f"┃✩ **Modules :** {len(modules)} Modules \n"
-        f"┃✩ **Repo :** [UserBot](https://github.com/Kyuraxp/kyura-userbot) \n"
-        f"┃✩ **Owner Repo :** [Kyura](https://t.me/kyuraxx) \n"
-        f"┃✩ **support :** [groups](https://t.me/kyurasupport2) \n"
+        f"┃✩ **Repo :** [✫AM͢͢͢ITOD-U฿OT](https://github.com/amibotdisini/AMITOD-UBOT) \n"
+        f"┃✩ **Si Cupu :** [✫AM͢͢͢ITOD](https://t.me/AmiUseriBot) \n"
+        f"┃✩ **support :** [groups](https://t.me/AmiBotSiMurni) \n"
         f"╰✠╼━━━━━━━━━━━━━━━━✠╯"
     )
     if ALIVE_LOGO:
@@ -328,8 +328,8 @@ async def redis(alive):
             await msg.delete()
         except BaseException:
             await alive.edit(
-                output + "\n\n *`Logo Yang Disediakan Tidak Valid."
-                "\nPastikan Tautan Yang Anda Gunakan Valid`"
+                output + "\n\n *`Hai Tod Logo Yang Disediakan Tidak Valid."
+                "\nWoy Tod Pastikan Tautan Yang Anda Gunakan Valid`"
             )
             await asyncio.sleep(100)
             await alive.delete()
