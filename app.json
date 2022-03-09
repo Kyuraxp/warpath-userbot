@@ -1,7 +1,7 @@
 {
-  "name": "Kyura-Userbot",
-  "description": "[Kyura-Userbot] USERBOT KHUSUS YANG DIGUNAKAN UNTUK BERSENANG-SENANG DI TELEGRAM.",
-  "logo": "https://telegra.ph/file/d841005eca08d0ed2ef36.jpg",
+  "name": "AMITOD-UBOT",
+  "description": "[AMITOD-UBOT] USERBOT KHUSUS YANG DIGUNAKAN UNTUK BERSENANG-SENANG DI TELEGRAM.",
+  "logo": "https://telegra.ph/file/913eb8253a4bd78cd65b6.jpg",
   "keywords": [
     "telegram",
     "userbot",
@@ -9,48 +9,48 @@
     "modular",
     "productivity"
 ],
-  "repository": "https://github.com/Kyuraxp/kyura-userbot",
-  "telegram": "https://t.me/kyuraxx",
-  "success_url": "https://t.me/kyurasupport2",
+  "repository": "https://github.com/amibotdisini/AMITOD-UBOT",
+  "telegram": "https://t.me/AmiUseriBot",
+  "success_url": "https://t.me/AmiBotSiMurni",
   "stack": "container",
   "env": {
     "API_KEY": {
-      "description": "Dapatkan Api Key di web my.telegram.org/ Dibot @scrapsenbot.",
+      "description": "Hai Tod Dapatkan Api Key di web my.telegram.org/ Dibot @scrapsenbot.",
       "required": true
     },
     "API_HASH": {
-      "description": "Dapatkan Api Hash Di Web my.telegram.org/ Dibot @scrapsendbot.",
+      "description": "Hai Tod Dapatkan Api Hash Di Web my.telegram.org/ Dibot @scrapsendbot.",
       "required": true
     },
      "STRING_SESSION": {
-      "description": "Dapatkan String Session di @kyurasupport2 lalu ketik #string di telegram",
+      "description": "Hai Tod Dapatkan String Session di @kyurasupport2 lalu ketik #string di telegram",
       "required": true
     },
     "HEROKU_APP_NAME": {
-      "description": "Nama App heroku, Nama App yang paling pertama di isi (liat paling atas)",
+      "description": "Okay Tod Nama App heroku, Nama App yang paling pertama di isi (liat paling atas)",
       "required": true
     },
     "HEROKU_API_KEY": {
-      "description": "Heroku API KEY mu, dapatkan dari web 'https://dashboard.heroku.com/account'",
+      "description": "Woy Tod Heroku API KEY mu, dapatkan dari web 'https://dashboard.heroku.com/account'",
       "value": "Check Di Heroku Dashboard Mu",
       "required": true
     },
     "BOTLOG_CHATID": {
-      "description": "Buatlah Sebuah Grup Publik Lalu Masukkan Bot @MissRose_Bot Ke Grup Mu, Setelah itu Ketik /id. Nanti akan muncul ID seperti ini Contoh : -1001234567890",
+      "description": "Woy Tod Buatlah Sebuah Grup Publik Lalu Masukkan Bot @MissRose_Bot Ke Grup Mu, Setelah itu Ketik /id. Nanti akan muncul ID seperti ini Contoh : -1001234567890",
       "value": "-100",
       "required": true
     },
     "G_BAN_LOGGER_GROUP": {
-      "description": "Buatlah Sebuah Grup Publik Lalu Masukkan Bot @MissRose_Bot Ke Grup Mu, Setelah itu Ketik /id. Nanti akan muncul ID seperti ini Contoh : -1001234567890",
+      "description": "Woy Tod Buatlah Sebuah Grup Publik Lalu Masukkan Bot @MissRose_Bot Ke Grup Mu, Setelah itu Ketik /id. Nanti akan muncul ID seperti ini Contoh : -1001234567890",
       "value": "-100",
       "required": true
     },
     "ALIVE_NAME": {
-      "description": "Nama untuk menunjukan pesan .alive",
+      "description": "Woy Tod Nama untuk menunjukan pesan .alive",
       "required": true
     },
     "S_PACK_NAME": {
-      "description": "Nama Sticker Pack Mu",
+      "description": "Woy Tod Nama Sticker Pack Mu",
       "required": false
     }
   },
