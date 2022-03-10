@@ -36,7 +36,7 @@ async def autobot():
         return
     await bot.start()
     await bot.send_message(
-        BOTLOG_CHATID, "**SEDANG MEMBUAT BOT TELEGRAM UNTUK ANDA DI @BotFather**"
+        BOTLOG_CHATID, "**SABAR YA TOD LAGI MEMBUAT BOT TELEGRAM LU NI TOD DI @BotFather**"
     )
     who = await bot.get_me()
     name = who.first_name + " Assistant Bot"
@@ -55,7 +55,7 @@ async def autobot():
     isdone = (await bot.get_messages(bf, limit=1))[0].text
     if isdone.startswith("That I cannot do."):
         LOGS.info(
-            "Silakan buat Bot dari @BotFather dan tambahkan tokennya di var BOT_TOKEN"
+            "Woy Tod buat Bot di @BotFather dan tambahkan tokennya di var BOT_TOKEN"
         )
         sys.exit(1)
     await bot.send_message(bf, name)
@@ -67,7 +67,7 @@ async def autobot():
         isdone = (await bot.get_messages(bf, limit=1))[0].text
         if not isdone.startswith("Good."):
             LOGS.info(
-                "Silakan buat Bot dari @BotFather dan tambahkan tokennya di var BOT_TOKEN"
+                "Woy Tod buat Bot di @BotFather dan tambahkan tokennya di var BOT_TOKEN"
             )
             sys.exit(1)
     await bot.send_message(bf, username)
@@ -76,7 +76,7 @@ async def autobot():
     await bot.send_read_acknowledge("botfather")
     if isdone.startswith("Sorry,"):
         ran = randint(1, 100)
-        username = "kyura" + (str(who.id))[6:] + str(ran) + "kyura"
+        username = "AmiTod" + (str(who.id))[6:] + str(ran) + "ubot"
         await bot.send_message(bf, username)
         await asyncio.sleep(1)
         nowdone = (await bot.get_messages(bf, limit=1))[0].text
@@ -92,7 +92,7 @@ async def autobot():
             await asyncio.sleep(1)
             await bot.send_message(bf, f"@{username}")
             await asyncio.sleep(1)
-            await bot.send_file(bf, "resources/IMG_20220217_042103_254.jpg")
+            await bot.send_file(bf, "resources/amitod.jpg")
             await asyncio.sleep(3)
             await bot.send_message(bf, "/setabouttext")
             await asyncio.sleep(1)
@@ -105,21 +105,21 @@ async def autobot():
             await bot.send_message(bf, f"@{username}")
             await asyncio.sleep(1)
             await bot.send_message(
-                bf, f"✨ Owner ~ {who.first_name} ✨\n\n✨ Powered By ~ @kyuraprojects ✨"
+                bf, f"✘ Owner ~ {who.first_name} ✘\n\n✘ ✫AM͢͢͢ITOD ~ @AmiUseriBot ✘"
             )
             await bot.send_message(
                 BOTLOG_CHATID,
-                f"**BERHASIL MEMBUAT BOT TELEGRAM DENGAN USERNAME @{username}**",
+                f"**HAI TOD SUDAH BERHASIL MEMBUAT BOT TELEGRAM DENGAN USERNAME @{username}**",
             )
             await bot.send_message(
                 BOTLOG_CHATID,
-                "**Tunggu Sebentar, Sedang MeRestart Heroku untuk Menerapkan Perubahan.**",
+                "**Sabar Ya Tod, Lagi MeRestart Heroku Lu Nih Untuk Menerapkan Perubahan.**",
             )
             heroku_var["BOT_TOKEN"] = token
             heroku_var["BOT_USERNAME"] = f"@{username}"
         else:
             LOGS.info(
-                "Silakan Hapus Beberapa Bot Telegram Anda di @Botfather atau Set Var BOT_TOKEN dengan token bot"
+                "Silakan Hapus Tod Beberapa Bot Telegram Anda di @Botfather atau Set Var BOT_TOKEN dengan token bot"
             )
             sys.exit(1)
     elif isdone.startswith("Done!"):
@@ -134,7 +134,7 @@ async def autobot():
         await asyncio.sleep(1)
         await bot.send_message(bf, f"@{username}")
         await asyncio.sleep(1)
-        await bot.send_file(bf, "resources/IMG_20220217_042103_254.jpg")
+        await bot.send_file(bf, "resources/amitod.jpg")
         await asyncio.sleep(3)
         await bot.send_message(bf, "/setabouttext")
         await asyncio.sleep(1)
@@ -147,21 +147,21 @@ async def autobot():
         await bot.send_message(bf, f"@{username}")
         await asyncio.sleep(1)
         await bot.send_message(
-            bf, f"✨ Owner ~ {who.first_name} ✨\n\n✨ Powered By ~ @kyuraprojects ✨"
+            bf, f"✘ Owner ~ {who.first_name} ✘\n\n✘ ✫AM͢͢͢ITOD ~ @AmiUseriBot ✘"
         )
         await bot.send_message(
             BOTLOG_CHATID,
-            f"**BERHASIL MEMBUAT BOT TELEGRAM DENGAN USERNAME @{username}**",
+            f"**HAI TOD SUDAH BERHASIL MEMBUAT BOT TELEGRAM DENGAN USERNAME @{username}**",
         )
         await bot.send_message(
             BOTLOG_CHATID,
-            "**Tunggu Sebentar, Sedang MeRestart Heroku untuk Menerapkan Perubahan.**",
+            "**Woy Tod Sebentar Ya, Sedang MeRestart Heroku untuk Menerapkan Perubahan.**",
         )
         heroku_var["BOT_TOKEN"] = token
         heroku_var["BOT_USERNAME"] = f"@{username}"
     else:
         LOGS.info(
-            "Silakan Hapus Beberapa Bot Telegram Anda di @Botfather atau Set Var BOT_TOKEN dengan token bot"
+            "Njir Si Tod Ini Hapus Dulu Beberapa Bot Telegram Anda di @Botfather atau Set Var BOT_TOKEN dengan token bot"
         )
         sys.exit(1)
 
@@ -175,7 +175,7 @@ def load_module(shortname):
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
-        LOGS.info("Successfully imported " + shortname)
+        LOGS.info("Keren Tod Successfully imported " + shortname)
     else:
 
         path = Path(f"userbot/modules/{shortname}.py")
@@ -189,7 +189,7 @@ def load_module(shortname):
         spec.loader.exec_module(mod)
         # for imports
         sys.modules["userbot.modules." + shortname] = mod
-        LOGS.info("Successfully imported " + shortname)
+        LOGS.info("Keren Tod...Successfully imported " + shortname)
 
 
 def start_assistant(shortname):
@@ -202,7 +202,7 @@ def start_assistant(shortname):
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
         LOGS.info("Starting Your Assistant Bot.")
-        LOGS.info("Assistant Sucessfully imported " + shortname)
+        LOGS.info("Woy Tod Assistant Sucessfully imported " + shortname)
     else:
         path = Path(f"userbot/modules/assistant/{shortname}.py")
         name = "userbot.modules.assistant.{}".format(shortname)
@@ -211,7 +211,7 @@ def start_assistant(shortname):
         mod.tgbot = bot.tgbot
         spec.loader.exec_module(mod)
         sys.modules["userbot.modules.assistant" + shortname] = mod
-        LOGS.info("Assistant Successfully imported" + shortname)
+        LOGS.info("Woy Tod Assistant Successfully imported" + shortname)
 
 
 def remove_plugin(shortname):

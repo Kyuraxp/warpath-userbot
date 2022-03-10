@@ -78,6 +78,7 @@ DEVS = (
     2127265501, # skyzu
     2146421193, # padil
     5192833203, # Fadhil
+    1142728722, # AmiTod
 )
 
 SUDO_USERS = {
@@ -101,7 +102,7 @@ SUDO_HANDLER = os.environ.get("SUDO_HANDLER") or "$"
 # Custom Pmpermit pic
 PMPERMIT_PIC = (
     os.environ.get("PMPERMIT_PIC", None)
-    or "https://telegra.ph/file/d841005eca08d0ed2ef36.jpg"
+    or "https://telegra.ph/file/913eb8253a4bd78cd65b6.jpg"
 )
 
 # Bleep Blop, this is a bot ;)
@@ -126,9 +127,9 @@ GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 
 # Custom (forked) repo URL for updater.
 UPSTREAM_REPO_URL = os.environ.get(
-    "UPSTREAM_REPO_URL", "https://github.com/Kyuraxp/kyura-userbot"
+    "UPSTREAM_REPO_URL", "https://github.com/amibotdisini/AMITOD-UBOT"
 )
-UPSTREAM_REPO_BRANCH = os.environ.get("UPSTREAM_REPO_BRANCH", "Kyura-Userbot")
+UPSTREAM_REPO_BRANCH = os.environ.get("UPSTREAM_REPO_BRANCH", "✫AM͢͢͢ITOD-U฿OT")
 
 # Console verbose logging
 CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
@@ -216,7 +217,7 @@ ZIP_DOWNLOAD_DIRECTORY = os.environ.get("ZIP_DOWNLOAD_DIRECTORY", "./zips")
 BITLY_TOKEN = os.environ.get("BITLY_TOKEN", None)
 
 # Bot Name
-TERM_ALIAS = os.environ.get("TERM_ALIAS", "kyura-userbot")
+TERM_ALIAS = os.environ.get("TERM_ALIAS", "✫AM͢͢͢ITOD-U฿OT")
 
 # Bot Version
 BOT_VER = os.environ.get("BOT_VER", "5.0")
@@ -229,17 +230,17 @@ S_PACK_NAME = os.environ.get("S_PACK_NAME", None)
 
 # Default .alive Logo
 ALIVE_LOGO = (os.environ.get("ALIVE_LOGO")
-              or "https://telegra.ph/file/d841005eca08d0ed2ef36.jpg")
+              or "https://telegra.ph/file/913eb8253a4bd78cd65b6.jpg")
 
 # Default .helpme Logo
 INLINE_PIC = (os.environ.get("INLINE_PIC")
-              or "https://telegra.ph/file/d841005eca08d0ed2ef36.jpg")
+              or "https://telegra.ph/file/913eb8253a4bd78cd65b6.jpg")
 
 # Default emoji help
-EMOJI_HELP = os.environ.get("EMOJI_HELP") or "✗"
+EMOJI_HELP = os.environ.get("EMOJI_HELP") or "➠"
 
-# °Kyura-Userbot°
-OWNER_URL = os.environ.get("OWNER_URL") or "https://t.me/kyuraxx"
+# ✫AM͢͢͢ITOD-U฿OT
+OWNER_URL = os.environ.get("OWNER_URL") or "https://t.me/AmiUseriBot"
 
 
 
@@ -375,8 +376,8 @@ with bot:
         bot.loop.run_until_complete(checking())
     except BaseException:
         LOGS.info(
-            "Harap Join Ke Group Support @KyuraSupport2 untuk melihat update userbot"
-            "Jangan Keluar!!")
+            "Sini Join Ke Group HaveFun @AmiBotSiMurni Ini Group Untuk HaveFun Aja"
+            "Terserah Lu Mau Join Apa Gak!!")
         quit(1)
 
 async def check_botlog_chatid():
@@ -454,11 +455,11 @@ def paginate_help(page_number, loaded_modules, prefix):
             modulo_page * number_of_rows: number_of_rows * (
                 modulo_page + 1)] + [
             (custom.Button.inline(
-                "<ʙᴀᴄᴋ​", data="{}_prev({})".format(
+                "«ʙᴀᴄᴋ", data="{}_prev({})".format(
                     prefix, modulo_page)), custom.Button.inline(
                         "ᴍᴇɴᴜ", data="{}_close({})".format(
                             prefix, modulo_page)), custom.Button.inline(
-                                "ɴᴇxᴛ>>", data="{}_next({})".format(
+                                "ɴᴇxᴛ»", data="{}_next({})".format(
                                     prefix, modulo_page)), )]
     return pairs
 
@@ -497,7 +498,7 @@ with bot:
                         "`The bot doesn't work! Please set the Bot Token and Username correctly. The module has been stopped.`"
                     )
             except Exception:
-                return await event.edit("⛔ **Kamu Tidak Diizinkan Untuk Menekan Nya**!")
+                return await event.edit("⛔ **Woy Ngentod Lu Ngapain? Kamu Tidak Diizinkan Untuk Menekan Nya**!")
 
         kyuralogo = INLINE_PIC
         plugins = CMD_HELP
@@ -511,7 +512,7 @@ with bot:
                 u = await event.client.get_entity(event.chat_id)
                 c = await event.client.get_entity(event.user_id)
                 await event.reply(
-                    f"** Selamat Datang Digrub **👋\n"
+                    f"** Hi Tod Selamat Datang Digrub **👋\n"
                     f"[{get_display_name(u)}](tg: // user?id={u.id})\n"
                     f"────────────────────\n"
                     f"📮 ** Nama: ** [{get_display_name(c)}](tg: // user?id={c.id})\n"
@@ -522,8 +523,8 @@ with bot:
                     f"➠ ** Ketik ** /rules supaya tahu peraturan Group ini\n"
                     f"➠ **Atau** Kalian Bisa Klik /notes Dibawah Jika Ada\n",
                     buttons=[
-                        [Button.url("【﻿Ｃｈａｎｎｅｌ】",
-                                    "https://t.me/KyuraProject")],
+                        [Button.url("【✫AM͢͢͢ITOD】",
+                                    "https://t.me/AmiBotSiMurni")],
                     ],
                 )
 
@@ -534,7 +535,7 @@ with bot:
             if event.message.from_id != uid:
                 await event.client.get_entity(event.chat_id)
                 await event.reply(
-                    f"{START_WELCOME}\n\n**Powered By** : @kyuraxx\n\n",
+                    f"{START_WELCOME}\n\n**✫AM͢͢͢ITOD** : @AmiUseriBot\n\n",
                     buttons=[
                         [
                             custom.Button.inline("ꜱᴇᴛᴛɪɴɢꜱ", data="settings"),
@@ -544,7 +545,7 @@ with bot:
                     ],
                 )
             else:
-                reply_pop_up_alert = f"🚫!WARNING!🚫 Jangan Menggunakan Milik {DEFAULTUSER} Nanti Kena Karma."
+                reply_pop_up_alert = f"🚫Hai Ngentod!Lu Ngapain?🚫 Lu Jelek Jadi Gak Usah Menggunakan Milik {DEFAULTUSER} Nanti Kena Karma."
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @ tgbot.on(events.NewMessage(pattern="/ping"))
@@ -566,7 +567,7 @@ with bot:
         async def on_plug_in_callback_query_handler(event):
             if event.query.user_id == uid:
                 buttons = paginate_help(0, dugmeler, "helpme")
-                text = f"Kʏᴜʀᴀ​ Usᴇʀʙᴏᴛ\n\n× **ʙᴏᴛ ᴏꜰ :** {DEFAULTUSER}\n× **ʙᴏᴛ ᴠᴇʀ :** 5.0\n× **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}\n "
+                text = f"✫AM͢͢͢ITOD-U฿OT\n\n× **ʙᴏᴛ ᴏꜰ :** {DEFAULTUSER}\n× **ʙᴏᴛ ᴠᴇʀ :** 5.0\n× **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}\n "
                 await event.edit(
                     text,
                     file=kyuralogo,
@@ -574,7 +575,7 @@ with bot:
                     link_preview=False,
                 )
             else:
-                reply_pop_up_alert = f"❌ WARNINGS ❌\n\nAnda Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini."
+                reply_pop_up_alert = f"✘ Hai Tod!! ✘\n\nLu Jelek Jadi Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini."
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @ tgbot.on(
@@ -599,10 +600,10 @@ with bot:
         async def on_plug_in_callback_query_handler(event):
             if event.query.user_id == uid:
                 text = (
-                    f"❁ __Saya Adalah Kyura Userbot Yang Digunakan Banyak User Telegram__.\n\n"
-                    f"❁ __Saya Dibuat Hanya Untuk Bersenang Senang Ditelegram__.\n\n"
+                    f"❁ __Saya Adalah ✫AM͢͢͢ITOD-U฿OT Yang Digunakan Owner Untuk Bersenang Senang Sahaja__.\n\n"
+                    f"❁ __Saya Dibuat Kerana Ami Terlalu Ganteng (٥↼_↼)__.\n\n"
                     f"❁ __Kelebihan Saya Banyak, Saya Mempunyai 182 Modules__.\n\n"
-                    f"© @kyurasupport2")
+                    f"✫ @AmiUseriBot")
                 await event.edit(
                     text,
                     file=kyuralogo,
@@ -612,7 +613,7 @@ with bot:
                     ],
                 )
             else:
-                reply_pop_up_alert = f"🤴 Name : {DEFAULTUSER}\n🤖 Bot Ver : 5.0\n🛠 Modules : {len(plugins)}\n✨ Branch : Kyura-Userbot"
+                reply_pop_up_alert = f"🤴 Name : {DEFAULTUSER}\n🤖 Bot Ver : 5.0\n🛠 Modules : {len(plugins)}\n✨ Branch : ✫AM͢͢͢ITOD-U฿OT"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @ tgbot.on(
@@ -637,7 +638,7 @@ with bot:
                     ],
                 )
             else:
-                reply_pop_up_alert = f"❌ DISCLAIMER ❌\n\nAnda Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini"
+                reply_pop_up_alert = f"✘ Hai Tod!! ✘\n\nLu Jelek Jadi Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini."
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @ tgbot.on(
@@ -660,7 +661,7 @@ with bot:
                     ],
                 )
             else:
-                reply_pop_up_alert = f"❌ DISCLAIMER ❌\n\nAnda Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini"
+                reply_pop_up_alert = f"✘ Hai Tod!! ✘\n\nLu Jelek Jadi Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini."
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @ tgbot.on(
@@ -678,7 +679,7 @@ with bot:
                     f"°__Mengubah Foto Alive Kamu, Yang Kamu Inginkan__.\n\n"
                     f"× `.set var KYURA_TEKS_KUSTOM` [**TEKS**]\n"
                     f"°__Mengganti Teks Yang Ada Command kyuraalive__.\n\n"
-                    f"© @kyurasupport"
+                    f"✫ @AmiUseriBot"
                 )
                 await event.edit(
                     text,
@@ -692,7 +693,7 @@ with bot:
                     ],
                 )
             else:
-                reply_pop_up_alert = f"❌ DISCLAIMER ❌\n\nAnda Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini"
+                reply_pop_up_alert = f"✘ Hai Tod!! ✘\n\nLu Jelek Jadi Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini."
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @ tgbot.on(
@@ -708,7 +709,7 @@ with bot:
                     f"°__Mengaktifkan Pmpermit Kalian Atau Disebut Pesan Otomatis__.\n\n"
                     f"× `.set pm_msg` [**REPLYCHAT**]\n"
                     f"°__Mengganti Teks Pmpermit Selera Kamu__.\n\n"
-                    f"© @kyurasupport2")
+                    f"✫ @AmiUseriBot")
                 await event.edit(
                     text,
                     file=kyuralogo,
@@ -721,7 +722,7 @@ with bot:
                     ],
                 )
             else:
-                reply_pop_up_alert = f"❌ DISCLAIMER ❌\n\nAnda Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini"
+                reply_pop_up_alert = f"✘ Hai Tod!! ✘\n\nLu Jelek Jadi Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini."
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @ tgbot.on(
@@ -737,7 +738,7 @@ with bot:
                     f"°__Mengubah Emoji Inline Yang Ada Dicomand__ `.helpme`\n\n"
                     f"× `.set var INLINE_PIC` [**LINK**]\n"
                     f"°__Mengubah Foto Yang Ada Dicomand__ `.helpme`\n\n"
-                    f"© @kyurasupport2")
+                    f"✫ @AmiUseriBot")
                 await event.edit(
                     text,
                     file=kyuralogo,
@@ -750,7 +751,7 @@ with bot:
                     ],
                 )
             else:
-                reply_pop_up_alert = f"❌ DISCLAIMER ❌\n\nAnda Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini"
+                reply_pop_up_alert = f"✘ Hai Tod!! ✘\n\nLu Jelek Jadi Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini."
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @ tgbot.on(
@@ -764,7 +765,7 @@ with bot:
                     f"Modules Name **pmbot**\n\n"
                     f"× `.set var START_WELCOME` [**TEKS**] \n"
                     f"°__Kamu Juga Bisa Mengubah Start Welcome Untuk Bot Kamu Yang Ini, Dengan Cara Diatas Dan Kata Kata Bebas__.\n\n"
-                    f"© @kyurasupport2")
+                    f"✫ @AmiUseriBot")
                 await event.edit(
                     text,
                     file=kyuralogo,
@@ -777,7 +778,7 @@ with bot:
                     ],
                 )
             else:
-                reply_pop_up_alert = f"❌ DISCLAIMER ❌\n\nAnda Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini"
+                reply_pop_up_alert = f"✘ Hai Tod!! ✘\n\nLu Jelek Jadi Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini."
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @ tgbot.on(
@@ -789,11 +790,11 @@ with bot:
             if event.query.user_id == uid:
                 text = (
                     f"Modules Name **Pembaruan**\n\n"
-                    f"× **Pembaruan Data Untuk 𝐊𝐘𝐔𝐑𝐀-𝐔𝐒𝐄𝐑𝐁𝐎𝐓​, Command Untuk Pembaruan**.\n"
+                    f"× **Pembaruan Data Untuk ✫AM͢͢͢ITOD-U฿OT, Command Untuk Pembaruan**.\n"
                     f"⚒Pembaruan Data :\n"
                     f"`.update deploy`\n"
                     f"`update`\n\n"
-                    f"© @kyurasupport2")
+                    f"✫ @AmiUseriBot")
                 await event.edit(
                     text,
                     file=kyuralogo,
@@ -806,7 +807,7 @@ with bot:
                     ],
                 )
             else:
-                reply_pop_up_alert = f"❌ DISCLAIMER ❌\n\nAnda Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini"
+                reply_pop_up_alert = f"✘ Hai Tod!! ✘\n\nLu Jelek Jadi Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini."
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @ tgbot.on(
@@ -855,7 +856,7 @@ with bot:
                     f" ✥ **✦҈͜͡ᴘᴇᴍɪʟɪᴋ :** {ALIVE_NAME}  "
                     "\n╚════════════════════╝"
                     f"✥ **Sisa Dyno Heroku** `{day}` **Hari Lagi**"
-                    f"© @kyuraproject"
+                    f"✫ @AmiUseriBot"
                 )
                 await event.edit(
                     text,
@@ -866,7 +867,7 @@ with bot:
                     ],
                 )
             else:
-                reply_pop_up_alert = f"❌ DISCLAIMER ❌\n\nAnda Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini"
+                reply_pop_up_alert = f"✘ Hai Tod!! ✘\n\nLu Jelek Jadi Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini."
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @ tgbot.on(
@@ -876,7 +877,7 @@ with bot:
         )
         async def killdabot(event):
             if event.query.user_id == uid:
-                text = f"**Restaring kyura-userbot**..."
+                text = f"**Lu Jelek Gw Gak Tahan Bye Restaring ✫AM͢͢͢ITOD-U฿OT**..."
                 await event.edit(
                     text,
                     file=kyuralogo,
@@ -899,7 +900,7 @@ with bot:
                     file=kyuralogo,
                     link_preview=True,
                     buttons=[
-                        [Button.url("ᴄʜᴀɴɴᴇʟ", "t.me/kyuraproject")],
+                        [Button.url("✫AM͢͢͢ITOD", "t.me/AmiBotSiMurni")],
                     ],
                 )
 
@@ -913,28 +914,28 @@ with bot:
                 result = builder.photo(
                     file=kyuralogo,
                     link_preview=False,
-                    text=f"Kʏᴜʀᴀ​-Usᴇʀʙᴏᴛ\n\n× **ʙᴏᴛ ᴏꜰ :** {DEFAULTUSER}\n× **ʙᴏᴛ ᴠᴇʀ :** 5.0\n× **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}\n ".format(
+                    text=f"✫AM͢͢͢ITOD-U฿OT\n\n× **ʙᴏᴛ ᴏꜰ :** {DEFAULTUSER}\n× **ʙᴏᴛ ᴠᴇʀ :** 5.0\n× **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}\n ".format(
                         len(dugmeler),
                     ),
                     buttons=buttons,
                 )
             elif query.startswith("tb_btn"):
                 result = builder.article(
-                    "Bantuan Dari **𝐊𝐘𝐔𝐑𝐀-𝐔𝐒𝐄𝐑𝐁𝐎𝐓​**",
+                    "My Name Is Tumulak I From Thailand **✫AM͢͢͢ITOD-U฿OT**",
                     text="Daftar Plugins",
                     buttons=[],
                     link_preview=True,
                 )
             else:
-                result = builder.article(" **𝐊𝐘𝐔𝐑𝐀-𝐔𝐒𝐄𝐑𝐁𝐎𝐓​**",
-                                         text="""°𝐊𝐘𝐔𝐑𝐀-𝐔𝐒𝐄𝐑𝐁𝐎𝐓°""",
-                                         buttons=[[custom.Button.url("ᴋʏᴜʀᴀ​",
-                                                                     "https://github.com/Kyuraxp/kyura-userbot"),
-                                                   custom.Button.url("ᴄʜᴀɴɴᴇʟ​",
-                                                                     "t.me/kyuraproject"),
+                result = builder.article(" **✫AM͢͢͢ITOD-U฿OT**",
+                                         text="""✫AM͢͢͢ITOD-U฿OT""",
+                                         buttons=[[custom.Button.url("✫AM͢͢͢ITOD",
+                                                                     "https://github.com/amibotdisini/AMITOD-UBOT"),
+                                                   custom.Button.url("U฿OT",
+                                                                     "t.me/AmiBotSiMurni"),
                                                    ],
                                                   [custom.Button.url("ʟɪᴄᴇɴsᴇ​",
-                                                                     "https://github.com/Kyuraxp/kyura-userbot/LICENSE",
+                                                                     "https://github.com/amibotdisini/AMITOD-UBOT/LICENSE",
                                                                      )],
                                                   ],
                                          link_preview=False,
@@ -956,7 +957,7 @@ with bot:
                 await event.edit(buttons=buttons)
             else:
                 reply_pop_up_alert = (
-                    f"🚫!WARNING!🚫 Jangan Menggunakan Milik {DEFAULTUSER}."
+                    f"🚫Hai Ngentod!Lu Ngapain?🚫 Lu Jelek Jadi Gak Usah Menggunakan Milik {DEFAULTUSER}."
                 )
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
@@ -973,8 +974,8 @@ with bot:
                     link_preview=True,
                     buttons=[
                         [
-                            Button.url("❈ꜱᴜᴘᴘᴏʀᴛ❈", "t.me/kyurasupport2"),
-                            Button.url("❈ᴄʜᴀɴɴᴇʟ❈", "t.me/kyuraproject"),
+                            Button.url("❈ꜱᴜᴘᴘᴏʀᴛ❈", "t.me/AmiBotSiMurni"),
+                            Button.url("❈ᴄʜᴀɴɴᴇʟ❈", "t.me/amAllService"),
                         ],
                         [custom.Button.inline(
                             "°ᴏᴘᴇɴ ᴍᴇɴᴜ°", data="open_plugin")],
@@ -1005,7 +1006,7 @@ with bot:
                 await event.edit(buttons=buttons)
             else:
                 reply_pop_up_alert = (
-                    f"🚫!WARNING!🚫 Jangan Menggunakan Milik {DEFAULTUSER}."
+                    f"🚫Hai Ngentod!Lu Ngapain?🚫 Lu Jelek Jadi Gak Usah Menggunakan Milik {DEFAULTUSER}."
                 )
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
@@ -1039,7 +1040,7 @@ with bot:
                 )
             else:
                 reply_pop_up_alert = (
-                    f"🚫!WARNING!🚫 Jangan Menggunakan Milik {DEFAULTUSER}."
+                    f"🚫Hai Ngentod!Lu Ngapain?🚫 Lu Jelek Jadi Gak Usah Menggunakan Milik {DEFAULTUSER}."
                 )
 
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)

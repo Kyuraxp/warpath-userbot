@@ -43,18 +43,35 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 CUSTOM_TEXT = (
     str(PMPERMIT_TEXT)
     if PMPERMIT_TEXT
-    else f"__Halo kawan, saya bot yang menjaga room chat Kyura-Userbot {DEFAULTUSER} di mohon jangan melakukan spam , kalau anda melakukan itu OTOMATIS saya akan memblockir anda!__ \n"
+    else f"__Hi Tod, saya bot ✫AM͢͢͢ITOD-U฿OT yang menjaga room chat {DEFAULTUSER} di mohon jangan melakukan spam ya tod, kalau lu melakukan itu OTOMATIS gw akan memblockir lu ya tod!__ \n"
 )
 DEF_UNAPPROVED_MSG = (
-    "╔═════════════════════╗\n"
-    "    🚫 𝗔𝗧𝗧𝗘𝗡𝗧𝗜𝗢𝗡 𝗣𝗟𝗘𝗔𝗦𝗘 🚫 \n"
-    "╚═════════════════════╝\n"
-    "**TOLONG JANGAN MELAKUKAN SPAM CHAT KEPADA OWNER SAYA** \n"
-    f"**KARENA SAYA AKAN OTOMATIS MEMBLOKIR KAMU, TUNGGU SAMPAI {DEFAULTUSER} MENERIMA PESAN MU** \n"
-    "╔═════════════════════╗\n"
-    "│○›Support : @kyurasupport2      \n"
-    f"│○›By : 𝐊𝐘𝐔𝐑𝐀 𝐔𝐒𝐄𝐑𝐁𝐎𝐓​           \n"
-    "╚═════════════════════╝"
+    "➠ PERINGATAN YA❗\n"
+    "“𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐭𝐨 𝐓𝐡𝐞 𝐏𝐫𝐢𝐯𝐚𝐜𝐲 𝐌𝐞𝐬𝐬𝐚𝐠𝐞”\n"
+    "Ini Hanya Pesan Dari Bot!\n" 
+    "Masa Lu Baper Ama Bot Wkwkwk\n"
+    "╔══════════════════════╗\n"
+    "╠•Hai Tod Lu Gay Ya?Dih Si Gay\n"
+    "╠•Canda Tod.Chat Gw Harus Ganteng\n"
+    "╠•Oi Tod Kerana Lu Gak Ganteng\n"
+    "╠•Gw Belum Menyetujui Lu\n"
+    "╠•Tunggu Sampai Lu Ganteng\n"
+    "╠•Baru Gw Menyetujui Chat\n"
+    "╠•Dari Lu Jadi Kalau Gw\n"
+    "╠•Gak Balas Lagi Chat Lu\n"
+    "╠•Jangan Lu Spam Chat Ya Anj\n"
+    "╠•Kek Org Tolol Gak Bisa Baca\n"
+    "╠•Atau Lu Akan Otomatis Terblokir.\n"
+    "╚══════════════════════╝\n"
+    "╭✠╼━━━━━━❖━━━━━━━✠╮\n"
+    "┣[•𖣘 AUTOREPLAY MASSAGES\n"
+    "┣[•𖣘 BY: ✫AM͢͢͢ITOD-U฿OT\n"
+    "┣[•𖣘 ✫AM͢͢͢ITOD: @amibaik_bot\n"
+    "╰✠╼━━━━━━❖━━━━━━━✠╯\n"
+    "╭✠╼━━━━━━❖━━━━━━━✠╮\n"
+    "┣[•𖣘 **𝗦𝘂𝗽𝗽𝗼𝗿𝘁: @AmiBotSiMurni**\n"
+    "┣[•𖣘 **𝗖𝗵𝗮𝗻𝗻𝗲𝗹: @amAllservice**\n"
+    "╰✠╼━━━━━━❖━━━━━━━✠╯\n"
 )
 # =================================================================
 
@@ -113,8 +130,8 @@ async def permitpm(event):
 
             if COUNT_PM[event.chat_id] > PM_LIMIT:
                 await event.respond(
-                    "`Maaf anda telah terkena blokir otomatis karena anda melakukan spam`\n"
-                    f"`Ke owner saya`"
+                    "`UDAH JELEK LU BODO LAGI GW BLOCK LU KARNA NGESPAM`\n"
+                    f"`KE OWNER GW!!`"
                 )
 
                 try:
@@ -141,7 +158,7 @@ async def permitpm(event):
                         + "](tg://user?id="
                         + str(event.chat_id)
                         + ")"
-                        + " Telah Diblokir Karna Melakukan Spam Ke Room Chat",
+                        + " Mampus Gw Block Lu Jelek Kali Muka Lu",
                     )
 
 
@@ -257,10 +274,10 @@ async def approvepm(apprvpm):
     try:
         approve(uid)
     except IntegrityError:
-        return await apprvpm.edit("`Oke Pesan Anda Sudah Diterima ツ`")
+        return await apprvpm.edit("`Karna Gw Baik Gw Terima Pesan lu`")
 
     await apprvpm.edit(
-        f"`Hai` [{name0}](tg://user?id={uid}) `Pesan Anda Sudah Diterima Oleh Owner Saya`"
+        f"`Hai Tod` [{name0}](tg://user?id={uid}) `Pesan Lu Sudah Diterima Nih Oleh Owner Gw`"
     )
     await apprvpm.delete(getmsg)
     await message.delete()
@@ -290,13 +307,13 @@ async def disapprovepm(disapprvpm):
         name0 = str(aname.first_name)
 
     await disapprvpm.edit(
-        f"`Maaf` [{name0}](tg://user?id={disapprvpm.chat_id}) `Pesan Anda Telah Ditolak, Mohon Jangan Melakukan Spam Ke Room Chat!`"
+        f"`Maaf Ya Lu Terlalu Jelek` [{name0}](tg://user?id={disapprvpm.chat_id}) `Jadi Gw Tolak Pesan Lu, Mohon Jangan Melakukan Spam Ya Tod Di Room Chat Gw!`"
     )
 
     if BOTLOG:
         await disapprvpm.client.send_message(
             BOTLOG_CHATID,
-            f"[{name0}](tg://user?id={disapprvpm.chat_id})" " `Berhasil Ditolak` !",
+            f"[{name0}](tg://user?id={disapprvpm.chat_id})" " `Berhasil Ditolak Ya Tod` !",
         )
 
 
@@ -309,12 +326,12 @@ async def blockpm(block):
         aname = replied_user.id
         name0 = str(replied_user.first_name)
         await block.client(BlockRequest(aname))
-        await block.edit(f"`Anda Telah Diblokir Oleh {DEFAULTUSER}`")
+        await block.edit(f"`Maaf Kamu Terlalu Sombong Jadi Kamu Telah Diblokir! Oleh {DEFAULTUSER}`")
         uid = replied_user.id
     else:
         await block.client(BlockRequest(block.chat_id))
         aname = await block.client.get_entity(block.chat_id)
-        await block.edit(f"`LU JAMET, MAAF GUA BLOCK YA KONTOLL`")
+        await block.edit(f"`Dih Karna Lu Jelek Gw Block Lu Mampus!`")
         name0 = str(aname.first_name)
         uid = block.chat_id
 
@@ -340,12 +357,12 @@ async def unblockpm(unblock):
         replied_user = await unblock.client.get_entity(reply.from_id)
         name0 = str(replied_user.first_name)
         await unblock.client(UnblockRequest(replied_user.id))
-        await unblock.edit("`UDAH DI UNBLOCK NIH, JANGAN NGEJAMET LAGI YA NGENTOT!!`")
+        await unblock.edit("`Karna Gw Baik Gw Buka Blocknya Ya Tod.`")
 
     if BOTLOG:
         await unblock.client.send_message(
             BOTLOG_CHATID,
-            f"[{name0}](tg://user?id={replied_user.id})" " Tidak Lagi Diblokir.",
+            f"[{name0}](tg://user?id={replied_user.id})" " Woy Tod Lu Tidak Lagi Diblokir.",
         )
 
 

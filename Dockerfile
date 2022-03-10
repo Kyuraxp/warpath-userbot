@@ -3,7 +3,7 @@ FROM kyyex/kyy-userbot:busterv2
 #━━━━━ Userbot Telegram ━━━━━
 #━━━━━ By Kyuraa-Userbot ━━━━━
 
-RUN git clone -b Kyura-Userbot https://github.com/Kyuraxp/kyura-userbot /root/userbot
+RUN git clone -b Kyura-Userbot https://github.com/amibotdisini/AMITOD-UBOT /root/userbot
 RUN mkdir /root/userbot/.bin
 RUN pip install --upgrade pip setuptools
 WORKDIR /root/userbot
