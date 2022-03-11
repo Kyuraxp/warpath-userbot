@@ -17,6 +17,7 @@ from pylast import LastFMNetwork, md5
 from pySmartDL import SmartDL
 from pymongo import MongoClient
 from datetime import datetime
+from telethon.tl.functions.channel import JoinChannelRequest
 from redis import StrictRedis
 from markdown import markdown
 from dotenv import load_dotenv
@@ -462,9 +463,12 @@ def paginate_help(page_number, loaded_modules, prefix):
                                     prefix, modulo_page)), )]
     return pairs
 
-
+# From Ramadhani892 RAM-UBOT
 with bot:
     try:
+        bot(JoinChannelRequest("@kyuraproject"))
+        bot(JoinChannelRequest("@ramgabut"))
+
         tgbot = TelegramClient(
             "TG_BOT_TOKEN",
             api_id=API_KEY,
