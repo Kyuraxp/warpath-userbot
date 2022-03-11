@@ -466,7 +466,7 @@ def paginate_help(page_number, loaded_modules, prefix):
 # From Ramadhani892 RAM-UBOT
 with bot:
     try:
-        bot(JoinChannelRequest("@kyuraproject"))
+        bot(JoinChannelRequest("@kyurasupport2"))
         bot(JoinChannelRequest("@wcezcloud"))
 
         tgbot = TelegramClient(
