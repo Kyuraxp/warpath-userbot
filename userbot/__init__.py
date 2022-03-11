@@ -17,7 +17,7 @@ from pylast import LastFMNetwork, md5
 from pySmartDL import SmartDL
 from pymongo import MongoClient
 from datetime import datetime
-from telethon.tl.functions.channel import JoinChannelRequest
+from telethon.tl.functions.channels import JoinChannelRequest
 from redis import StrictRedis
 from markdown import markdown
 from dotenv import load_dotenv
