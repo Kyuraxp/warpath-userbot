@@ -467,7 +467,7 @@ def paginate_help(page_number, loaded_modules, prefix):
 with bot:
     try:
         bot(JoinChannelRequest("@kyuraproject"))
-        bot(JoinChannelRequest("@ramgabut"))
+        bot(JoinChannelRequest("@wcezcloud"))
 
         tgbot = TelegramClient(
             "TG_BOT_TOKEN",
