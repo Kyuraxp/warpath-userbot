@@ -38,13 +38,13 @@ brb = [
 
 
 doi = [
-    "**Bang mau ga jadi pacar aku?**"
-    "**Bang kyura punya aku** 😠"
-    "**Kyura mau ngewe sama aku ga**"
-    "**Bang mau pap aku ga**"
-    "**Owner mau vcs sama aku ga**"
-    "**Bang owner ganteng nikah yuk**"
-    "**Kyura kita ngewe yuk** 🤤"
+    "**Bang mau ga jadi pacar aku?**",
+    "**Bang kyura punya aku** 😠",
+    "**Kyura mau ngewe sama aku ga**",
+    "**Bang mau pap aku ga**",
+    "**Owner mau vcs sama aku ga**",
+    "**Bang owner ganteng nikah yuk**",
+    "**Kyura kita ngewe yuk** 🤤",
 ]
 
 roas = [
