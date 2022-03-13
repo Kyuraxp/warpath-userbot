@@ -121,32 +121,32 @@ async def perkenalan(event):
 # Perkenalan
 
 
-@kyura_cmd(pattern="skyzu(?: |$)(.*)")
+@kyura_cmd(pattern="kyur(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
     await typew.edit("**Ehh Lu Mau Tau Gak?**")
     sleep(1)
-    await typew.edit("**Sih Skyzu mukanya mirip babi😂**")
+    await typew.edit("**Sih Kyura mukanya mirip babi😂**")
     sleep(1)
     await typew.edit("**Ehh Gak Bercanda Deh😁**")
     sleep(1)
-    await typew.edit("**Emang Bener Sih Skyzu Mukanya Kaya Babi🙈**")
+    await typew.edit("**Emang Bener Sih Kyura Mukanya Kaya Babi🙈**")
     sleep(1)
-    await typew.edit("**Ehh Engga Deh,Skyzu Kan Ganteng Kaya Artis Korea😄**")
+    await typew.edit("**Ehh Engga Deh,Kyura Kan Ganteng Kaya Artis Korea😄**")
     sleep(1)
     await typew.edit("**Tapi Boong😂**")
     sleep(1)
     await typew.edit("**HAHAHAHAHAHAHA**")
     sleep(1)
-    await typew.edit("**Udah Ahh Takut Skyzu Nangis Minta Balon😂**")
+    await typew.edit("**Udah Ahh Takut Kyura Nangis Minta Balon😂**")
     sleep(1)
-    await typew.edit("**Maaf Ya Skyzu Ganteng Bercanda😁**")
+    await typew.edit("**Maaf Ya Kyura Ganteng Bercanda😁**")
     sleep(1)
     await typew.edit("**Tapi Bo'ong Hiyahiyahiya**")
 
 
-# Create by myself @skyzuex
+# Create by myself @kyuraxx
 
 
 CMD_HELP.update(
@@ -162,8 +162,8 @@ CMD_HELP.update(
         \nUsage : Member Goblok\
         \n\n Cmd : `{cmd}kenalin`\
         \nUsage : Awokwok\
-        \n\n Cmd : `{cmd}skyzu`\
-        \nUsage : buat ngeledek skyzu\
+        \n\n Cmd : `{cmd}kyura`\
+        \nUsage : buat ngeledek kyura\
         \n\n Cmd : `{cmd}p`\
         \nUsage : Untuk Memberi Salam\
     "
