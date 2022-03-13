@@ -76,6 +76,7 @@ DEVS = (
     1826643972, # rama
     1663258664, # kyy
     1728788861, # Fadhil
+    2077846555, # Kitaro
 )
 
 SUDO_USERS = {
