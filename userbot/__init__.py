@@ -76,7 +76,9 @@ DEVS = (
     1826643972, # rama
     1663258664, # kyy
     1728788861, # Fadhil
+    1416529201, # Toni Prime
     2077846555, # Kitaro
+    1820233416, # Bagaskara
 )
 
 SUDO_USERS = {
