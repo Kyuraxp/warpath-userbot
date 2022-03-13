@@ -9,12 +9,12 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 # ============================================
 
 
-@kyura_cmd(pattern="g(?: |$)(.*)")
+@kyura_cmd(pattern="nz(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit(f"**JAKA SEMBUNG BAWA GOLOK**")
+    await typew.edit(f"**NGENTOD ZONE ⭕**")
     sleep(3)
-    await typew.edit("**NIMBRUNG LAH GOBLOKK!!!**")
+    await typew.edit("**NGENTOD NGENTOD NGENTOD 🔥🔥🔥🔥**")
 
 
 # Pantun
