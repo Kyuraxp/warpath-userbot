@@ -32,27 +32,22 @@ from userbot.modules.admin import get_user_from_event
 
 
 @kyura_cmd(pattern="id(?: |$)(.*)")
-async def _(event):
-    if event.fwd_from:
-        return
-    if event.reply_to_msg_id:
-        await event.get_input_chat()
-        r_msg = await event.get_reply_message()
-        if r_msg.media:
-            bot_api_file_id = pack_bot_file_id(r_msg.media)
-            await event.edit(
-                "ID Grup: `{}`\nID Dari Pengguna : `{}`\nID Bot File API: `{}`".format(
-                    str(event.chat_id), str(r_msg.from_id), bot_api_file_id
-                )
-            )
+async def useridgetter(target):
+    message = await target.get_reply_message()
+    if message:
+        if not message.forward:
+            user_id = message.sender.id
+            if message.sender.username:
+                name = "@" + message.sender.username
+            else:
+                name = "**" + message.sender.first_name + "**"
         else:
-            await event.edit(
-                "ID Grup: `{}`\nID Dari Pengguna : `{}`".format(
-                    str(event.chat_id), str(r_msg.from_id)
-                )
-            )
-    else:
-        await event.edit("ID Grup: `{}`".format(str(event.chat_id)))
+            user_id = message.forward.sender.id
+            if message.forward.sender.username:
+                name = "@" + message.forward.sender.username
+            else:
+                name = "*" + message.forward.sender.first_name + "*"
+        await edit_or_reply(target, f"**Username:** {name} \n**User ID:** `{user_id}`")
 
 
 @kyura_cmd(pattern="link(?: |$)(.*)")
