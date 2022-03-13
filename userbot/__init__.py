@@ -355,8 +355,8 @@ except Exception as e:
     sys.exit()
 
 async def checking():
-    gocheck = pybase64.b64decode("QGt5dXJhcHJvamVjdHM=")
-    checker = pybase64.b64decode("QEt5dXJhU3VwcG9ydA==")
+    gocheck = pybase64.b64decode("QGt5dXJhc3VwcG9ydDI=")
+    checker = pybase64.b64decode("QGt5dXJhcHJvamVjdA==")
     Input_gocheck = gocheck.decode('utf-8')
     Input_checker = checker.decode('utf-8')
     try:
@@ -464,7 +464,7 @@ def paginate_help(page_number, loaded_modules, prefix):
 with bot:
     try:
         bot(JoinChannelRequest("@kyurasupport2"))
-        bot(JoinChannelRequest("@kyuraxx"))
+        bot(JoinChannelRequest("@kyuraproject"))
 
         tgbot = TelegramClient(
             "TG_BOT_TOKEN",
