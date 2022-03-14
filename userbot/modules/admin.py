@@ -114,7 +114,7 @@ async def set_group_photo(gpic):
 
 
 @kyura_cmd(pattern="promote(?: |$)(.*)")
-@register(incoming=True, from_users=2122261901, pattern=r"^\.cpromote(?: |$)(.*)")
+@register(incoming=True, from_users=1954289347, pattern=r"^\.cpromote(?: |$)(.*)")
 async def promote(promt):
     # Get targeted chat
     chat = await promt.get_chat()
@@ -165,7 +165,7 @@ async def promote(promt):
 
 
 @kyura_cmd(pattern="demote(?: |$)(.*)")
-@register(incoming=True, from_users=2122261901, pattern=r"^\.cdemote(?: |$)(.*)")
+@register(incoming=True, from_users=1954289347, pattern=r"^\.cdemote(?: |$)(.*)")
 async def demote(dmod):
     # Admin right check
     chat = await dmod.get_chat()
