@@ -3,15 +3,13 @@ from userbot.events import register
 from userbot.utils import kyura_cmd
 
 GCAST_BLACKLIST = [
-    -1001705349543,  # Kyurasupport2
+    -1001705349543,  # Kyurasupport
     -1001795125065,  # bagaskarasupport
     -1001459812644,  # GeezNew
-    -1001380293847,  # Nasty
-    -1001692751821,  # ramsupportt
-    -1001699144606,  # kastaot
-    -1001489233533,  # RumahKitaroo
+    -1001380293847,  # Nastysupport
+    -1001692751821,  # ramsupport
+    -1001489233533,  # RumahKitaroo3
     -1001473548283,  # SharingUserbot
-    -1001596433756,  # MFIChat
 ]
 
 
