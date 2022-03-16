@@ -14,7 +14,7 @@ from userbot.utils import edit_delete, edit_or_reply, kyura_cmd
 from userbot.utils.misc import create_quotly
 from telethon.tl.functions.users import GetFullUserRequest
 
-from .kyurcarbon import all_col
+from .carbon import all_col
 
 
 @kyura_cmd(pattern="q ?(.*)")
