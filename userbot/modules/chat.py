@@ -27,7 +27,7 @@ from telethon.utils import get_input_location, pack_bot_file_id
 
 from userbot import ALIVE_NAME, BOTLOG, BOTLOG_CHATID, CMD_HELP, bot, CMD_HANDLER as cmd
 from userbot.events import register
-from userbot.utils import kyura_cmd
+from userbot.utils import kyura_cmd, edit_or_reply
 from userbot.modules.admin import get_user_from_event
 
 
