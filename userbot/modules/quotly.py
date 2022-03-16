@@ -14,15 +14,15 @@ from userbot.utils import edit_delete, edit_or_reply, kyura_cmd
 from userbot.utils.misc import create_quotly
 from telethon.tl.functions.users import GetFullUserRequest
 
-from .ramcarbon import all_col
+from .kyurcarbon import all_col
 
 
 @kyura_cmd(pattern="q ?(.*)")
 async def quott_(event):
     match = event.pattern_match.group(1).strip()
     if not event.is_reply:
-        return await edit_delete(event, "`Reply Kepesan!`")
-    msg = await edit_or_reply(event, "Sedang Memprosess!!")
+        return await edit_delete(event, "`Reply Ke pesan!`")
+    msg = await edit_or_reply(event, "Sedang Memproses Quotly!!")
     reply = await event.get_reply_message()
     replied_to, reply_ = None, None
     if match:
