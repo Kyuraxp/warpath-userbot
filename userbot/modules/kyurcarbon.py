@@ -356,7 +356,7 @@ async def carbon_api(e):
 
 
 CMD_HELP.update({
-    "carbon":
+    "kyurcarbon":
     f"`{cmd}carbon`value <values=1,2,3,4>\
         \nUsage:reply or type .carbon1 or 2,3,4 value and beautify your text."
 })
