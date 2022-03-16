@@ -1,8 +1,11 @@
 # Using Python Slim-Buster
 FROM kyyex/kyy-userbot:busterv2
-#━━━━━ Userbot Telegram ━━━━━
+#━━━━━ Userbot Telegram ━━━━
+#━━━━━ By Kyy-Userbot ━━━━━ 
 #━━━━━ By Kyuraa-Userbot ━━━━━
 
+RUN apt-get update && apt-get upgrade -y
+RUN apt-get install ffmpeg -y
 RUN git clone -b Kyura-Userbot https://github.com/Kyuraxp/kyura-userbot /root/userbot
 RUN mkdir /root/userbot/.bin
 RUN pip install --upgrade pip setuptools
