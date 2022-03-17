@@ -22,8 +22,6 @@
 from userbot import BOT_USERNAME, CMD_HELP, bot
 from userbot.utils import edit_or_reply, edit_delete, kyura_cmd
 
-user = bot.get_me()
-DEFAULTUSER = user.first_name
 CUSTOM_HELP_EMOJI = "✘"
 
 
@@ -38,7 +36,7 @@ async def cmd_list(event):
     else:
         try:
             results = await bot.inline_query(  # pylint:disable=E0602
-                BOT_USERNAME, "@Kyura_Userbot"
+                BOT_USERNAME, "@kyura_userbot"
             )
             await results[0].click(
                 event.chat_id, reply_to=event.reply_to_msg_id, hide_via=True
