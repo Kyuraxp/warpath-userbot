@@ -1000,21 +1000,21 @@ with bot:
                     link_preview=True,
                     buttons=[
                         [
-                            Button.url("❈ꜱᴜᴘᴘᴏʀᴛ❈", "t.me/kyurasupport2"),
-                            Button.url("❈ᴄʜᴀɴɴᴇʟ❈", "t.me/kyuraproject"),
+                            Button.url("• ꜱᴜᴘᴘᴏʀᴛ •", "t.me/kyurasupport2"),
+                            Button.url("• ᴄʜᴀɴɴᴇʟ •", "t.me/kyuraproject"),
                         ],
                         [custom.Button.inline(
-                            "°ᴏᴘᴇɴ ᴍᴇɴᴜ°", data="open_plugin")],
-                        [custom.Button.inline("°ᴄʟᴏꜱᴇ ɪɴʟɪɴᴇ°", b"close")],
+                            "• ᴏᴘᴇɴ ᴍᴇɴᴜ •", data="open_plugin")],
+                        [custom.Button.inline("• ᴄʟᴏꜱᴇ ɪɴʟɪɴᴇ •", b"close")],
                     ],
                 )
 
         @ tgbot.on(events.CallbackQuery(data=b"close"))
         async def close(event):
             buttons = [
-                (custom.Button.inline("Open Menu", data="open_plugin"),),
+                (custom.Button.inline("• ᴏᴘᴇɴ ᴍᴇɴᴜ •", data="open_plugin"),),
             ]
-            await event.edit(f"Menu Ditutup! ", buttons=buttons)
+            await event.edit(f"• ᴄʟᴏsᴇ ᴍᴇɴᴜ • ", buttons=buttons)
 
         @ tgbot.on(
             events.callbackquery.CallbackQuery(  # pylint:disable=E0602
