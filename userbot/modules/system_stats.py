@@ -303,20 +303,20 @@ async def amireallyalive(alive):
 async def redis(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
-    await alive.edit("⚡")
-    await asyncio.sleep(2)
+    await alive.edit("♨️")
+    await asyncio.sleep(1)
     output = (
         f"╭✠╼━━━━━━━━━━━━━━━━✠╮\n"
-        f"┃✩ **Master :** {DEFAULTUSER} \n"
-        f"┃✩ **Username :** @{user.username} \n"
-        f"┃✩ **Telethon :** Ver {version.__version__} \n"
-        f"┃✩ **Python :** Ver {python_version()} \n"
-        f"┃✩ **Branch :** {UPSTREAM_REPO_BRANCH} \n"
-        f"┃✩ **Bot Ver :** {BOT_VER} \n"
-        f"┃✩ **Modules :** {len(modules)} Modules \n"
-        f"┃✩ **Repo :** [UserBot](https://github.com/Kyuraxp/kyura-userbot) \n"
-        f"┃✩ **Owner Repo :** [Kyura](https://t.me/kyuraxx) \n"
-        f"┃✩ **support :** [groups](https://t.me/kyurasupport2) \n"
+        f"┃✩ Master : {DEFAULTUSER} \n"
+        f"┃✩ Username : @{user.username} \n"
+        f"┃✩ Telethon : Ver {version.__version__} \n"
+        f"┃✩ Python : Ver {python_version()} \n"
+        f"┃✩ Branch : {UPSTREAM_REPO_BRANCH} \n"
+        f"┃✩ Bot Ver : {BOT_VER} \n"
+        f"┃✩ Modules : {len(modules)} Modules \n"
+        f"┃✩ Repo :** [UserBot](https://github.com/Kyuraxp/kyura-userbot) \n"
+        f"┃✩ Owner Repo : [Kyura](https://t.me/kyuraxx) \n"
+        f"┃✩ support : [groups](https://t.me/kyurasupport2) \n"
         f"╰✠╼━━━━━━━━━━━━━━━━✠╯"
     )
     if ALIVE_LOGO:
