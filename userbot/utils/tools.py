@@ -258,8 +258,8 @@ async def edit_or_reply(
 eor = edit_or_reply
 
 async def ini_wm():
-    kyura = str(pybase64.b64decode("S3l1cmFzdXBwb3J0="))[2:13]
-    usbot =str(pybase64.b64decode("cmFtc3VwcG9ydHQ="))[2:13]
+    kyura = str(pybase64.b64decode("QGt5dXJhc3VwcG9ydDI="))[2:13]
+    usbot =str(pybase64.b64decode("QGt5dXJhc3VwcG9ydDI="))[2:13]
     try:
         await bot(Get(kyura))
     except BaseException:
