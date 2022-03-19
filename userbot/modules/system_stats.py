@@ -314,9 +314,9 @@ async def redis(alive):
         f"┃✩ Branch : {UPSTREAM_REPO_BRANCH} \n"
         f"┃✩ Bot Ver : {BOT_VER} \n"
         f"┃✩ Modules : {len(modules)} Modules \n"
-        f"┃✩ Repo :** [UserBot](https://github.com/Kyuraxp/kyura-userbot) \n"
+        f"┃✩ Repo : [UserBot](https://github.com/Kyuraxp/kyura-userbot) \n"
         f"┃✩ Owner Repo : [Kyura](https://t.me/kyuraxx) \n"
-        f"┃✩ support : [groups](https://t.me/kyurasupport2) \n"
+        f"┃✩ Channel : [Kyura Project](https://t.me/kyuraproject) \n"
         f"╰✠╼━━━━━━━━━━━━━━━━✠╯"
     )
     if ALIVE_LOGO:
