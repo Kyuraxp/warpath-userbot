@@ -117,7 +117,7 @@ SUDO_HANDLER = os.environ.get("SUDO_HANDLER") or "$"
 # Custom Pmpermit pic
 PMPERMIT_PIC = (
     os.environ.get("PMPERMIT_PIC", None)
-    or "https://telegra.ph/file/d841005eca08d0ed2ef36.jpg"
+    or "https://telegra.ph/file/958f8dea4d7c72342375e.jpg"
 )
 
 # Bleep Blop, this is a bot ;)
@@ -245,16 +245,16 @@ S_PACK_NAME = os.environ.get("S_PACK_NAME", None)
 
 # Default .alive Logo
 ALIVE_LOGO = (os.environ.get("ALIVE_LOGO")
-              or "https://telegra.ph/file/d841005eca08d0ed2ef36.jpg")
+              or "https://telegra.ph/file/958f8dea4d7c72342375e.jpg")
 
 # Default .helpme Logo
 INLINE_PIC = (os.environ.get("INLINE_PIC")
-              or "https://telegra.ph/file/d841005eca08d0ed2ef36.jpg")
+              or "https://telegra.ph/file/958f8dea4d7c72342375e.jpg")
 
 # Default emoji help
 EMOJI_HELP = os.environ.get("EMOJI_HELP") or "✗"
 
-# °Kyura-Userbot°
+# • Kyura-Userbot •
 OWNER_URL = os.environ.get("OWNER_URL") or "https://t.me/kyuraxx"
 
 # Picture For VCPLUGIN
