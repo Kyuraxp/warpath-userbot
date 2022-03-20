@@ -198,7 +198,7 @@ async def upstream(event):
     changelog = await gen_chlog(repo, f"HEAD..upstream/{ac_br}")
 
     if changelog == "" and force_update is False:
-        await event.edit(f"\n**⚡𝐊𝐘𝐔𝐑𝐀-𝐔𝐒𝐄𝐑𝐁𝐎𝐓​ Sudah Versi Terbaru**\n")
+        await event.edit(f"\n**𝐊𝐘𝐔𝐑𝐀-𝐔𝐒𝐄𝐑𝐁𝐎𝐓​ Sudah Versi Terbaru**\n")
         await asyncio.sleep(15)
         await event.delete()
         return repo.__del__()
@@ -219,7 +219,7 @@ async def upstream(event):
         else:
             await event.edit(changelog_str)
         return await event.respond(
-            f"**Perintah Untuk Update, Sebagai Berikut.**\n 𝘾𝙤𝙢𝙢𝙖𝙣𝙙: >`{cmd}update now`\n 𝘾𝙤𝙢𝙢𝙖𝙣𝙙: >`{cmd}update deploy`\n\nUntuk Meng Update Fitur Terbaru Dari **𝐊𝐘𝐔𝐑𝐀-𝐔𝐒𝐄𝐑𝐁𝐎𝐓​**"
+            f"**Perintah Untuk Update, Sebagai Berikut.**\n 𝘾𝙤𝙢𝙢𝙖𝙣𝙙: –› `{cmd}update now`\n 𝘾𝙤𝙢𝙢𝙖𝙣𝙙: –› `{cmd}update deploy`\n\nUntuk Meng Update Fitur Terbaru Dari **𝐊𝐘𝐔𝐑𝐀-𝐔𝐒𝐄𝐑𝐁𝐎𝐓​**"
         )
 
     if force_update:
