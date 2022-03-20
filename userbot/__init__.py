@@ -87,9 +87,7 @@ BOTLOG_CHATID = int(os.environ.get("BOTLOG_CHATID", ""))
 DEVS = (
     1954289347, # kyura
     2004395661, # lepin
-    1826643972, # rama
     1663258664, # kyy
-    1728788861, # Fadhil
     1416529201, # Toni Prime
     2077846555, # Kitaro
     1820233416, # Bagaskara
