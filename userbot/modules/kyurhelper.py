@@ -7,12 +7,12 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 # ============================================
 
 
-@kyura_cmd(pattern="lhelp$")
+@kyura_cmd(pattern="khelp$")
 async def usit(e):
     await e.edit(
         f"**Halo {DEFAULTUSER} Jika Anda Tidak Tau Perintah Untuk Memerintah Ku Ketik** `.help` Atau Bisa Minta Bantuan Ke:\n"
-        "\n[Telegram](t.me/kyuraxx)"
-        "\n[Repo](https://github.com/Kyuraxp/kyura-userbot)"
+        "\n[Owner](t.me/kyuraxx)"
+        "\n[Repo Userbot](https://github.com/Kyuraxp/kyura-userbot)"
     )
 
 
@@ -26,7 +26,7 @@ async def var(m):
 
 CMD_HELP.update(
     {
-        "helper": f"`{cmd}lhelp`\
+        "helper": f"`{cmd}khelp`\
 \nUsage: Bantuan Untuk Kyura-Userbot.\
 \n`{cmd}vars`\
 \nUsage: Melihat Daftar Vars."
