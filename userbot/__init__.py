@@ -91,7 +91,7 @@ DEVS = (
     1416529201, # Toni Prime
     2077846555, # Kitaro
     1820233416, # Bagaskara
-    2122770443, # Skyzu
+    2116587637, # Skyzu
     1826643972, # rama
     1728788861, # Fadhil
 )
