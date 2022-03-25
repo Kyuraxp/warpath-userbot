@@ -187,7 +187,7 @@ async def dyno_usage(dyno):
                 f"✦҈͜͡➠ {AppHours} ᴊᴀᴍ - {AppMinutes} ᴍᴇɴɪᴛ [ {AppPercentage}% ]  \n"
                 f"✪ sɪsᴀ ᴅʏɴᴏ sᴀᴀᴛ ɪɴɪ : \n"
                 f"✦҈͜͡➠ {hours} ᴊᴀᴍ - {minutes} ᴍᴇɴɪᴛ [ {percentage}% ] \n"
-                f" ✪ ᴏᴡɴᴇʀ  : {ALIVE_NAME} \n"
+                f"✪ ᴏᴡɴᴇʀ  : {ALIVE_NAME} \n"
             )
             await asyncio.sleep(20)
             await event.delete()
