@@ -135,6 +135,8 @@ async def dyno_usage(dyno):
     """
     await dyno.edit("**Processing...**")
     await asyncio.sleep(1)
+    await dyno.edit("♨️")
+    await asyncio.sleep(2)
     useragent = (
         "Mozilla/5.0 (Linux; Android 10; SM-G975F) "
         "AppleWebKit/537.36 (KHTML, like Gecko) "
@@ -181,11 +183,11 @@ async def dyno_usage(dyno):
             AppMinutes = math.floor(AppQuotaUsed % 60)
 
             await dyno.edit(
-                "𝐏𝐄𝐍𝐆𝐆𝐔𝐍𝐀𝐀𝐍 𝐃𝐘𝐍𝐎 𝐒𝐀𝐀𝐓 𝐈𝐍𝐈 : \n"
-                f"➠ {AppHours} ᴊᴀᴍ - {AppMinutes} ᴍᴇɴɪᴛ [ {AppPercentage}% ]  \n"
-                f"𝐒𝐈𝐒𝐀 𝐃𝐘𝐍𝐎 𝐁𝐔𝐋𝐀𝐍 𝐈𝐍𝐈: \n"
-                f"➠ {hours} ᴊᴀᴍ - {minutes} ᴍᴇɴɪᴛ [ {percentage}% ] \n"
-                f" ✦҈͜͡ᴘᴇᴍɪʟɪᴋ  : {ALIVE_NAME} \n"
+                "✪ ᴘᴇɴɢɢᴜɴᴀᴀɴ ᴅʏɴᴏ sᴀᴀᴛ ɪɴɪ : \n"
+                f"✦҈͜͡➠ {AppHours} ᴊᴀᴍ - {AppMinutes} ᴍᴇɴɪᴛ [ {AppPercentage}% ]  \n"
+                f"✪ sɪsᴀ ᴅʏɴᴏ sᴀᴀᴛ ɪɴɪ : \n"
+                f"✦҈͜͡➠ {hours} ᴊᴀᴍ - {minutes} ᴍᴇɴɪᴛ [ {percentage}% ] \n"
+                f" ✪ ᴏᴡɴᴇʀ  : {ALIVE_NAME} \n"
             )
             await asyncio.sleep(20)
             await event.delete()
