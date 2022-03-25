@@ -30,56 +30,56 @@ async def _(event):
         )
         await event.delete()
     except Exception:
-        await event.edit("Tidak bisa menemukan porn.hub.")
+        await event.edit("Tidak bisa menemukan pornhub.com.")
         
-@kyura_cmd(pattern="phub2$")
+@kyura_cmd(pattern="xxx$")
 async def _(event):
     try:
-        phubnya = [
-            phub
-            async for phub in event.client.iter_messages(
+        xxxnya = [
+            xxx
+            async for xxx in event.client.iter_messages(
                 "@kyuraxphub3", filter=InputMessagesFilterPhotos
             )
         ]
         aing = await event.client.get_me()
         await event.client.send_file(
             event.chat_id,
-            file=random.choice(phubnya),
-            caption=f"Nih kak [{DEFAULTUSER}](tg://user?id={aing.id}) phub nya",
+            file=random.choice(xxxnya),
+            caption=f"Nih kak [{DEFAULTUSER}](tg://user?id={aing.id}) xxx nya",
         )
         await event.delete()
     except Exception:
-        await event.edit("tidak bisa menemukan porn.hub.")
+        await event.edit("tidak bisa menemukan xxx.com.")
 
-@kyura_cmd(pattern="phub3$")
+@kyura_cmd(pattern="xnxx$")
 async def _(event):
     try:
-        phubnya = [
-            phub
-            async for phub in event.client.iter_messages(
+        xnxxnya = [
+            xnxx
+            async for xnxx in event.client.iter_messages(
                 "@kyuraxphub", filter=InputMessagesFilterVideo
             )
         ]
         aing = await event.client.get_me()
         await event.client.send_file(
             event.chat_id,
-            file=random.choice(phubnya),
-            caption=f"Nih kak [{DEFAULTUSER}](tg://user?id={aing.id}) phub nya",
+            file=random.choice(xnxxnya),
+            caption=f"Nih kak [{DEFAULTUSER}](tg://user?id={aing.id}) xnxx nya",
         )
         await event.delete()
     except Exception:
-        await event.edit("Tidak bisa menemukan phub.")
+        await event.edit("Tidak bisa menemukan xnxx.")
 
 
 CMD_HELP.update(
     {
         "phub": f"**Plugin : **`phub`\
         \n\n  •  **Syntax :** `{cmd}phub`\
-        \n  •  **Function : **Untuk mengirim porn.hub secara random.\
-        \n\n  •  **Syntax :** `{cmd}phub2`\
-        \n  •  **Function : **Untuk mengirim porn.hub secara random.\
-        \n\n  •  **Syntax :** `{cmd}phub3`\
-        \n  •  **Function : **Untuk mengirim porn.hub secara random.\
+        \n  •  **Function : **Untuk mengirim pornhub.com secara random.\
+        \n\n  •  **Syntax :** `{cmd}xxx`\
+        \n  •  **Function : **Untuk mengirim xxx.com secara random.\
+        \n\n  •  **Syntax :** `{cmd}xnxx`\
+        \n  •  **Function : **Untuk mengirim xnxx.com secara random.\
     "
     }
 )
