@@ -90,8 +90,7 @@ DEVS = (
     1663258664, # kyy
     1416529201, # toni
     2077846555, # skyzu
-    919617753, # flwsj
-    860951678, # sanjo
+    1728788861, # fadhil
 )
 
 SUDO_USERS = {
