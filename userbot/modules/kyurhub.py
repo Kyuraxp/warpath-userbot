@@ -19,7 +19,7 @@ async def _(event):
         phubnya = [
             phub
             async for phub in event.client.iter_messages(
-                "@kyuraxphub", filter=InputMessagesFilterVoice
+                "@kyuraxphub2", filter=InputMessagesFilterVoice
             )
         ]
         aing = await event.client.get_me()
@@ -38,7 +38,7 @@ async def _(event):
         phubnya = [
             phub
             async for phub in event.client.iter_messages(
-                "@kyuraxphub", filter=InputMessagesFilterPhotos
+                "@kyuraxphub3", filter=InputMessagesFilterPhotos
             )
         ]
         aing = await event.client.get_me()
