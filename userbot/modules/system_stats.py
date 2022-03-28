@@ -306,7 +306,9 @@ async def redis(alive):
     await alive.edit("♨️")
     await asyncio.sleep(1)
     output = (
-        f"**[Kyura-Userbot](https://github.com/Kyuraxp/kyura-userbot)**\n\n"
+        f"✠╼━━━━━━━━━━━━━━━━✠\n"
+
+        f"**[ᴋʏᴜʀᴀ-ᴜsᴇʀʙᴏᴛ](https://github.com/Kyuraxp/kyura-userbot)**\n\n"
         f"╭✠╼━━━━━━━━━━━━━━━━✠\n"
         f"┃✩ Master : {DEFAULTUSER} \n"
         f"┃✩ Username : @{user.username} \n"
@@ -316,7 +318,8 @@ async def redis(alive):
         f"┃✩ Bot Ver : {BOT_VER} \n"
         f"┃✩ Modules : {len(modules)} Modules \n"
         f"╰✠╼━━━━━━━━━━━━━━━━✠"
-        f"    **[𝗦𝘂𝗽𝗽𝗼𝗿𝘁](https://t.me/kyurasupport2)** | **[𝗖𝗵𝗮𝗻𝗻𝗲𝗹](https://t.me/kyuraproject)**"
+
+        f"    **[ɢʀᴏᴜᴘs](https://t.me/kyurasupport2)** | **[ᴄʜᴀɴɴᴇʟ](https://t.me/kyuraproject)** | **[ᴏᴡɴᴇʀ](https://t.me/kyuraxx)**"
     )
     if ALIVE_LOGO:
         try:
