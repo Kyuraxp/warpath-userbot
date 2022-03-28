@@ -89,7 +89,7 @@ async def get_readable_time(seconds: int) -> str:
 async def _(kyura):
     await kyura.reply(random.choice(absen))
 
-@register(incoming=True, from_users=DEVS, pattern=r"^.brb$")
+@register(incoming=True, from_users=DEVS, pattern=r"brb$")
 async def _(kyura):
     await kyura.reply(random.choice(brb))
 
@@ -216,6 +216,7 @@ async def redis(pong):
     await pong.edit("**PI**")
     await pong.edit("**PIN**")
     await pong.edit("**PING!**")
+    await pong.edit("**♨️**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(
