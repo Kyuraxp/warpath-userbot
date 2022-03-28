@@ -29,7 +29,7 @@ async def writer(event):
     for line in lines:
         draw.text((x, y), line, fill=(1, 22, 55), font=font)
         y = y + line_height - 5
-    file = "Xa.jpg"
+    file = "kyura.jpg"
     img.save(file)
     await event.reply(file=file)
     os.remove(file)
@@ -40,7 +40,7 @@ CMD_HELP.update(
     {
         "nulis": f"**plugin : **`nulis`\
         \n\n  •  **syntax :** `{cmd}nulis` <text>\
-        \n  •  **function : **menulis Teks Di buku ,buat Lu Yang mager nulis\
+        \n  •  **function : **menulis Teks Di buku ,buat kalian yang malas menulis\
     "
     }
 )
