@@ -20,6 +20,7 @@ from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP
 from userbot import PLAY_PIC as fotoplay
 from userbot import QUEUE_PIC as ngantri
+from userbot import ALIVE_NAME
 from userbot import call_py
 from userbot.utils import bash, edit_delete, edit_or_reply, kyura_cmd
 from userbot.utils.chattitle import CHAT_TITLE
@@ -456,7 +457,7 @@ async def join_(event):
         stream_type=StreamType().pulse_stream,
     )
     try:
-        await xnxx.edit("**{}** `Joined VC in` `{}`".format(owner, str(event.chat_id)))
+        await xnxx.edit("**{}** `Joined VC in` `{}`".format(ALIVE_NAME, str(event.chat_id)))
     except Exception as ex:
         await edit_delete(event, f"**ERROR:** `{ex}`")
 
@@ -473,10 +474,10 @@ async def leavevc(event):
         except (NotInGroupCallError, NoActiveGroupCall):
             pass
         await xnxx.edit(
-            "**{}** `Left the voice in` `{}`".format(owner, str(event.chat_id))
+            "**{}** `Left the voice in` `{}`".format(ALIVE_NAME, str(event.chat_id))
         )
     else:
-        await edit_delete(event, f"**Maaf {owner} Tidak di VCG**")
+        await edit_delete(event, f"**Maaf {ALIVE_NAME} Tidak di VCG**")
 
 
 @kyura_cmd(pattern="playlist$")
