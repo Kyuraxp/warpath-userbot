@@ -117,8 +117,9 @@ async def repeat(rep):
 async def repo_is_here(wannasee):
     """For .repo command, just returns the repo URL."""
     await wannasee.edit(
-        f"**HI**__THIS IS MY REPO__\n\n"
-        f"  __THANKS FOR USING ME__\n"
+        f"**HI,** __THIS IS MY REPO__\n\n"
+        f"  __THANKS FOR USING ME__\n\n"
+
         f"✣ **Rᴇᴘᴏ​:** [Kʏᴜʀᴀ-Usᴇʀʙᴏᴛ​](https://github.com/Kyuraxp/kyura-userbot)\n"
         f"✣ **Oᴡɴᴇʀ:​** [Kʏᴜʀᴀ](t.me/kyuraxx)\n"
         f"✣ **Gʀᴏᴜᴘ Sᴜᴘᴘᴏʀᴛ:** [Kʏᴜʀᴀ Sᴜᴘᴘᴏʀᴛ](t.me/kyurasupport2)\n"
