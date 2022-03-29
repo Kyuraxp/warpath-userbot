@@ -10,7 +10,7 @@ from importlib import import_module
 
 import requests
 from telethon.tl.functions.channels import InviteToChannelRequest
-from userbot import ALIVE_NAME, BOT_USERNAME, BOT_VER, BOTLOG_CHATID, BOT_TOKEN, LOGS, UPSTREAM_REPO_BRANCH, bot, call_py, owner
+from userbot import ALIVE_NAME, BOT_USERNAME, BOT_VER, BOTLOG_CHATID, BOT_TOKEN, LOGS, UPSTREAM_REPO_BRANCH, bot, call_py
 from userbot.modules import ALL_MODULES
 from userbot.utils.tools import ini_wm
 from userbot.utils import autobot
