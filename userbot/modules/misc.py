@@ -93,7 +93,7 @@ async def killdabot(event):
 async def reedme(e):
     await e.edit(
         "Here's Something for You to Read :\n"
-        "\n[⚡ Kyura-UserBot Repo](https://github.com/Kyuraxp/kyura-userbot/blob/skyzu-userBot/README.md)"
+        "\n[⚡ Kyura-UserBot Repo](https://github.com/Kyuraxp/kyura-userbot/blob/kyura-userBot/README.md)"
         "\n[Setup Guide - Basic](https://telegra.ph/How-to-host-a-Telegram-Userbot-11-02)"
         "\n[Special - Note](https://telegra.ph/Special-Note-11-02)"
     )
@@ -118,8 +118,8 @@ async def repo_is_here(wannasee):
     """For .repo command, just returns the repo URL."""
     await wannasee.edit(
         f"**HI**, __THIS IS MY REPO__\n\n"
-        f"      __THANKS FOR USING ME__\n"
-        f" **Rᴇᴘɪ​** ➠ [Kʏᴜʀᴀ-Usᴇʀʙᴏᴛ​](https://github.com/Kyuraxp/kyura-userbot)\n"
+        f"  __THANKS FOR USING ME__\n"
+        f" **Rᴇᴘᴏ​** ➠ [Kʏᴜʀᴀ-Usᴇʀʙᴏᴛ​](https://github.com/Kyuraxp/kyura-userbot)\n"
         f"✣ **Oᴡɴᴇʀ​** ➠ [Kʏᴜʀᴀ](t.me/kyuraxx)\n"
         f"✣ **Kʏᴜʀᴀ Sᴜᴘᴘᴏʀᴛ** ➠ [Kʏᴜʀᴀ Sᴜᴘᴘᴏʀᴛ](t.me/kyurasupport2)\n"
         f"✣ **Kʏᴜʀᴀ Pʀᴏᴊᴇᴄᴛ**​ ➠ [Kʏᴜʀᴀ Pʀᴏᴊᴇᴄᴛ](t.me/kyuraproject)\n"
