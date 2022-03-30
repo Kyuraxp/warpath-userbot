@@ -26,7 +26,7 @@ from userbot import (
     PMPERMIT_TEXT,
 )
 from userbot.events import register
-from userbot.utils import kyura_cmd
+from userbot.utils import edit_or_reply, edit_delete, kyura_cmd
 
 if PMPERMIT_PIC is None:
     CUSTOM_PIC = ALIVE_LOGO
