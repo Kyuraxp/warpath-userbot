@@ -228,7 +228,7 @@ async def approvepm(apprvpm):
         from userbot.modules.sql_helper.globals import gvarstatus
         from userbot.modules.sql_helper.pm_permit_sql import approve
     except AttributeError:
-        return await apprvpm.edit("`Running on Non-SQL mode!`")
+        return await edit_delete(apprvpm, "`Running on Non-SQL mode!`")
 
     if apprvpm.reply_to_msg_id:
         reply = await apprvpm.get_reply_message()
@@ -257,12 +257,12 @@ async def approvepm(apprvpm):
     try:
         approve(uid)
     except IntegrityError:
-        return await apprvpm.edit("`Oke Pesan Anda Sudah Diterima ツ`")
+        return await edit_delete(apprvpm,"`Oke Pesan Anda Sudah Diterima ツ`")
 
-    await apprvpm.edit(
+    await edit_delete(apprvpm,
         f"`Hai` [{name0}](tg://user?id={uid}) `Pesan Anda Sudah Diterima Oleh Owner Saya`"
     )
-    await apprvpm.delete(getmsg)
+    await edit_delete(apprvpm, getmsg)
     await message.delete()
 
     if BOTLOG:
@@ -276,7 +276,7 @@ async def disapprovepm(disapprvpm):
     try:
         from userbot.modules.sql_helper.pm_permit_sql import dissprove
     except BaseException:
-        return await disapprvpm.edit("`Running on Non-SQL mode!`")
+        return await edit_or_reply(disapprvpm, "`Running on Non-SQL mode!`")
 
     if disapprvpm.reply_to_msg_id:
         reply = await disapprvpm.get_reply_message()
@@ -289,7 +289,7 @@ async def disapprovepm(disapprvpm):
         aname = await disapprvpm.client.get_entity(disapprvpm.chat_id)
         name0 = str(aname.first_name)
 
-    await disapprvpm.edit(
+    await edit_or_reply(disapprvpm,
         f"`Maaf` [{name0}](tg://user?id={disapprvpm.chat_id}) `Pesan Anda Telah Ditolak, Mohon Jangan Melakukan Spam Ke Room Chat!`"
     )
 
