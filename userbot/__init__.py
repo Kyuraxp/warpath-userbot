@@ -935,7 +935,7 @@ with bot:
             query = event.text
             if event.query.user_id == uid and query.startswith(""):
                 buttons = paginate_help(0, dugmeler, "helpme")
-                result = builder.photo(
+                result = await event.builder.photo(
                     file=kyuralogo,
                     link_preview=False,
                     text=f"Kʏᴜʀᴀ​-Usᴇʀʙᴏᴛ\n\n× **ʙᴏᴛ ᴏꜰ :** {DEFAULTUSER}\n× **ʙᴏᴛ ᴠᴇʀ :** 5.0\n× **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}\n ".format(
@@ -1044,9 +1044,9 @@ with bot:
                 modul_name = event.data_match.group(1).decode("UTF-8")
 
                 cmdhel = str(CMD_HELP[modul_name])
-                if len(cmdhel) > 180:
+                if len(cmdhel) > 950:
                     help_string = (
-                        str(CMD_HELP[modul_name]).replace("`", "")[:180]
+                        str(CMD_HELP[modul_name]).replace("`", "")[:950]
                         + "..."
                         + "\n\nBaca Text Berikutnya Ketik .help "
                         + modul_name
@@ -1062,12 +1062,16 @@ with bot:
                         modul_name
                     )
                 )
+                await event.edit(
+                    reply_pop_up_alert, buttons=[Button.inline("Back", data="reopen")]
+                )
+
             else:
                 reply_pop_up_alert = (
                     f"🚫!WARNING!🚫 Jangan Menggunakan Milik {DEFAULTUSER}."
                 )
 
-            await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
+                await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
     except BaseException:
         LOGS.info(
