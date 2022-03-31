@@ -311,13 +311,13 @@ async def redis(alive):
         f"┃✩ Mᴀsᴛᴇʀ : {DEFAULTUSER} \n"
         f"┃✩ Usᴇʀɴᴀᴍᴇ : @{user.username} \n"
         f"┃✩ Tᴇʟᴇᴛʜᴏɴ : Ver {version.__version__} \n"
-        f"┃✩ Pʏᴛᴊᴏɴ : Ver {python_version()} \n"
+        f"┃✩ Pʏᴛʜᴏɴ : Ver {python_version()} \n"
         f"┃✩ Bʀᴀɴᴄʜ : {UPSTREAM_REPO_BRANCH} \n"
         f"┃✩ Bᴏᴛ Vᴇʀsɪᴏɴ : {BOT_VER} \n"
-        f"┃✩ Mᴘᴅᴜʟᴇs : {len(modules)} Modules \n"
+        f"┃✩ Mᴏᴅᴜʟᴇs : {len(modules)} Modules \n"
         f"╰✠╼━━━━━━━━━━━━━━✠"
-        f"  [ɢʀᴏᴜᴘ](https://t.me/kyurasupport2) \n"
-        f"  [ᴄʜᴀɴɴᴇʟ](https://t.me/kyuraproject) \n"
+        f"    **[ɢʀᴏᴜᴘ](https://t.me/kyurasupport2)**\n\n"
+        f"    **[ᴄʜᴀɴɴᴇʟ](https://t.me/kyuraproject)**\n\n"
     )
     if ALIVE_LOGO:
         try:
