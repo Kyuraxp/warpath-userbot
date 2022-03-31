@@ -308,14 +308,14 @@ async def redis(alive):
     output = (
         f"   **[ᴋʏᴜʀᴀ-ᴜsᴇʀʙᴏᴛ](https://github.com/Kyuraxp/kyura-userbot)**\n\n"
 
-        f"✩ Mᴀsᴛᴇʀ : {DEFAULTUSER} \n"
-        f"✩ Usᴇʀɴᴀᴍᴇ : @{user.username} \n"
-        f"✩ Tᴇʟᴇᴛʜᴏɴ : Ver {version.__version__} \n"
-        f"✩ Pʏᴛʜᴏɴ : Ver {python_version()} \n"
-        f"✩ Bʀᴀɴᴄʜ : {UPSTREAM_REPO_BRANCH} \n"
-        f"✩ Bᴏᴛ Vᴇʀsɪᴏɴ : {BOT_VER} \n"
-        f"✩ Mᴏᴅᴜʟᴇs : {len(modules)} Modules \n"
-        f"✩  Gʀᴏᴜᴘ : [Sᴜᴘᴘᴏʀᴛ](https://t.me/kyurasupport2) \n"
+        f"≛ **Mᴀsᴛᴇʀ :** {DEFAULTUSER} \n"
+        f"≛ **Usᴇʀɴᴀᴍᴇ :** @{user.username} \n"
+        f"≛ **Tᴇʟᴇᴛʜᴏɴ :** Ver {version.__version__} \n"
+        f"≛ **Pʏᴛʜᴏɴ :** Ver {python_version()} \n"
+        f"≛ **Bʀᴀɴᴄʜ :** {UPSTREAM_REPO_BRANCH} \n"
+        f"≛ **Bᴏᴛ Vᴇʀsɪᴏɴ :** {BOT_VER} \n"
+        f"≛ **Mᴏᴅᴜʟᴇs :** {len(modules)} Modules \n"
+        f"≛ **Gʀᴏᴜᴘ :** [Sᴜᴘᴘᴏʀᴛ](https://t.me/kyurasupport2) \n"
     )
     if ALIVE_LOGO:
         try:
