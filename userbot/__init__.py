@@ -1063,7 +1063,7 @@ with bot:
                     )
                 )
                 await event.edit(
-                    reply_pop_up_alert, buttons=[Button.inline("Back", data="open")]
+                    reply_pop_up_alert, buttons=[Button.inline("Back", data="open_plugin")]
                 )
 
             else:
