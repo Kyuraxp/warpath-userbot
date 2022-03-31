@@ -308,16 +308,17 @@ async def redis(alive):
     output = (
         f"    **[ᴋʏᴜʀᴀ-ᴜsᴇʀʙᴏᴛ](https://github.com/Kyuraxp/kyura-userbot)**\n\n"
         f"╭✠╼━━━━━━━━━━━━━━✠\n"
-        f"┃✩ Master : {DEFAULTUSER} \n"
-        f"┃✩ Username : @{user.username} \n"
-        f"┃✩ Telethon : Ver {version.__version__} \n"
-        f"┃✩ Python : Ver {python_version()} \n"
-        f"┃✩ Branch : {UPSTREAM_REPO_BRANCH} \n"
-        f"┃✩ Bot Ver : {BOT_VER} \n"
-        f"┃✩ Modules : {len(modules)} Modules \n"
+        f"┃✩ Mᴀsᴛᴇʀ : {DEFAULTUSER} \n"
+        f"┃✩ Usᴇʀɴᴀᴍᴇ : @{user.username} \n"
+        f"┃✩ Tᴇʟᴇᴛʜᴏɴ : Ver {version.__version__} \n"
+        f"┃✩ Pʏᴛᴊᴏɴ : Ver {python_version()} \n"
+        f"┃✩ Bʀᴀɴᴄʜ : {UPSTREAM_REPO_BRANCH} \n"
+        f"┃✩ Bᴏᴛ Vᴇʀsɪᴏɴ : {BOT_VER} \n"
+        f"┃✩ Mᴘᴅᴜʟᴇs : {len(modules)} Modules \n"
         f"╰✠╼━━━━━━━━━━━━━━✠"
 
-        f"    **[ɢʀᴏᴜᴘs](https://t.me/kyurasupport2)** | **[ᴄʜᴀɴɴᴇʟ](https://t.me/kyuraproject)** | **[ᴏᴡɴᴇʀ](https://t.me/kyuraxx)**"
+
+        f"**[ɢʀᴏᴜᴘs](https://t.me/kyurasupport2)** | **[ᴄʜᴀɴɴᴇʟ](https://t.me/kyuraproject)**
     )
     if ALIVE_LOGO:
         try:
