@@ -1,4 +1,4 @@
-0# Copyright (C) 2019 The Raphielscape Company LLC.
+# Copyright (C) 2019 The Raphielscape Company LLC.
 #
 # Licensed under the Raphielscape Public License, Version 1.d (the "License");
 # you may not use this file except in compliance with the License.
@@ -316,9 +316,8 @@ async def redis(alive):
         f"┃✩ Bᴏᴛ Vᴇʀsɪᴏɴ : {BOT_VER} \n"
         f"┃✩ Mᴘᴅᴜʟᴇs : {len(modules)} Modules \n"
         f"╰✠╼━━━━━━━━━━━━━━✠"
-
-
-        f"**[ɢʀᴏᴜᴘs](https://t.me/kyurasupport2)** | **[ᴄʜᴀɴɴᴇʟ](https://t.me/kyuraproject)**
+        f"  [ɢʀᴏᴜᴘ](https://t.me/kyurasupport2) \n"
+        f"  [ᴄʜᴀɴɴᴇʟ](https://t.me/kyuraproject) \n"
     )
     if ALIVE_LOGO:
         try:
