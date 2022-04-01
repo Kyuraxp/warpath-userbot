@@ -591,7 +591,7 @@ with bot:
         async def on_plug_in_callback_query_handler(event):
             if event.query.user_id == uid:
                 buttons = paginate_help(0, dugmeler, "helpme")
-                text = f"Kʏᴜʀᴀ​ Usᴇʀʙᴏᴛ\n\n× **ʙᴏᴛ ᴏꜰ :** {DEFAULTUSER}\n× **ʙᴏᴛ ᴠᴇʀ :** 5.0\n× **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}\n "
+                text = f"Kʏᴜʀᴀ​ Usᴇʀʙᴏᴛ\n\n× **ʙᴏᴛ ᴏꜰ :** {DEFAULTUSER}\n× **ʙᴏᴛ ᴠᴇʀ :** 3.1.0\n× **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}\n "
                 await event.edit(
                     text,
                     file=kyuralogo,
@@ -637,7 +637,7 @@ with bot:
                     ],
                 )
             else:
-                reply_pop_up_alert = f"🤴 Name : {DEFAULTUSER}\n🤖 Bot Ver : 5.0\n🛠 Modules : {len(plugins)}\n✨ Branch : Kyura-Userbot"
+                reply_pop_up_alert = f"🤴 Name : {DEFAULTUSER}\n🤖 Bot Ver : 3.1.0\n🛠 Modules : {len(plugins)}\n✨ Branch : Kyura-Userbot"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @ tgbot.on(
@@ -938,7 +938,7 @@ with bot:
                 result = await event.builder.photo(
                     file=kyuralogo,
                     link_preview=False,
-                    text=f"Kʏᴜʀᴀ​-Usᴇʀʙᴏᴛ\n\n× **ʙᴏᴛ ᴏꜰ :** {DEFAULTUSER}\n× **ʙᴏᴛ ᴠᴇʀ :** 5.0\n× **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}\n ".format(
+                    text=f"Kʏᴜʀᴀ​-Usᴇʀʙᴏᴛ\n\n× **ʙᴏᴛ ᴏꜰ :** {DEFAULTUSER}\n× **ʙᴏᴛ ᴠᴇʀ :** 3.1.0\n× **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}\n ".format(
                         len(dugmeler),
                     ),
                     buttons=buttons,
