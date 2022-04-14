@@ -119,10 +119,10 @@ async def repo_is_here(wannasee):
     await wannasee.edit(
         f"**HI,** __THIS IS MY REPO__\n\n"
         f"  __THANKS FOR USING ME__\n"
-        f"✣ **Rᴇᴘᴏ​:** [Kʏᴜʀᴀ-Usᴇʀʙᴏᴛ​](https://github.com/Kyuraxp/kyura-userbot)\n"
-        f"✣ **Oᴡɴᴇʀ:​** [Kʏᴜʀᴀ](t.me/kyuraxx)\n"
+        f"✣ **Rᴇᴘᴏ​:** [Wᴀʀᴘᴀᴛʜ-Usᴇʀʙᴏᴛ​](https://github.com/Kyuraxp/kyura-userbot)\n"
+        f"✣ **Oᴡɴᴇʀ:​** [Wᴀʀᴘᴀᴛʜ](t.me/warpathnieh)\n"
         f"✣ **Gʀᴏᴜᴘ Sᴜᴘᴘᴏʀᴛ:** [Kʏᴜʀᴀ Sᴜᴘᴘᴏʀᴛ](t.me/kyurasupport2)\n"
-        f"✣ **Cʜᴀɴɴᴇʟ Kʏᴜʀᴀ:**​ [Kʏᴜʀᴀ Pʀᴏᴊᴇᴄᴛ](t.me/kyuraproject)\n"
+        f"✣ **Cʜᴀɴɴᴇʟ Wᴀʀᴘᴀᴛʜ:**​ [Kʏᴜʀᴀ Pʀᴏᴊᴇᴄᴛ](t.me/kyuraproject)\n"
     )
 
 
