@@ -1,6 +1,6 @@
 {
-  "name": "Kyura-Userbot",
-  "description": "[Kyura-Userbot] USERBOT KHUSUS YANG DIGUNAKAN UNTUK BERSENANG-SENANG DI TELEGRAM.",
+  "name": "Warpath-Userbot",
+  "description": "[Warpath-Userbot] USERBOT KHUSUS YANG DIGUNAKAN UNTUK BERSENANG-SENANG DI TELEGRAM.",
   "logo": "https://telegra.ph/file/d841005eca08d0ed2ef36.jpg",
   "keywords": [
     "telegram",
@@ -9,8 +9,8 @@
     "modular",
     "productivity"
 ],
-  "repository": "https://github.com/Kyuraxp/kyura-userbot",
-  "telegram": "https://t.me/kyuraxx",
+  "repository": "https://github.com/Kyuraxp/warpath-userbot",
+  "telegram": "https://t.me/papiwarpath",
   "success_url": "https://t.me/kyurasupport2",
   "stack": "container",
   "env": {
