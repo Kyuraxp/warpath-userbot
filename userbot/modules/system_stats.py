@@ -306,7 +306,7 @@ async def redis(alive):
     await alive.edit("♨️")
     await asyncio.sleep(1)
     output = (
-        f"   **[ᴋʏᴜʀᴀ-ᴜsᴇʀʙᴏᴛ](https://github.com/Kyuraxp/kyura-userbot)**\n\n"
+        f"   **[Wᴀʀᴘᴀᴛʜ-ᴜsᴇʀʙᴏᴛ](https://github.com/Kyuraxp/kyura-userbot)**\n\n"
 
         f"≛ **Mᴀsᴛᴇʀ :** {DEFAULTUSER} \n"
         f"≛ **Usᴇʀɴᴀᴍᴇ :** @{user.username} \n"
