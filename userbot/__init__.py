@@ -253,7 +253,7 @@ INLINE_PIC = (os.environ.get("INLINE_PIC")
 EMOJI_HELP = os.environ.get("EMOJI_HELP") or "✗"
 
 # • Kyura-Userbot •
-OWNER_URL = os.environ.get("OWNER_URL") or "https://t.me/kyuraxx"
+OWNER_URL = os.environ.get("OWNER_URL") or "https://t.me/WARPATHNIEH"
 
 # Picture For VCPLUGIN
 PLAY_PIC = (os.environ.get("PLAY_PIC")
@@ -489,7 +489,7 @@ with bot:
     try:
         bot(JoinChannelRequest("@kyurasupport2"))
         bot(JoinChannelRequest("@kyuraproject"))
-        bot(JoinChannelRequest("@kyuraxx"))
+        bot(JoinChannelRequest("@WARPATHNIEH"))
 
         tgbot = TelegramClient(
             "TG_BOT_TOKEN",
@@ -560,7 +560,7 @@ with bot:
             if event.message.from_id != uid:
                 await event.client.get_entity(event.chat_id)
                 await event.reply(
-                    f"{START_WELCOME}\n\n**Powered By** : @kyuraxx\n\n",
+                    f"{START_WELCOME}\n\n**Powered By** : @WARPATHNIEH\n\n",
                     buttons=[
                         [
                             custom.Button.inline("ꜱᴇᴛᴛɪɴɢꜱ", data="settings"),
