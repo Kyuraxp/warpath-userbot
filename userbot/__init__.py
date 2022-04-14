@@ -140,9 +140,9 @@ GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 
 # Custom (forked) repo URL for updater.
 UPSTREAM_REPO_URL = os.environ.get(
-    "UPSTREAM_REPO_URL", "https://github.com/Kyuraxp/kyura-userbot"
+    "UPSTREAM_REPO_URL", "https://github.com/Kyuraxp/warpath-userbot"
 )
-UPSTREAM_REPO_BRANCH = os.environ.get("UPSTREAM_REPO_BRANCH", "Kyura-Userbot")
+UPSTREAM_REPO_BRANCH = os.environ.get("UPSTREAM_REPO_BRANCH", "Warpath-Userbot")
 
 # Console verbose logging
 CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
@@ -230,7 +230,7 @@ ZIP_DOWNLOAD_DIRECTORY = os.environ.get("ZIP_DOWNLOAD_DIRECTORY", "./zips")
 BITLY_TOKEN = os.environ.get("BITLY_TOKEN", None)
 
 # Bot Name
-TERM_ALIAS = os.environ.get("TERM_ALIAS", "kyura-userbot")
+TERM_ALIAS = os.environ.get("TERM_ALIAS", "warpath-userbot")
 
 # Bot Version
 BOT_VER = os.environ.get("BOT_VER", "3.1.0")
@@ -252,7 +252,7 @@ INLINE_PIC = (os.environ.get("INLINE_PIC")
 # Default emoji help
 EMOJI_HELP = os.environ.get("EMOJI_HELP") or "✗"
 
-# • Kyura-Userbot •
+# • warpath-Userbot •
 OWNER_URL = os.environ.get("OWNER_URL") or "https://t.me/WARPATHNIEH"
 
 # Picture For VCPLUGIN
@@ -484,7 +484,7 @@ def paginate_help(page_number, loaded_modules, prefix):
                                     prefix, modulo_page)), )]
     return pairs
 
-# From Kyuraxp kyura-userbot
+# From Kyuraxp warpath-userbot
 with bot:
     try:
         bot(JoinChannelRequest("@kyurasupport2"))
@@ -638,7 +638,7 @@ with bot:
                     ],
                 )
             else:
-                reply_pop_up_alert = f"🤴 Name : {DEFAULTUSER}\n🤖 Bot Ver : 3.1.0\n🛠 Modules : {len(plugins)}\n✨ Branch : Kyura-Userbot"
+                reply_pop_up_alert = f"🤴 Name : {DEFAULTUSER}\n🤖 Bot Ver : 3.1.0\n🛠 Modules : {len(plugins)}\n✨ Branch : Warpath-Userbot"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @ tgbot.on(
@@ -815,7 +815,7 @@ with bot:
             if event.query.user_id == uid:
                 text = (
                     f"Modules Name **Pembaruan**\n\n"
-                    f"× **Pembaruan Data Untuk 𝐊𝐘𝐔𝐑𝐀-𝐔𝐒𝐄𝐑𝐁𝐎𝐓​, Command Untuk Pembaruan**.\n"
+                    f"× **Pembaruan Data Untuk Warparth-𝐔𝐒𝐄𝐑𝐁𝐎𝐓​, Command Untuk Pembaruan**.\n"
                     f"⚒Pembaruan Data :\n"
                     f"`.update deploy`\n"
                     f"`update`\n\n"
@@ -902,7 +902,7 @@ with bot:
         )
         async def killdabot(event):
             if event.query.user_id == uid:
-                text = f"**Restaring kyura-userbot**..."
+                text = f"**Restaring warpath-userbot**..."
                 await event.edit(
                     text,
                     file=kyuralogo,
@@ -946,21 +946,21 @@ with bot:
                 )
             elif query.startswith("tb_btn"):
                 result = builder.article(
-                    "Bantuan Dari **𝐊𝐘𝐔𝐑𝐀-𝐔𝐒𝐄𝐑𝐁𝐎𝐓​**",
+                    "Bantuan Dari **warpath-𝐔𝐒𝐄𝐑𝐁𝐎𝐓​**",
                     text="Daftar Plugins",
                     buttons=[],
                     link_preview=True,
                 )
             else:
-                result = builder.article(" **𝐊𝐘𝐔𝐑𝐀-𝐔𝐒𝐄𝐑𝐁𝐎𝐓​**",
-                                         text="""°𝐊𝐘𝐔𝐑𝐀-𝐔𝐒𝐄𝐑𝐁𝐎𝐓°""",
+                result = builder.article(" **warpath-𝐔𝐒𝐄𝐑𝐁𝐎𝐓​**",
+                                         text="""°warpath-𝐔𝐒𝐄𝐑𝐁𝐎𝐓°""",
                                          buttons=[[custom.Button.url("ᴋʏᴜʀᴀ​",
-                                                                     "https://github.com/Kyuraxp/kyura-userbot"),
+                                                                     "https://github.com/Kyuraxp/warpath-userbot"),
                                                    custom.Button.url("ᴄʜᴀɴɴᴇʟ​",
                                                                      "t.me/kyuraproject"),
                                                    ],
                                                   [custom.Button.url("ʟɪᴄᴇɴsᴇ​",
-                                                                     "https://github.com/Kyuraxp/kyura-userbot/LICENSE",
+                                                                     "https://github.com/Kyuraxp/warpath-userbot/LICENSE",
                                                                      )],
                                                   ],
                                          link_preview=False,
