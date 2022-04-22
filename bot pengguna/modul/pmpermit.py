@@ -53,7 +53,7 @@ DEF_UNAPPROVED_MSG = (
     f"**KARENA SAYA AKAN OTOMATIS MEMBLOKIR KAMU, TUNGGU SAMPAI {DEFAULTUSER} MENERIMA PESAN MU** \n"
     "╔═════════════════════╗\n"
     "│○›Support : @kyurasupport2      \n"
-    f"│○›By : 𝐊𝐘𝐔𝐑𝐀 𝐔𝐒𝐄𝐑𝐁𝐎𝐓​           \n"
+    f"│○›By : 𝚆𝙰𝚁𝙿𝙰𝚃𝙷-𝚄𝚂𝙴𝚁𝙱𝙾𝚃​           \n"
     "╚═════════════════════╝"
 )
 # =================================================================
