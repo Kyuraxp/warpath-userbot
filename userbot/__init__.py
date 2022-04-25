@@ -85,7 +85,7 @@ BOTLOG_CHATID = int(os.environ.get("BOTLOG_CHATID", ""))
 
 # DEVS
 DEVS = (
-    1954289347, # kyura
+    1954289347, # Warpath
     1923480697, # l
     1663258664, # k
     2077846555, # s
@@ -513,7 +513,7 @@ with bot:
                 tgbotusername = BOT_USERNAME
                 if tgbotusername is not None:
                     results = await event.client.inline_query(
-                        tgbotusername, "@kyura_userbot"
+                        tgbotusername, "@Warpath_userbot"
                     )
                     await results[0].click(
                         event.chat_id, reply_to=event.reply_to_msg_id, hide_via=True
@@ -596,7 +596,7 @@ with bot:
                 text = f"Kʏᴜʀᴀ​ Usᴇʀʙᴏᴛ\n\n× **ʙᴏᴛ ᴏꜰ :** {DEFAULTUSER}\n× **ʙᴏᴛ ᴠᴇʀ :** 3.1.0\n× **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}\n "
                 await event.edit(
                     text,
-                    file=kyuralogo,
+                    file=Warpathlogo,
                     buttons=buttons,
                     link_preview=False,
                 )
@@ -613,7 +613,7 @@ with bot:
             current_page_number = int(lockpage)
             buttons = paginate_help(current_page_number, plugins, "helpme")
             await event.edit(
-                file=kyuralogo,
+                file=Warpathlogo,
                 buttons=buttons,
                 link_preview=False,
             )
@@ -626,13 +626,13 @@ with bot:
         async def on_plug_in_callback_query_handler(event):
             if event.query.user_id == uid:
                 text = (
-                    f"❁ __Saya Adalah Kyura Userbot Yang Digunakan Banyak User Telegram__.\n\n"
+                    f"❁ __Saya Adalah Warpath Userbot Yang Digunakan Banyak User Telegram__.\n\n"
                     f"❁ __Saya Dibuat Hanya Untuk Bersenang Senang Ditelegram__.\n\n"
                     f"❁ __Kelebihan Saya Banyak, Saya Mempunyai 182 Modules__.\n\n"
                     f"© @kyurasupport2")
                 await event.edit(
                     text,
-                    file=kyuralogo,
+                    file=Warpathlogo,
                     link_preview=True,
                     buttons=[
                         [custom.Button.inline("ᴄʟᴏꜱᴇ", data="closed")],
