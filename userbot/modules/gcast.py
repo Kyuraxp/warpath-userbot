@@ -6,6 +6,22 @@ GCAST_BLACKLIST = [
     -1001705349543,  # Kyurasupport
     -1001380293847,  # Nastysupport
     -1001692751821,  # ramsupport
+    -1001675396283,  # AyiinXdSupport
+    -1001473548283,  # SharingUserbot
+    -1001433238829,  # TedeSupport
+    -1001476936696,  # AnosSupport
+    -1001327032795,  # UltroidSupport
+    -1001294181499,  # UserBotIndo
+    -1001419516987,  # VeezSupportGroup
+    -1001459812644,  # GeezSupportGroup
+    -1001296934585,  # X-PROJECT BOT
+    -1001481357570,  # UsergeOnTopic
+    -1001459701099,  # CatUserbotSupport
+    -1001109837870,  # TelegramBotIndonesia
+    -1001752592753,  # Skyzusupport
+    -1001788983303,  # KayzuSupport
+    -1001267233272,  # PocongUserbot
+    -1001500063792,  # Trident
 ]
 
 
