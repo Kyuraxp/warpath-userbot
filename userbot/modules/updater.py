@@ -19,7 +19,7 @@ from userbot import (
     UPSTREAM_REPO_BRANCH,
     UPSTREAM_REPO_URL,
 )
-fron userbot.events import register
+from userbot.events import register
 from userbot.utils import kyura_cmd
 
 requirements_path = path.join(
