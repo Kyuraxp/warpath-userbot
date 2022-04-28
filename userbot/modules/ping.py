@@ -136,7 +136,7 @@ async def redis(pong):
     await pong.edit(
         f"**{ALIVE_NAME}**        \n"
         f"**➠Kecepatan : ** %sms  \n"
-        f"**➠Branch : ** Kyura-Userbot \n" % (duration)
+        f"**➠Branch : ** Warpath-Userbot \n" % (duration)
     )
 
 
@@ -216,7 +216,7 @@ async def redis(pong):
     await pong.edit("**PI**")
     await pong.edit("**PIN**")
     await pong.edit("**PING!**")
-    await pong.edit("**⚡**")
+    await pong.edit("**🔱**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(
