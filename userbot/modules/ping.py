@@ -18,11 +18,11 @@ from userbot.events import register
 from userbot.utils import kyura_cmd
 
 absen = [
-    "**Eh ada kyura**",
+    "**Eh ada Warpath**",
     "**Hadir ganteng** 🥵",
     "**Hadir Sayang** 😘",
-    "**Hadir kak** 😉",
-    "**Hadir bang kyura** 😁",
+    "**eh lord Warpath** 😉",
+    "**Hadir bang Warpath** 😁",
     "**Hadir kak maap telat** 🥺",
 ]
 
@@ -174,7 +174,7 @@ async def redis(pong):
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(
-        f"**⚡𝐊𝐘𝐔𝐑𝐀 𝐔𝐒𝐄𝐑𝐁𝐎𝐓​⚡**\n"
+        f"**⚡𝗪𝗔𝗥𝗣𝗔𝗧𝗛 𝗨𝗦𝗘𝗥𝗕𝗢𝗧​⚡**\n"
         f"➠ __Signal__    __:__ "
         f"`%sms` \n"
         f"➠ __Uptime__ __:__ "
@@ -198,7 +198,7 @@ async def redis(pong):
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(
-        f"**⚡𝐊𝐘𝐔𝐑𝐀 𝐔𝐒𝐄𝐑𝐁𝐎𝐓​⚡**\n"
+        f"**⚡𝗪𝗔𝗥𝗣𝗔𝗧𝗛 𝗨𝗦𝗘𝗥𝗕𝗢𝗧​⚡**\n"
         f"** ➠  Sɪɢɴᴀʟ   :** "
         f"`%sms` \n"
         f"** ➠  Uᴘᴛɪᴍᴇ  :** "
@@ -216,7 +216,7 @@ async def redis(pong):
     await pong.edit("**PI**")
     await pong.edit("**PIN**")
     await pong.edit("**PING!**")
-    await pong.edit("**♨️**")
+    await pong.edit("**⚡**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(
@@ -252,7 +252,7 @@ async def speedtst(spd):
         f"`{result['ping']}` \n"
         "✧ **ISP:** "
         f"`{result['client']['isp']}` \n"
-        "✧ **BOT:** ⚡kyura-userbot⚡"
+        "✧ **BOT:** ⚡Warpath-userbot⚡"
     )
 
 
