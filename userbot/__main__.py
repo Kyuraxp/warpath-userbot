@@ -21,7 +21,7 @@ try:
         imported_module = import_module("userbot.modules." + module_name)
     bot.start()
     call_py.start()
-    LOGS.info(f"♨️Kyura-Userbot♨️ ⚙️ V{BOT_VER} [ TELAH DIAKTIFKAN! ]")
+    LOGS.info(f"♨️Warpath-Userbot♨️ ⚙️ V{BOT_VER} [ TELAH DIAKTIFKAN! ]")
 except BaseException as e:
     LOGS.info(str(e), exc_info=True)
     sys.exit(1)
@@ -32,7 +32,7 @@ async def kyura_usbot_on():
         if BOTLOG_CHATID != 0:
             await bot.send_message(
                 BOTLOG_CHATID,
-                f"♨️ Kyura-Userbot Berhasil Diaktfikan ♨️\n╼┅━━━━━╍━━━━━┅╾\n❍▹ Bot Of : {ALIVE_NAME}\n❍▹ BotVer : {BOT_VER}\n@{UPSTREAM_REPO_BRANCH}\n╼┅━━━━━╍━━━━━┅╾",
+                f"♨️ Warpath-Userbot Berhasil Diaktfikan ♨️\n╼┅━━━━━╍━━━━━┅╾\n❍▹ Bot Of : {ALIVE_NAME}\n❍▹ BotVer : {BOT_VER}\n@{UPSTREAM_REPO_BRANCH}\n╼┅━━━━━╍━━━━━┅╾",
             )
     except Exception as e:
         LOGS.info(str(e))
