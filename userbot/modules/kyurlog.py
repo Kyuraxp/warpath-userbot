@@ -1,6 +1,6 @@
 # 🍀 © @tofik_dn
 # ⚠️ Do not remove credits
-# recode by @Kyuraxx
+# recode by @PAPIWARPATH
 
 
 import random
