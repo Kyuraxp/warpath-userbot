@@ -43,7 +43,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 CUSTOM_TEXT = (
     str(PMPERMIT_TEXT)
     if PMPERMIT_TEXT
-    else f"__Halo kawan, saya bot yang menjaga room chat Kyura-Userbot {DEFAULTUSER} di mohon jangan melakukan spam , kalau anda melakukan itu OTOMATIS saya akan memblockir anda!__ \n"
+    else f"__Halo kawan, saya bot yang menjaga room chat Warpath-Userbot {DEFAULTUSER} di mohon jangan melakukan spam , kalau anda melakukan itu OTOMATIS saya akan memblockir anda!__ \n"
 )
 DEF_UNAPPROVED_MSG = (
     "╔═════════════════════╗\n"
