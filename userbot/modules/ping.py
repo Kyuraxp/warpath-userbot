@@ -23,7 +23,7 @@ absen = [
     "**Hadir kak warpath** 😘",
     "**eh lord Warpath** 😉",
     "**Hadir bang Warpath** 😁",
-    "**Hadir lord warpath ganteng** 🥺",
+    "**Hadir om warpath** 🥺",
 ]
 
 
