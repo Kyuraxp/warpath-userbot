@@ -18,12 +18,12 @@ from userbot.events import register
 from userbot.utils import kyura_cmd
 
 absen = [
-    "**Eh ada Warpath**",
-    "**Hadir ganteng** 🥵",
-    "**Hadir Sayang** 😘",
+    "**Eh ada bang Warpath**",
+    "**Hadir warpath ganteng** 🥵",
+    "**Hadir kak warpath** 😘",
     "**eh lord Warpath** 😉",
     "**Hadir bang Warpath** 😁",
-    "**Hadir kak maap telat** 🥺",
+    "**Hadir lord warpath ganteng** 🥺",
 ]
 
 
