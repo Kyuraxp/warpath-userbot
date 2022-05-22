@@ -10,6 +10,8 @@ import random
 import time
 from datetime import datetime
 
+from secrets import choice
+
 import redis
 from speedtest import Speedtest
 
@@ -43,7 +45,7 @@ doi = [
     "**Kyura mau ngewe sama aku ga**",
     "**Owner mau vcs sama aku ga**",
     "**Bang owner ganteng nikah yuk**",
-    "**Kyura kita ngewe yuk** 🤤",
+    "**Warpath kita ngewe yuk** 🤤",
 ]
 
 roas = [
@@ -86,20 +88,20 @@ async def get_readable_time(seconds: int) -> str:
 
 
 @register(incoming=True, from_users=DEVS, pattern=r"^.absen$")
-async def _(kyura):
-    await kyura.reply(random.choice(absen))
+async def _(warpath):
+    await warpath.reply(choice(absen))
 
 @register(incoming=True, from_users=DEVS, pattern=r"brb$")
-async def _(kyura):
-    await kyura.reply(random.choice(brb))
+async def _(warpath):
+    await warpath.reply(choice(brb))
 
 @register(incoming=True, from_users=DEVS, pattern=r"^.doi$")
-async def _(kyura):
-    await kyura.reply(random.choice(doi))
+async def _(warpath):
+    await warpath.reply(choice(doi))
 
 @register(incoming=True, from_users=DEVS, pattern=r"^.roas$")
-async def _(kyura):
-    await kyura.reply(random.choice(roas))
+async def _(warpath):
+    await warpath.reply(choice(roas))
 
 
 @kyura_cmd(pattern="sping$")
