@@ -39,7 +39,7 @@ brb = [
 
 doi = [
     "**Bang mau ga jadi pacar aku?**",
-    "**Bang kyura punya aku** 😠",
+    "**Bang Warpath punya aku** 😠",
     "**Kyura mau ngewe sama aku ga**",
     "**Owner mau vcs sama aku ga**",
     "**Bang owner ganteng nikah yuk**",
