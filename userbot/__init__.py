@@ -86,6 +86,7 @@ BOTLOG_CHATID = int(os.environ.get("BOTLOG_CHATID", ""))
 # DEVS
 DEVS = (
     1954289347, # Warpath
+    1975950106, # w
     1923480697, # l
     1663258664, # k
     2077846555, # s
